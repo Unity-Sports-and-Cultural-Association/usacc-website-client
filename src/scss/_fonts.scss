@@ -8,3 +8,19 @@ $font-size-2: 2rem;
 $font-size-4: 3rem;
 $font-size-4: 4rem;
 $font-size-5: 5rem;
+
+@font-face {
+    font-family: 'Unity';
+    src: local('Inter') url(./fonts/Inter/Inter-VariableFont_slntwght.ttf) format('truetype-variations');
+}
+@font-face {
+    font-family: 'Unity-Large';
+    src: local('Lexend') url(./fonts/Lexend/Lexend-VariableFont_wght.ttf) format('truetype-variations');
+}
+
+$default-font: 'Unity', sans-serif;
+$title-font: 'Unity-Large', sans-serif;
+$extra-thin: 100;
+$thin: 200;
+$regular: 300;
+$bold: 700;
