@@ -1,0 +1,10 @@
+@use '../../scss' as styles;
+
+    .navbar-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: styles.$spacing-025rem styles.$spacing-1rem styles.$spacing-025rem styles.$spacing-1rem;
+        box-shadow: styles.$header-shadow;
+    }
