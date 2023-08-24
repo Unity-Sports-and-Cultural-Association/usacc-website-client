@@ -1,10 +1,102 @@
-@use '../../scss' as styles;
+@use '../../scss' as *;
 
     .navbar-container {
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        padding: styles.$spacing-025rem styles.$spacing-1rem styles.$spacing-025rem styles.$spacing-1rem;
-        box-shadow: styles.$header-shadow;
+        padding: $spacing-025rem $spacing-1rem $spacing-025rem $spacing-1rem;
+        box-shadow: $header-shadow;
     }
+
+    .nav-button {
+        z-index: 9999;
+        transition: color $default-transition;
+    }
+
+    .nav-button.active {
+        color: $white;
+    }
+    
+    .side-menu {
+        position: absolute;
+        top: 0;
+        right: -100vw;
+        width: 250px;
+        height: 100%;
+        padding: $spacing-3rem 0 0 $spacing-2rem;
+
+        background-color: $primary-color;
+
+        transition: right $default-transition;
+    }
+
+    .side-menu.active {
+        right: 0;
+    }
+
+    .side-nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-05rem;
+
+        color: $white;
+        font-size: $font-size-15;
+    }
+
+    .side-divider {
+        width: 75%;
+        height: 1px;
+        background-color: $white;
+    }
+
+    .links-side-menu {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-15rem;
+
+        width: 225px;
+        overflow-x: auto;
+    }
+
+    .side-contact{
+        display: flex;
+        align-items: top;
+        gap: $spacing-075rem;
+
+        color: $white;
+        font-size: $font-size-12;
+    }
+
+    .side-cotact-logo {
+        color: $white;
+        font-size: $font-size-2;
+    }
+
+    .side-contact-link {
+        text-decoration: underline;
+    }
+
+    .side-contact-container {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-1rem;
+    }
+
+    .side-footer {
+        color: $gray;
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-05rem;
+
+        .side-email {
+            text-decoration: underline;
+            font-size: $font-size-086;
+        }
+
+        .side-footer-text {
+            white-space: pre-wrap;
+            font-size: $font-size-086;
+        }
+    }
+

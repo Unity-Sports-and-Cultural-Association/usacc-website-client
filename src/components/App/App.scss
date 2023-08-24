@@ -5,6 +5,8 @@ body {
   padding: 0;
   font-family: styles.$default-font;
   font-weight: styles.$thin;
+
+  overflow-x: hidden !important;
 }
 
 .App {
