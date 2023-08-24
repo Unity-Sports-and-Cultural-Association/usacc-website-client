@@ -32,8 +32,8 @@ function App() {
 								<SlLocationPin />
 							</div>
 							<div className='side-contact-link'>
-                                10 Dunbar Ave, 
-                                Dorchester Center, 
+                                10 Dunbar Ave,<br/>
+                                Dorchester Center,<br/> 
                                 Ma 02124
 							</div>
 						</div>
