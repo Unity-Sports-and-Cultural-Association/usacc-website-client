@@ -12,7 +12,7 @@ function App(): ReactElement {
 			<Router>
 				<NavBar />
 				<Routes>
-					<Route path="/" element={<div>Home</div>} />
+					<Route path="/" element={<div style={{ height: '200vh' }}>Home</div>} />
 					<Route path="/menu" element={<div>Menu</div>} />
 					<Route path="/volunteering" element={<div>Volunteering</div>} />
 					<Route path="/about" element={<div>About</div>} />

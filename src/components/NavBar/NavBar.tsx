@@ -1,4 +1,5 @@
 import React, { ReactElement, useContext, useState } from 'react';
+import Sticky from 'react-stickynode';
 import IsMobileContext from '../../utils/isMobileContext';
 import DesktopNav from './DesktopNav';
 import MobileNav from './MobileNav';
@@ -8,9 +9,11 @@ function NavBar(): ReactElement {
 	const [ isOpen, setOpen ] = useState(false);
 	const isMobile = useContext(IsMobileContext);
 	return (
-
-		isMobile ? <MobileNav isOpen={isOpen} setOpen={setOpen}/>
-			: <DesktopNav isOpen={isOpen} setOpen={setOpen} />
+		<Sticky> {
+			isMobile ? <MobileNav isOpen={isOpen} setOpen={setOpen}/>
+				: <DesktopNav isOpen={isOpen} setOpen={setOpen} />
+		}
+		</Sticky>
 
 	);
 }

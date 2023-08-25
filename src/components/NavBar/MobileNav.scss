@@ -23,7 +23,7 @@
         top: 0;
         right: 0;
         width: 250px;
-        height: 100%;
+        height: 100vh;
         padding: $spacing-25rem 0 0 $spacing-2rem;
     
         overflow-y: hidden;
@@ -38,9 +38,6 @@
         transform: translateX(0);
         opacity: 1;
     }
-    
-    
-    
     
 
     .side-nav-links {

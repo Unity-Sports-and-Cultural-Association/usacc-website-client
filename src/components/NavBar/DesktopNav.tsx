@@ -33,6 +33,7 @@ function DesktopNav({ isOpen, setOpen }: DesktopNavProps): ReactElement {
 			</div>
 			{isOpen && <div className='menu-cover' onClick={closeMenu}/>}
 			<div className={isOpen ? 'side-menu desktop active' : 'desktop side-menu'} >
+
 				<div className='links-side-menu'>
 					<div className='side-nav-links'>
 						<div>
@@ -79,6 +80,7 @@ function DesktopNav({ isOpen, setOpen }: DesktopNavProps): ReactElement {
 						</div>
 					</div>
 				</div>
+
 			</div>
 		</>
 	);
