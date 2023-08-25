@@ -1,0 +1,54 @@
+@use '../../scss' as *;
+
+    .navbar-container.desktop{
+        padding: $spacing-05rem $spacing-4rem $spacing-05rem $spacing-4rem;
+       
+    }
+
+    .desktop-nav-links.desktop {
+        display: flex;
+        justify-content: center;
+        align-items: top;
+
+        font-size: $font-size-15;
+        font-weight: $weight-regular;
+        gap: $spacing-1rem;
+        margin-right: $spacing-3rem;
+
+        padding-bottom: $spacing-025rem;
+    }
+
+    .right-menu-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-button.desktop {
+        z-index: 9999;
+        transition: color $default-transition, transform $slow-transition;
+    }
+
+    .nav-button.desktop.active {
+        color: $white; 
+        transform: translate(2rem, 1rem);
+    }
+    
+    .side-menu.desktop {
+        position: absolute;
+        top: 0;
+        right: -100vw;
+        width: 250px;
+        height: 100%;
+        padding: $spacing-3rem 0 0 $spacing-2rem;
+
+        background-color: $primary-color;
+
+        transition: right $default-transition ease-in-out;
+    }
+
+    .side-menu.desktop.active {
+        right: 0;
+    }
+
+

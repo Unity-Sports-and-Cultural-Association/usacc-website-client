@@ -32,6 +32,7 @@
       "before": false,
       "after": true
     }],
+    "arrow-spacing": ["error", { "before": true, "after": true }],
     "import/order": [
       "error",
       {
