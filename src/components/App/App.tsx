@@ -1,8 +1,9 @@
-import React from 'react';
-import './App.scss';
+import React, { ReactElement } from 'react';
 import NavBar from '../NavBar';
+import './App.scss';
 
-function App() {
+
+function App(): ReactElement {
 	return (
 		<>
 			<NavBar />

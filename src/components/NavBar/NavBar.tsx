@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-import {Spin as Hamburger} from 'hamburger-react';
+import React, { ReactElement, useState } from 'react';
+import { Spin as Hamburger } from 'hamburger-react';
 import { SlLocationPin, SlPhone } from 'react-icons/sl';
 import './NavBar.scss';
 
-function App() {
-	const [isOpen, setOpen] = useState(false);
+function App(): ReactElement {
+	const [ isOpen, setOpen ] = useState(false);
 	return (
 		<>
 			<div className="navbar-container">
 				<img src={'usacc-logo.svg'} className="app-logo" alt="logo" />
-				<div className={isOpen? 'nav-button active' : 'nav-button'}>
+				<div className={isOpen ? 'nav-button active' : 'nav-button'}>
 					<Hamburger toggled={isOpen} toggle={setOpen} />
 				</div>
 			</div>
-			<div className={isOpen? 'side-menu active' : 'side-menu'} >
+			<div className={isOpen ? 'side-menu active' : 'side-menu'} >
 				<div className='links-side-menu'>
 					<div className='side-nav-links'>
 						<div>menu</div>
@@ -33,7 +33,7 @@ function App() {
 							</div>
 							<div className='side-contact-link'>
                                 10 Dunbar Ave,<br/>
-                                Dorchester Center,<br/> 
+                                Dorchester Center,<br/>
                                 Ma 02124
 							</div>
 						</div>
