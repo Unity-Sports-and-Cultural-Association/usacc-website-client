@@ -1,35 +1,43 @@
 import React, { ReactElement } from 'react';
 import { Spin as Hamburger } from 'hamburger-react';
 import { SlLocationPin, SlPhone } from 'react-icons/sl';
+import { Link } from 'react-router-dom';
 import './MobileNav.scss';
 
 type MobileNavProps = {
 	isOpen: boolean;
-	setOpen: React.Dispatch<React.SetStateAction<boolean>> | undefined;
-
+	setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 function MobileNav({ isOpen, setOpen }: MobileNavProps): ReactElement {
+
+	const closeMenu = (): void => {
+		if (isOpen) {
+			setOpen(false);
+		}
+	};
+
 	return (
 		<>
 			<div className="navbar-container">
-				<img src={'usacc-logo.svg'} className="app-logo" alt="logo" />
+				<Link className="no-underline" to="/" onClick={closeMenu}><img src={'usacc-logo.svg'} className="mobile app-logo" alt="logo" /> </Link>
 				<div className={isOpen ? 'nav-button active' : 'nav-button'}>
 					<Hamburger toggled={isOpen} toggle={setOpen} />
 				</div>
 			</div>
+			{isOpen && <div className='menu-cover' onClick={closeMenu}/>}
 			<div className={isOpen ? 'side-menu active' : 'side-menu'} >
 				<div className='links-side-menu'>
 					<div className='side-nav-links'>
-						<div>menu</div>
-						<div>booking</div>
-						<div>volunteering</div>
-						<div>membership</div>
+						<Link className="no-underline" to="/menu" onClick={closeMenu}>Menu</Link>
+						<Link className="no-underline" to="/booking" onClick={closeMenu}>Booking</Link>
+						<Link className="no-underline" to="/volunteering" onClick={closeMenu}>Volunteering</Link>
+						<Link className="no-underline" to="/membership" onClick={closeMenu}>Membership</Link>
 					</div>
 					<div className='side-divider'/>
 					<div className='side-nav-links'>
-						<div>about us</div>
-						<div>facebook</div>
+						<Link to="/about" onClick={closeMenu}>About Us</Link>
+						<a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>Facebook</a>
 					</div>
 					<div className='side-contact-container'>
 						<div className='side-contact'>
@@ -62,7 +70,7 @@ function MobileNav({ isOpen, setOpen }: MobileNavProps): ReactElement {
 						</div>
 					</div>
 				</div>
-			</div>
+		 </div>
 		</>
 	);
 }

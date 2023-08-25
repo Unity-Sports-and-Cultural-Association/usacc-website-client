@@ -6,14 +6,20 @@ import './DesktopNav.scss';
 
 type DesktopNavProps = {
 	isOpen: boolean;
-	setOpen: React.Dispatch<React.SetStateAction<boolean>> | undefined;
+	setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 function DesktopNav({ isOpen, setOpen }: DesktopNavProps): ReactElement {
+	const closeMenu = (): void => {
+		if (isOpen) {
+			setOpen(false);
+		}
+	};
+
 	return (
 		<>
 			<div className="navbar-container desktop">
-				<img src={'usacc-logo.svg'} className="app-logo" alt="logo" />
+				<Link className="no-underline" to="/" onClick={closeMenu}><img src={'usacc-logo.svg'} className="app-logo" alt="logo" /> </Link>
 				<div className='right-menu-container'>
 					<div className='desktop-nav-links desktop'>
 						<Link to="/volunteering">Volunteering</Link>
@@ -25,17 +31,18 @@ function DesktopNav({ isOpen, setOpen }: DesktopNavProps): ReactElement {
 					</div>
 				</div>
 			</div>
+			{isOpen && <div className='menu-cover' onClick={closeMenu}/>}
 			<div className={isOpen ? 'side-menu desktop active' : 'desktop side-menu'} >
 				<div className='links-side-menu'>
 					<div className='side-nav-links'>
 						<div>
-							<Link className="no-underline" to="/membership">Membership</Link>
+							<Link className="no-underline" to="/membership" onClick={closeMenu}>Membership</Link>
 						</div>
 					</div>
 					<div className='side-divider'/>
 					<div className='side-nav-links'>
 						<div>
-							<Link className="no-underline" to="/about">About Us</Link>
+							<Link className="no-underline" to="/about" onClick={closeMenu}>About Us</Link>
 						</div>
 						<div>
 							<a className="no-underline" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>

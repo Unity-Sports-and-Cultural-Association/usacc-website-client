@@ -1,10 +1,20 @@
 @use '../../scss' as *;
 
     .navbar-container.desktop{
-        padding: $spacing-05rem $spacing-4rem $spacing-05rem $spacing-4rem;
+        padding: $spacing-05rem $spacing-4rem $spacing-025rem $spacing-4rem;
 
     }
 
+    .menu-cover {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+    }
+
+    
+    .side-menu, .side-menu.desktop {
+        z-index: 9998;
+    }
 
     .desktop-nav-links.desktop {
         display: flex;

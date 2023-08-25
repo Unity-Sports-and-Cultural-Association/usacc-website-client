@@ -1,1 +1,16 @@
 @use '../../scss' as *;
+
+.side-menu, .side-menu.desktop {
+    z-index: 9998;
+}
+
+.menu-cover {
+    z-index: 9990;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+
+.app-logo {
+    padding-top: $spacing-025rem;
+}

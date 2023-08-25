@@ -40,7 +40,7 @@
         flex-direction: column;
         gap: $spacing-05rem;
 
-        & div > a {
+        & a {
             color: $white;
         }
         font-size: $font-size-15;
@@ -104,3 +104,6 @@
         }
     }
 
+    .mobile.app-logo {
+        padding-top: $spacing-05rem;
+    }
