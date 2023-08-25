@@ -1,12 +1,12 @@
 import React, { ReactElement } from 'react';
 import { Spin as Hamburger } from 'hamburger-react';
 import { SlLocationPin, SlPhone } from 'react-icons/sl';
+import { Link } from 'react-router-dom';
 import './DesktopNav.scss';
 
 type DesktopNavProps = {
 	isOpen: boolean;
 	setOpen: React.Dispatch<React.SetStateAction<boolean>> | undefined;
-
 }
 
 function DesktopNav({ isOpen, setOpen }: DesktopNavProps): ReactElement {
@@ -16,9 +16,9 @@ function DesktopNav({ isOpen, setOpen }: DesktopNavProps): ReactElement {
 				<img src={'usacc-logo.svg'} className="app-logo" alt="logo" />
 				<div className='right-menu-container'>
 					<div className='desktop-nav-links desktop'>
-						<div>volunteering</div>
-						<div>booking</div>
-						<div>menu</div>
+						<Link to="/volunteering">Volunteering</Link>
+						<Link to="/booking">Booking</Link>
+						<Link to="/menu">Menu</Link>
 					</div>
 					<div className={isOpen ? 'nav-button desktop active' : 'nav-button desktop'}>
 						<Hamburger toggled={isOpen} toggle={setOpen} />
@@ -28,12 +28,18 @@ function DesktopNav({ isOpen, setOpen }: DesktopNavProps): ReactElement {
 			<div className={isOpen ? 'side-menu desktop active' : 'desktop side-menu'} >
 				<div className='links-side-menu'>
 					<div className='side-nav-links'>
-						<div>membership</div>
+						<div>
+							<Link className="no-underline" to="/membership">Membership</Link>
+						</div>
 					</div>
 					<div className='side-divider'/>
 					<div className='side-nav-links'>
-						<div>about us</div>
-						<div>facebook</div>
+						<div>
+							<Link className="no-underline" to="/about">About Us</Link>
+						</div>
+						<div>
+							<a className="no-underline" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+						</div>
 					</div>
 					<div className='side-contact-container'>
 						<div className='side-contact'>

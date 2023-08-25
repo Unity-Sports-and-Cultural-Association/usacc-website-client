@@ -2,8 +2,9 @@
 
     .navbar-container.desktop{
         padding: $spacing-05rem $spacing-4rem $spacing-05rem $spacing-4rem;
-       
+
     }
+
 
     .desktop-nav-links.desktop {
         display: flex;
@@ -14,10 +15,14 @@
         font-weight: $weight-regular;
         gap: $spacing-1rem;
         margin-right: $spacing-3rem;
-
         padding-bottom: $spacing-025rem;
+
+        & a {
+            color: $unity-black;
+        }
     }
 
+    
     .right-menu-container {
         display: flex;
         justify-content: center;
@@ -30,10 +35,10 @@
     }
 
     .nav-button.desktop.active {
-        color: $white; 
+        color: $white;
         transform: translate(2rem, 1rem);
     }
-    
+
     .side-menu.desktop {
         position: absolute;
         top: 0;
