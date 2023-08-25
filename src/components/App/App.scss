@@ -13,33 +13,8 @@ a {
   position: relative;
   text-decoration: none;
   color: $default-font;
-  padding-bottom: 4px;
 }
 
-a::before {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 1px;
-  bottom: 0;
-  left: 0;
-  background-color: $link-color;
-  visibility: hidden;
-  transition: all $default-transition ease-in-out;
-}
-
-a:hover::before {
-  visibility: visible;
-  width: 100%;
-}
-
-a.white-underline::before {
-  background-color: $white;
-}
-
-a.no-underline:hover::before {
-  visibility: hidden;
-}
 
 
 .App {
