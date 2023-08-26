@@ -1,0 +1,27 @@
+@use '../../scss' as *;
+
+.app-footer-container {
+    display: flex;
+    flex-direction: column;
+
+    .footer-navs {
+        background-color: $color-primary;
+    }
+
+    .footer-disclaimer {
+        background-color: $color-dark-gray;
+    }
+
+    .footer-nav-links-container {
+        display: flex;
+        gap: $spacing-3rem;
+    }
+
+    .footer-nav-links {
+        display: flex;
+        flex-direction: column;
+        color: $color-white;
+        gap: $spacing-05rem;
+    }
+}
+

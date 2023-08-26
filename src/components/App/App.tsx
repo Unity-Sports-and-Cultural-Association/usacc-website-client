@@ -2,6 +2,7 @@ import React, { ReactElement } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import IsMobileContext from '../../utils/isMobileContext';
 import useIsMobile from '../../utils/useIsMobile';
+import Footer from '../Footer';
 import NavBar from '../NavBar';
 import './App.scss';
 
@@ -20,6 +21,7 @@ function App(): ReactElement {
 					<Route path="/booking" element={<div>Booking</div>} />
 					<Route path="*" element={<Navigate to="/" />} />
 				</Routes>
+				<Footer />
 			</Router>
 		</IsMobileContext.Provider>
 	);

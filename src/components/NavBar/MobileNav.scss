@@ -15,7 +15,7 @@
     }
 
     .nav-button.active {
-        color: $white;
+        color: $color-white;
     }
     
     .side-menu {
@@ -27,7 +27,7 @@
         padding: $spacing-25rem 0 0 $spacing-2rem;
     
         overflow-y: hidden;
-        background-color: $primary-color;
+        background-color: $color-primary;
     
         transform: translateX(100%);
         transition: transform $default-transition, opacity $default-transition;
@@ -46,7 +46,7 @@
         gap: $spacing-05rem;
 
         & a {
-            color: $white;
+            color: $color-white;
         }
         font-size: $font-size-15;
     }
@@ -54,7 +54,7 @@
     .side-divider {
         width: 75%;
         height: 1px;
-        background-color: $white;
+        background-color: $color-white;
     }
 
     .links-side-menu {
@@ -71,12 +71,12 @@
         align-items: top;
         gap: $spacing-075rem;
 
-        color: $white;
+        color: $color-white;
         font-size: $font-size-1;
     }
 
     .side-cotact-logo {
-        color: $white;
+        color: $color-white;
         font-size: $font-size-15;
     }
 
@@ -93,7 +93,7 @@
 
     .side-footer {
         margin-top: $spacing-1rem;
-        color: $gray;
+        color: $color-gray;
         display: flex;
         flex-direction: column;
         gap: $spacing-05rem;
