@@ -13,12 +13,12 @@ function App(): ReactElement {
 			<Router>
 				<NavBar />
 				<Routes>
-					<Route path="/" element={<div style={{ height: '200vh' }}>Home</div>} />
-					<Route path="/menu" element={<div>Menu</div>} />
-					<Route path="/volunteering" element={<div>Volunteering</div>} />
-					<Route path="/about" element={<div>About</div>} />
-					<Route path="/membership" element={<div>Membership</div>} />
-					<Route path="/booking" element={<div>Booking</div>} />
+					<Route path="/" element={<div className='test-height'>Home</div>} />
+					<Route path="/menu" element={<div className='test-height'>Menu</div>} />
+					<Route path="/volunteering" element={<div className='test-height'>Volunteering</div>} />
+					<Route path="/about" element={<div className='test-height'>About</div>} />
+					<Route path="/membership" element={<div className='test-height'>Membership</div>} />
+					<Route path="/booking" element={<div className='test-height'>Booking</div>} />
 					<Route path="*" element={<Navigate to="/" />} />
 				</Routes>
 				<Footer />

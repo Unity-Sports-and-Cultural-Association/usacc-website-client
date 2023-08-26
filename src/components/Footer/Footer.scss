@@ -4,12 +4,46 @@
     display: flex;
     flex-direction: column;
 
+    .footer-navs-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        
+        background-color: $color-primary-dark;
+    }
+
     .footer-navs {
-        background-color: $color-primary;
+        padding-top: $spacing-12rem;
+        padding-bottom: $spacing-1rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width: 768px) {
+            align-items: flex-start;
+        }
+
     }
 
     .footer-disclaimer {
         background-color: $color-dark-gray;
+        color: $color-gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        font-size: $font-size-05;
+        padding: $spacing-12rem;
+        padding-bottom: $spacing-15rem;
+
+        @media (min-width: 768px) {
+            padding-bottom: $font-size-12;
+        }
+
     }
 
     .footer-nav-links-container {
@@ -20,8 +54,91 @@
     .footer-nav-links {
         display: flex;
         flex-direction: column;
-        color: $color-white;
         gap: $spacing-05rem;
+        font-size: $font-size-086;
+        & a {
+            color: $color-gray;
+        }
+        @media (min-width: 768px) {
+            font-size: $font-size-1;
+        }
     }
+
+    .footer-top-nav {
+        display: flex;
+        justify-content: center;
+        align-items: top;
+        gap: $spacing-15rem;
+
+        padding-left: $spacing-2rem;
+        padding-right: $spacing-2rem;
+
+        @media (min-width: 768px) {
+            gap: $spacing-4rem;
+            justify-content: flex-start;
+        }
+    }
+
+    .footer-bottom-nav {
+        padding-top: $spacing-1rem;
+        padding-left: $spacing-1rem;
+        padding-right: $spacing-1rem;
+    }
+
+    .footer-app-logo {
+        & img {
+            padding-top: $spacing-1rem;
+            @media (min-width: 768px) {
+                width: 163%;
+            }
+        }
+    }
+
+    .footer-bottom-nav {
+        display: flex;
+        gap: $spacing-1rem;
+        @media (min-width: 768px) {
+            gap: $spacing-4rem;
+            padding-top: $spacing-12rem;
+            padding-bottom: $spacing-05rem;
+        }
+    }
+
+    .footer-location-container, .footer-phone-container, .footer-email-container {
+        display: flex;
+        gap: $spacing-05rem;
+
+        align-items: center;
+        justify-content: center;
+
+        color: $color-white;
+
+        @media (min-width: 768px) {
+            color: $color-gray;
+        }
+    }
+
+    .footer-location-link, .footer-contact-link {
+        font-size: $font-size-05;
+        text-decoration: underline;
+    }
+
+    .footer-email-link {
+        font-size: $font-size-05;
+        text-decoration: underline;
+    }
+
+    .footer-bottom-right-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            gap: $spacing-1rem;
+        }
+    }
+
 }
 

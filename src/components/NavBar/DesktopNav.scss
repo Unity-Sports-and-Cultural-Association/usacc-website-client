@@ -2,12 +2,6 @@
 
     .navbar-container.desktop{
         padding: $spacing-05rem $spacing-4rem $spacing-025rem $spacing-4rem;
-        @media (min-width: 768px) {
-            .navbar-container.desktop {
-              display: none;
-              background-color: red;
-            }
-          }
           
     }
 
