@@ -1,5 +1,9 @@
 @use '../../scss' as *;
 
+#root {
+  overflow: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;

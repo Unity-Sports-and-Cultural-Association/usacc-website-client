@@ -9,7 +9,7 @@ function NavBar(): ReactElement {
 	const [ isOpen, setOpen ] = useState(false);
 	const isMobile = useContext(IsMobileContext);
 	return (
-		<Sticky> {
+		<Sticky innerZ={9990}> {
 			isMobile ? <MobileNav isOpen={isOpen} setOpen={setOpen}/>
 				: <DesktopNav isOpen={isOpen} setOpen={setOpen} />
 		}
