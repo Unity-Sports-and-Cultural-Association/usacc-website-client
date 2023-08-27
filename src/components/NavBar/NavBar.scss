@@ -14,3 +14,15 @@
 .all-nav-container {
     position: relative;
 }
+
+.navbar-container * , .side-menu .side-nav-links *{
+    user-select: none;
+}
+
+.navbar-master-container {
+    transition: $transition-medium ease-in-out;
+}
+
+.navbar-master-container.hide-nav {
+    opacity: 0;
+}

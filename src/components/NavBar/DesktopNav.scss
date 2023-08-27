@@ -29,7 +29,7 @@
 
         & a {
             color: $color-black;
-            transition: $fast-transition;
+            transition: $transition-fast;
             &:hover {
                 color: $color-gray;
             }
@@ -46,7 +46,7 @@
 
     .nav-button.desktop {
         z-index: 9999;
-        transition: color $default-transition, transform $slow-transition;
+        transition: color $transition-default, transform $transition-slow;
     }
 
     .nav-button.desktop.active {
@@ -62,11 +62,10 @@
         height: 100vh;
         padding: $spacing-3rem 0 0 $spacing-2rem;
     
-        overflow-y: hidden;
         background-color: $color-primary;
     
         transform: translateX(100%);
-        transition: transform $default-transition, opacity $default-transition;
+        transition: transform $transition-default, opacity $transition-default;
         opacity: 0;
     }
     
