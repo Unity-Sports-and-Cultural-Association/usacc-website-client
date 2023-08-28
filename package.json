@@ -36,6 +36,11 @@
       "react-app/jest"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "sh .git/hooks/pre-commit"
+    }
+  },  
   "browserslist": {
     "production": [
       ">0.2%",
