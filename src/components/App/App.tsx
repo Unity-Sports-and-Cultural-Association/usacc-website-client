@@ -1,10 +1,10 @@
 import React, { ReactElement } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Home from '../../pages/Home/Home';
 import IsMobileContext from '../../utils/isMobileContext';
 import useIsMobile from '../../utils/useIsMobile';
 import Footer from '../Footer';
 import NavBar from '../NavBar';
-import Home from '../../pages/Home/Home';
 import './App.scss';
 
 function App(): ReactElement {

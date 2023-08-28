@@ -4,8 +4,8 @@ import Header from '../../components/Header/Header';
 function Home(): ReactElement {
 	return (
 		<div className='test-height'>
-            <Header />
-        </div>
+			<Header />
+		</div>
 	);
 }
 
