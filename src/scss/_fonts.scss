@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;700&family=Lexend:wght@100;200;300;700&display=swap%27');
+
 $font-size-1: 1rem;
 $font-size-05: .5rem;
 $font-size-086: .86rem;
@@ -10,18 +12,8 @@ $font-size-4: 3rem;
 $font-size-4: 4rem;
 $font-size-5: 5rem;
 
-@font-face {
-    font-family: 'Unity';
-    src: local('Inter') url(./fonts/Inter/Inter-VariableFont_slntwght.ttf) format('truetype-variations');
-}
-
-@font-face {
-    font-family: 'Unity-Large';
-    src: local('Lexend') url(./fonts/Lexend/Lexend-VariableFont_wght.ttf) format('truetype-variations');
-}
-
-$default-font: 'Unity', sans-serif;
-$title-font: 'Unity-Large', sans-serif;
+$default-font: 'Inter', sans-serif;
+$title-font: 'Lexend', sans-serif;
 $weight-extra-thin: 100;
 $weight-thin: 200;
 $weight-regular: 300;

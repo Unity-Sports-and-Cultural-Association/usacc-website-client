@@ -4,6 +4,7 @@ import IsMobileContext from '../../utils/isMobileContext';
 import useIsMobile from '../../utils/useIsMobile';
 import Footer from '../Footer';
 import NavBar from '../NavBar';
+import Home from '../../pages/Home/Home';
 import './App.scss';
 
 function App(): ReactElement {
@@ -13,7 +14,7 @@ function App(): ReactElement {
 			<Router>
 				<NavBar />
 				<Routes>
-					<Route path="/" element={<div className='test-height'>Home</div>} />
+					<Route path="/" element={<Home />} />
 					<Route path="/menu" element={<div className='test-height'>Menu</div>} />
 					<Route path="/volunteering" element={<div className='test-height'>Volunteering</div>} />
 					<Route path="/about" element={<div className='test-height'>About</div>} />
