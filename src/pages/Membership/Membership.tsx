@@ -5,7 +5,7 @@ function Membership(): ReactElement {
 	return (
 		<div className='test-height'>
 			<Header
-				title='Community&#13;&#10;Member'
+				title={<div>Community<br />Member</div>}
 				topic='Join our mission'
 				description='Unity is always open to spirited individuals who support the mission and vision of the organization. Even though we are a Caribbean club everyone is welcome.'
 			/>
