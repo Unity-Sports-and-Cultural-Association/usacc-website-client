@@ -13,24 +13,24 @@ import NavBar from '../NavBar';
 import './App.scss';
 
 function App(): ReactElement {
-	const isMobile = useIsMobile();
-	return (
-		<IsMobileContext.Provider value={isMobile}>
-			<Router>
-				<NavBar />
-				<Routes>
-					<Route path="/" element={<Home />} />
-					<Route path="/menu" element={<Menu />} />
-					<Route path="/volunteering" element={<Volunteer />} />
-					<Route path="/about" element={<About />} />
-					<Route path="/membership" element={<Membership />} />
-					<Route path="/booking" element={<Booking />} />
-					<Route path="*" element={<Navigate to="/" />} />
-				</Routes>
-				<Footer />
-			</Router>
-		</IsMobileContext.Provider>
-	);
+    const isMobile = useIsMobile();
+    return (
+        <IsMobileContext.Provider value={isMobile}>
+            <Router>
+                <NavBar />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/menu" element={<Menu />} />
+                    <Route path="/volunteering" element={<Volunteer />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/membership" element={<Membership />} />
+                    <Route path="/booking" element={<Booking />} />
+                    <Route path="*" element={<Navigate to="/" />} />
+                </Routes>
+                <Footer />
+            </Router>
+        </IsMobileContext.Provider>
+    );
 }
 
 export default App;
