@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
+import Header from '../../../components/Header';
 import './Booking.scss';
-import Header from '../../components/Header/Header';
+
 function Booking(): ReactElement {
     return (
         <div className='test-height'>

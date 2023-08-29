@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import './Volunteer.scss';
-import Header from '../../components/Header/Header';
+import Header from '../../../components/Header';
+
 function Volunteer(): ReactElement {
     return (
         <div className='test-height'>

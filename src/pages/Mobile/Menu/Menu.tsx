@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
+import Header from '../../../components/Header';
 import './Menu.scss';
-import Header from '../../components/Header/Header';
 function Menu(): ReactElement {
     return (
         <div className='test-height'>

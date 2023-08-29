@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import './Membership.scss';
-import Header from '../../components/Header/Header';
+import Header from '../../../components/Header';
 function Membership(): ReactElement {
     return (
         <div className='test-height'>
