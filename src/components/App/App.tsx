@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { ParallaxProvider } from 'react-scroll-parallax';
 import About from '../../pages/About/About';
 import Booking from '../../pages/Booking/Booking';
 // import Home from '../../pages/Home/Home';
@@ -17,19 +18,21 @@ function App(): ReactElement {
     const isMobile = useIsMobile();
     return (
         <IsMobileContext.Provider value={isMobile}>
-            <Router>
-                <NavBar />
-                <Routes>
-                    <Route path="/" element={<DesktopShell title='Home'><div>hello</div></DesktopShell>} />
-                    <Route path="/menu" element={<Menu />} />
-                    <Route path="/volunteering" element={<Volunteer />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/membership" element={<Membership />} />
-                    <Route path="/booking" element={<Booking />} />
-                    <Route path="*" element={<Navigate to="/" />} />
-                </Routes>
-                <Footer />
-            </Router>
+            <ParallaxProvider>
+                <Router>
+                    <NavBar />
+                    <Routes>
+                        <Route path="/" element={<DesktopShell title='About us'><div>About us</div></DesktopShell>} />
+                        <Route path="/menu" element={<Menu />} />
+                        <Route path="/volunteering" element={<Volunteer />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/membership" element={<Membership />} />
+                        <Route path="/booking" element={<Booking />} />
+                        <Route path="*" element={<Navigate to="/" />} />
+                    </Routes>
+                    <Footer />
+                </Router>
+            </ParallaxProvider>
         </IsMobileContext.Provider>
     );
 }

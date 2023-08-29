@@ -22,9 +22,14 @@
 
     .desktop-title {
         position: absolute;
-        font-size: 10rem;
-        left: -$spacing-1rem;
-        bottom: -$spacing-1rem;
+        font-size: 16rem;
+        font-weight: $weight-thick;
+        color: $color-white;
+        opacity: .1;
+        white-space: nowrap;
+        left: -$spacing-3rem;
+        bottom: 6rem;
+        user-select: none;
     }
 
     .right-container {
@@ -33,8 +38,8 @@
         display: flex;
         flex-direction: column;
         padding-left: $spacing-2rem;
-        padding-top: $spacing-15rem;
-        padding-bottom: $spacing-2rem
+        padding-top: $spacing-3rem;
+        padding-bottom: $spacing-4rem
         
     }
 
