@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
-import './Home.scss';
+import './Booking.scss';
 import Header from '../../components/Header/Header';
-function Home(): ReactElement {
+function Booking(): ReactElement {
 	return (
 		<div className='test-height'>
 			<Header
@@ -13,4 +13,4 @@ function Home(): ReactElement {
 	);
 }
 
-export default Home;
+export default Booking;
