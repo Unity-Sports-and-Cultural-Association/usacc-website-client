@@ -1,0 +1,18 @@
+@use '../../scss' as *;
+
+.back-nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-blue-link;
+    font-size: $font-size-1;
+    
+    .back-nav-link {
+        font-weight: $weight-regular;
+        font-size: $font-size-12;
+        text-decoration: underline;
+        cursor: pointer;
+        user-select: none;
+
+    }
+}

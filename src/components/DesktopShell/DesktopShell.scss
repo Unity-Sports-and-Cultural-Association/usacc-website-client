@@ -1,0 +1,60 @@
+@use '../../scss' as *;
+
+.desktop-article-container {
+    width: 100%;
+    height: 100%;
+    
+    .desktop-article-header-container {
+        position: relative;
+        width: 100%;
+        background-color: $color-primary;
+
+        display: flex;
+    }
+
+    .left-container {
+        flex: 7;
+    }
+
+    .text-container {
+        width: 19rem;
+    }
+
+    .desktop-title {
+        position: absolute;
+        font-size: 16rem;
+        font-weight: $weight-thick;
+        color: $color-white;
+        opacity: .1;
+        white-space: nowrap;
+        left: -$spacing-3rem;
+        bottom: 6rem;
+        user-select: none;
+    }
+
+    .right-container {
+        flex: 4;
+        background-color: $color-article-header-background;
+        display: flex;
+        flex-direction: column;
+        padding-left: $spacing-2rem;
+        padding-top: $spacing-3rem;
+        padding-bottom: $spacing-4rem
+        
+    }
+
+    .header-blurb-title {
+        color: $color-gray;
+        padding-bottom: $spacing-1rem;
+    }
+
+    .header-blurb {
+        color: $color-white;
+    }
+
+
+
+    .desktop-article-body-container {
+        height: 90vh;
+    }
+}
