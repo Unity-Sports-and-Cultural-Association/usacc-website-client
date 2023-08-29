@@ -1,0 +1,83 @@
+@use '../../scss' as *;
+
+.home-header-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: $spacing-15rem;
+    padding-top: $spacing-1rem;
+    padding-bottom: $spacing-2rem;
+    color: $color-white;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(24, 0, 0, 0.451389) 77.43%, #340000 100%), linear-gradient(0deg, #570B0B, #570B0B);
+    .home-header-title-container {
+        font-family: $title-font;
+        font-weight: $weight-medium;
+        font-size: $font-size-25;
+    }
+    .home-header-description-container {
+        padding-top: $spacing-1rem;
+        font-weight: $weight-regular;
+        padding-right: $spacing-4rem;
+        padding-bottom: $spacing-15rem;
+    }
+    .home-header-bottom-container {
+        display: flex;
+        flex-direction: row;
+        padding-right: $spacing-3rem;
+    }
+    .home-header-contact-container {
+        display: flex;
+        flex-direction: column;
+        row-gap: $spacing-1rem;
+        height: $spacing-2rem;
+    }
+    .home-header-contact-icon-container {
+        font-size: $font-size-12;
+    }
+    .home-header-contact-text-container {
+        color: $color-gray;
+        text-decoration: underline;
+        padding-left: $spacing-05rem;
+        font-size: $font-size-086;
+    }
+    .home-header-contact-list-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .home-header-contact-pin-container {
+        font-size: $font-size-12;
+        padding-top: $spacing-025rem;
+    }
+
+    .home-header-menu-title-text-container {
+        font-weight: $weight-medium;
+    }
+
+    .home-header-menu-time-container {
+        padding-top: $spacing-025rem;
+        padding-bottom: $spacing-1rem;
+    }
+
+    .home-header-menu-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: $spacing-025rem;
+        margin-right: $spacing-12rem;
+        border-radius: $spacing-025rem;
+        border-style: solid;
+        border-width: 1px;
+        color: $color-white;
+        text-decoration: none;
+    }
+
+    .home-header-menu-right-arrow-container {
+        font-size: $font-size-05;
+        padding-top: 2px;
+        padding-left: $spacing-05rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
