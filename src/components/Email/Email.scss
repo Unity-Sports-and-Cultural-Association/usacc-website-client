@@ -1,68 +1,88 @@
 @use '../../scss' as *;
 
-.email-container {
+.email-main-container {
+    padding-top: $spacing-15rem;
     display: flex;
-    flex-direction: column;
     width: 100%;
-    padding-left: $spacing-15rem;
-    padding-top: $spacing-1rem;
-    padding-bottom: $spacing-2rem;
-    background-color: $color-white;
-    .email-title-container {
-        color: $color-primary;
-        font-size: $font-size-25;
-        font-family: $title-font;
-        font-weight: $weight-medium;
-    }
-    .email-red-star-container {
-        color: $color-red-link;
-        margin-bottom: -$spacing-05rem;
-        font-weight: $weight-medium;
-        font-size: $font-size-12;
-    }
-    .email-subtext-container {
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px -2px 4px 0px #00000045;
+    .email-container {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding-bottom: $spacing-1rem;
-        .email-warning-text-container {
-            padding-left: $spacing-025rem;
-            color: $color-subtext-color;
-            font-size: $font-size-086;
-            font-weight: $weight-regular;
+        flex-direction: column;
+        padding-top: $spacing-1rem;
+        padding-bottom: $spacing-2rem;
+        background-color: $color-white;
+        .email-title-container {
+            color: $color-primary;
+            font-size: $font-size-25;
+            font-family: $title-font;
+            font-weight: $weight-medium;
         }
-    }
-    .email-label-container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding-bottom: $spacing-025rem;
-        .email-label-text-container {
-            padding-right: $spacing-025rem;
+        .email-red-star-container {
+            color: $color-link;
+            margin-bottom: -$spacing-05rem;
+            font-weight: $weight-medium;
             font-size: $font-size-12;
-            font-weight: $weight-regular;
         }
-    }
-    .email-input-container {
-        margin-right: $spacing-3rem;
-        padding: $spacing-05rem;
-        border-width: 2px;
-        border-radius: $spacing-025rem;
-        border-color: $color-gray;
-        border-style: solid;
-        margin-bottom: $spacing-075rem;
-    }
-    .email-submit-button-container {
-        background-color: $color-primary;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: $spacing-3rem;
-        padding: $spacing-075rem;
-        border-radius: 6px;
-        color: $color-white;
-        font-size: $font-size-15;
-        font-weight: $weight-thin;
-        margin-top: $spacing-15rem;
+        .email-subtext-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-bottom: $spacing-1rem;
+            .email-warning-text-container {
+                padding-left: $spacing-025rem;
+                color: $color-subtext-color;
+                font-size: $font-size-086;
+                font-weight: $weight-regular;
+            }
+        }
+        .email-label-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-bottom: $spacing-025rem;
+            .email-label-text-container {
+                padding-right: $spacing-025rem;
+                font-size: $font-size-12;
+                font-weight: $weight-regular;
+            }
+        }
+        .email-error-container {
+            color: $color-link;
+            font-weight: $weight-medium;
+            font-size: $font-size-086;
+        }
+        .email-error-hide-container {
+            color: $color-white;
+            font-weight: $weight-medium;
+            font-size: $font-size-086;
+        }
+        .email-input-container {
+            padding: $spacing-05rem;
+            border-width: 2px;
+            border-radius: $spacing-025rem;
+            border-color: $color-gray;
+            border-style: solid;
+        }
+        .email-input-error-container {
+            padding: $spacing-05rem;
+            border-width: 2px;
+            border-radius: $spacing-025rem;
+            border-color: $color-link;
+            border-style: solid;
+        }
+        .email-submit-button-container {
+            background-color: $color-primary;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: $spacing-075rem;
+            border-radius: 6px;
+            color: $color-white;
+            font-size: $font-size-15;
+            font-weight: $weight-thin;
+            margin-top: $spacing-15rem;
+        }
     }
 }
