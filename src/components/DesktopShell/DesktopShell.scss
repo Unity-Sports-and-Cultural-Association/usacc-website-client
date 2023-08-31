@@ -56,5 +56,39 @@
 
     .desktop-article-body-container {
         height: 90vh;
+        width: 100%;
+        display: flex;
+
+    }
+
+    .article-left-buffer {
+        background-color: $color-article-left-gutter;
+        flex: 1;
+        max-width: 7rem;
+    }
+
+    .article-content-body {
+        position: relative;
+        flex: 5;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .article-content {
+        width: 68%;
+        font-weight: $weight-regular;
+        margin-top: $spacing-4rem;
+    }
+
+    .article-right-buffer {
+        background-color: $color-article-right-gutter;
+        flex: 2;
+    }
+
+    .article-back {
+        position: absolute;
+        left: $spacing-25rem;
+        top: $spacing-3rem;
     }
 }
