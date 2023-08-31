@@ -1,0 +1,16 @@
+@use '../../scss' as *;
+
+.heading-text-h1 {
+    font-size: $font-size-25;
+    color: $color-title-dark;
+    font-family: $title-font;
+    font-weight: $weight-thick;
+}
+
+.heading-text-h2 {
+    font-size: $font-size-15;
+    color: $color-title-dark;
+    
+    font-family: $title-font;
+    font-weight: $weight-regular;
+}

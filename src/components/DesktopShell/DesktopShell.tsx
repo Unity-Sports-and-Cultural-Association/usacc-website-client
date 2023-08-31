@@ -3,6 +3,7 @@ import React, { ReactElement } from 'react';
 import './DesktopShell.scss';
 import { Parallax } from 'react-scroll-parallax';
 import BackNav from '../BackNav/BackNav';
+import Heading from '../Heading/Heading';
 
 
 
@@ -49,6 +50,7 @@ function DesktopShell({ title, children, isArticle }: DesktopShellProps): ReactE
                 <div className='article-content-body'>
                     <BackNav className='article-back'/>
                     <div className='article-content' >
+                        <Heading type='h1' text='Our Story'/>
                     	{content}
                     </div>
             		{children}
