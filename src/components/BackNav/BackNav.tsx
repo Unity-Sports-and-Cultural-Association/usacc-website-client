@@ -12,6 +12,7 @@ function BackNav({ className }: BackNavProps): ReactElement {
 
     return (
         <div onClick={(): void => navigate(-1)} className={`back-nav-container ${className}`}>
+
             <SlArrowLeft />
             <div className='back-nav-link'>
                 Back
