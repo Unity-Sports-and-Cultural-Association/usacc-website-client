@@ -17,7 +17,7 @@ function HomeHeader(): ReactElement {
                         <div className='home-header-contact-text-container'>&#40;617&#41; 436-9550</div>
                     </div>
                 </div>
-                <hr />
+                <hr className='home-header-line-container'/>
                 <div>
                     <div className='home-header-menu-title-text-container'>Night Life</div>
                     <div className='home-header-menu-time-container'>Fri-Sat: 10pm-2am</div>
