@@ -1,0 +1,23 @@
+@use '../../scss' as *;
+
+.back-header-container {
+    display: flex;
+    width: 100%;
+    padding: $spacing-15rem;
+    padding-bottom: 0;
+    background-color: $color-white;
+    align-items: center;
+    .back-header-left-arrow-container {
+        font-size: $font-size-05;
+        margin-top: 2px;
+        padding-right: $spacing-025rem;
+        color: $color-blue;
+    }
+    .back-header-back-text {
+        border-bottom: 1px solid $color-blue;
+        padding-bottom: 0;
+        color: $color-blue;
+        font-weight: $weight-medium;
+        font-size: $font-size-086;
+    }
+}
