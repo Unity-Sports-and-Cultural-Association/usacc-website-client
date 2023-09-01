@@ -1,8 +1,8 @@
 import React, { ReactElement } from 'react';
-import BackHeader from '../../../components/BackHeader/BackHeader';
-import Header from '../../../components/Header/Header';
-import DescriptionBody from '../../../components/DescriptionBody/DescriptionBody';
 import { SlEnvolope } from 'react-icons/sl';
+import BackHeader from '../../../components/BackHeader/BackHeader';
+import DescriptionBody from '../../../components/DescriptionBody/DescriptionBody';
+import Header from '../../../components/Header/Header';
 import './Volunteer.scss';
 
 function Volunteer(): ReactElement {
