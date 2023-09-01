@@ -1,0 +1,26 @@
+@use '../../scss' as *;
+
+.description-body-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: $spacing-15rem;
+    padding-top: $spacing-1rem;
+    padding-bottom: $spacing-1rem;
+    background-color: $color-white;
+    .description-body-title-container {
+        color: $color-primary;
+        font-size: $font-size-25;
+        font-family: $title-font;
+        font-weight: $weight-medium;
+    }
+    .description-body-text-container {
+        padding-top: $spacing-075rem;
+        color: $color-default-text;
+        font-size: $font-size-1;
+        font-family: $default-font;
+        font-weight: $weight-medium;
+        word-wrap: break-word;
+        padding-right: $spacing-3rem;
+    }
+}

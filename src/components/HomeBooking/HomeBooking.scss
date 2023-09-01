@@ -1,0 +1,46 @@
+@use '../../scss' as *;
+
+.home-booking-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: $spacing-15rem;
+    padding-top: $spacing-1rem;
+    padding-bottom: $spacing-2rem;
+    background-color: $color-white;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    margin-bottom: $spacing-2rem;
+    .home-booking-title-container {
+        color: $color-primary;
+        font-size: $font-size-25;
+        font-family: $title-font;
+        font-weight: $weight-medium;
+    }
+    .home-booking-topic-container {
+        color: $color-subtext-color;
+        font-size: $font-size-1;
+        font-weight: $weight-regular;
+    }
+    .home-booking-description-container {
+        padding-top: $spacing-075rem;
+        color: $color-default-text;
+        font-size: $font-size-1;
+        font-family: $default-font;
+        font-weight: $weight-medium;
+        word-wrap: break-word;
+        padding-right: $spacing-4rem + $spacing-15rem;
+    }
+    .home-booking-button-container {
+        background-color: $color-primary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: $spacing-3rem;
+        padding: $spacing-075rem;
+        border-radius: 6px;
+        color: $color-white;
+        font-size: $font-size-15;
+        font-weight: $weight-thin;
+        margin-top: $spacing-15rem;
+    }
+}

@@ -22,6 +22,7 @@
     }
     .home-header-bottom-container {
         display: flex;
+        justify-content: space-evenly;
         flex-direction: row;
         padding-right: $spacing-3rem;
     }
@@ -48,6 +49,10 @@
     .home-header-contact-pin-container {
         font-size: $font-size-12;
         padding-top: $spacing-025rem;
+    }
+    .home-header-line-container {
+        margin-left: $spacing-2rem;
+        margin-right: $spacing-2rem;
     }
 
     .home-header-menu-title-text-container {
