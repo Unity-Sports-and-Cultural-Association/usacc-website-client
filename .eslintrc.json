@@ -21,6 +21,7 @@
   },
   "plugins": ["@typescript-eslint", "react", "import"],
   "rules": {
+    "no-control-regex": 0,
     "@typescript-eslint/explicit-function-return-type": "error",
     "no-unused-vars": ["error", { "vars": "all" }],
     "indent": ["error", 4, {"SwitchCase": 1 }], "eol-last": ["error", "always"],
