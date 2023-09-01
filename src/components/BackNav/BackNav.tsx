@@ -3,11 +3,16 @@ import { SlArrowLeft } from 'react-icons/sl';
 import { useNavigate } from 'react-router-dom';
 import './BackNav.scss';
 
-function BackNav(): ReactElement {
+type BackNavProps = {
+	className: string;
+}
+
+function BackNav({ className }: BackNavProps): ReactElement {
     const navigate = useNavigate();
 
     return (
-        <div onClick={(): void => navigate(-1)} className='back-nav-container'>
+        <div onClick={(): void => navigate(-1)} className={`back-nav-container ${className}`}>
+
             <SlArrowLeft />
             <div className='back-nav-link'>
                 Back
@@ -15,5 +20,9 @@ function BackNav(): ReactElement {
         </div>
     );
 }
+
+BackNav.defaultProps = {
+    className: ''
+};
 
 export default BackNav;
