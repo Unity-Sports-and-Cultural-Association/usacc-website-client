@@ -1,0 +1,38 @@
+@use '../../scss' as *;
+
+.article-nav-container {
+    margin-top: $spacing-3rem;
+    margin-left: $spacing-2rem;
+    .article-timeline {
+        width: 3px;
+        background-color: $color-gray;
+        border-radius: 3px;
+    }
+
+    .article-nav-title {
+        padding-bottom: $spacing-1rem;
+        font-size: $font-size-15;
+        font-weight: $weight-thick;
+        color: $color-title-gray;
+    }
+
+    .article-timeline-container {
+        display: flex;
+        gap: $spacing-1rem;
+    }
+
+    .article-nav-items {
+        display: flex;
+        flex-direction: column;
+        font-weight: $weight-regular;
+        color: $color-gray-text;
+        font-size: $font-size-1;
+        padding-top: $spacing-05rem;
+        padding-bottom: $spacing-05rem;
+    }
+
+    .article-nav-item {
+        padding-bottom: $spacing-05rem;
+    }
+    
+}
