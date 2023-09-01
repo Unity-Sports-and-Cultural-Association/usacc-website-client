@@ -1,11 +1,12 @@
 import React, { ReactElement } from 'react';
-import './Home.scss';
 import Membershipimg from '../../../components/data/membership.png.png';
 import Volunteerimg from '../../../components/data/volunteering.png.png';
 import Email from '../../../components/Email/Email';
 import HomeBooking from '../../../components/HomeBooking/HomeBooking';
 import HomeHeader from '../../../components/HomeHeader/HomeHeader';
 import HomeLearnMore from '../../../components/HomeLearnMore/HomeLearnMore';
+import './Home.scss';
+
 function Home(): ReactElement {
     return (
         <div className='test-height'>
