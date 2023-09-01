@@ -1,7 +1,8 @@
 import React, { ReactElement } from 'react';
-import './Volunteer.scss';
 import BackHeader from '../../../components/BackHeader/BackHeader';
 import Header from '../../../components/Header/Header';
+import './Volunteer.scss';
+
 function Volunteer(): ReactElement {
     return (
         <div className='test-height'>
