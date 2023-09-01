@@ -1,0 +1,38 @@
+@use '../../../scss/' as *;
+
+.membership-benefit-list-container {
+    padding-top: $spacing-1rem;
+}
+
+.membership-email-text-container {
+    color: $color-link;
+    text-decoration: underline;
+}
+
+.membership-gap-container {
+    margin: $spacing-15rem;
+    border:none;
+}
+
+.membership-line-container {
+    margin: $spacing-15rem;
+    margin-top: $spacing-3rem;
+    margin-bottom: $spacing-3rem;
+}
+
+.membership-pdf-container {
+    margin: $spacing-15rem;
+    margin-bottom: $spacing-4rem;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    color: $color-link;
+    justify-content: center;
+    font-size: $font-size-1;
+    .membership-pdf-icon-container {}
+    .membership-pdf-text-container {
+        padding-left: $spacing-025rem;
+        text-decoration: underline;
+        font-weight: $weight-medium;
+    }
+}
