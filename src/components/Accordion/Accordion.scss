@@ -10,7 +10,6 @@
         font-size: $font-size-15;
         font-weight: $weight-regular;
         background-color: $color-white;
-        z-index: 3;
         .accordion-menu-arrow-container {
             font-size: $font-size-086;
             padding-left: $spacing-075rem;
@@ -35,7 +34,6 @@
             flex-direction: row;
             justify-content: space-between;
             padding: $spacing-025rem;
-            z-index: 1;
             &:nth-child(even) {
                 background-color: $color-article-left-gutter;
             }
