@@ -10,9 +10,19 @@ type DesktopShellProps = {
     title: string;
     children: ReactElement | undefined;
     isArticle: boolean;
+    header: string;
+    blurb: string;
+    textFile: string;
 }
 
-function DesktopShell({ title, children, isArticle }: DesktopShellProps): ReactElement {
+function DesktopShell({
+    title,
+    children,
+    isArticle,
+    header,
+    blurb,
+    textFile
+}: DesktopShellProps): ReactElement {
 
     return (
         <div className='desktop-article-container'>
@@ -26,10 +36,10 @@ function DesktopShell({ title, children, isArticle }: DesktopShellProps): ReactE
                 <div className='right-container'>
                     <div className='text-container'>
                         <div className='header-blurb-title'>
-						Caribbean-American non-profit
+						    {header}
                         </div>
                         <div className='header-blurb'>
-						Unity Sports and Cultural Association is a vibrant and diverse community that celebrates and supports Caribbean culture, sports, and social justice in New England.
+                            {blurb}
                         </div>
                     </div>
                 </div>
@@ -40,7 +50,7 @@ function DesktopShell({ title, children, isArticle }: DesktopShellProps): ReactE
                 <div className='article-content-body'>
                     <BackNav className='article-back'/>
                     <div className='article-content' >
-                        <BodyText textFile={'/pages/AboutUs.txt'} />
+                        <BodyText textFile={textFile} />
                     </div>
             		{children}
                 </div>
