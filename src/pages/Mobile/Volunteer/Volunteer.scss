@@ -24,12 +24,12 @@
     align-items: center;
     color: $color-link;
     font-size: $font-size-1;
-.volunteer-pdf-icon-container {
-    margin-top: $spacing-025rem;
-}
-.volunteer-pdf-text-container {
-    padding-left: $spacing-025rem;
-    text-decoration: underline;
-    font-weight: $weight-medium;
-}
+    .volunteer-pdf-icon-container {
+        margin-top: $spacing-025rem;
+    }
+    .volunteer-pdf-text-container {
+        padding-left: $spacing-025rem;
+        text-decoration: underline;
+        font-weight: $weight-medium;
+    }
 }
