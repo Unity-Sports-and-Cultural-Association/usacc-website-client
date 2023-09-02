@@ -17,6 +17,7 @@
     "react-icons": "^4.10.1",
     "react-router-dom": "^6.15.0",
     "react-scripts": "5.0.1",
+    "react-scroll": "^1.8.9",
     "react-scroll-parallax": "^3.4.2",
     "react-stickynode": "^4.1.0",
     "react-textfit": "^1.1.1",
@@ -62,6 +63,7 @@
   "license": "All Rights Reserved",
   "devDependencies": {
     "@types/react-headroom": "^3.2.0",
+    "@types/react-scroll": "^1.8.7",
     "@types/react-stickynode": "^4.0.0",
     "@types/react-textfit": "^1.1.0",
     "@typescript-eslint/eslint-plugin": "^6.4.1",

@@ -31,6 +31,9 @@
         font-size: $font-size-1;
         padding-top: $spacing-05rem;
         padding-bottom: $spacing-05rem;
+        
+        cursor: pointer;
+        user-select: none;
     }
 
     .article-nav-item {
@@ -55,7 +58,10 @@
         & li {
             text-decoration: underline;
             padding-bottom: $spacing-05rem;
-            color: $color-gray-text;
+            & a{
+                cursor: pointer;
+                color: $color-gray-text;
+            }
         }
     }
 

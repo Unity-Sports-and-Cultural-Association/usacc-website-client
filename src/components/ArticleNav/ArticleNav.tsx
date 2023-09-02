@@ -1,12 +1,16 @@
 import React, { ReactElement } from 'react';
+import { Link } from 'react-router-dom';
+import { Link as Scroll } from 'react-scroll';
 import Sticky from 'react-stickynode';
 import './ArticleNav.scss';
 
 type ArticleNavProps = {
   items: string[];
+  relates: string[][];
+  others: string[][];
 };
 
-function ArticleNav({ items }: ArticleNavProps): ReactElement {
+function ArticleNav({ items, relates, others }: ArticleNavProps): ReactElement {
     return (
         <Sticky top={50} innerClass={'article-nav-sticky'}>
             <div className="article-nav-container">
@@ -17,7 +21,16 @@ function ArticleNav({ items }: ArticleNavProps): ReactElement {
                         <div className="article-nav-items">
                             {items.map((item, index) => (
                                 <div key={index} className="article-nav-item">
-                                    {item}
+                                    <Scroll
+                                        activeClass="active"
+                                        to={`article-section-${index}`}
+                                        spy={true}
+                                        smooth={true}
+                                        duration={250}
+                                        offset={-200}
+                                    >
+                                        {item}
+                                    </Scroll>
                                 </div>
                             ))}
                         </div>
@@ -28,15 +41,21 @@ function ArticleNav({ items }: ArticleNavProps): ReactElement {
                 <div className='topics-container'>
                     <div className='topics-title'> Related Topics</div>
                     <ul className='topics-items'>
-                        <li>Voluteering</li>
-                        <li>Membership</li>
+                        {relates.map((item, index) => (
+                            <li key={index}>
+                                <Link to={item[1]}>{item[0]}</Link>
+                            </li>
+                        ))}
                     </ul>
                 </div>
                 <div className='topics-container'>
                     <div className='topics-title'> Other Topics</div>
                     <ul className='topics-items'>
-                        <li>Booking</li>
-                        <li>Menu</li>
+                        {others.map((item, index) => (
+                            <li key={index}>
+                                <Link to={item[1]}>{item[0]}</Link>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </div>

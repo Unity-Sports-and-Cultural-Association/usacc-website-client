@@ -25,6 +25,7 @@ const BodyText = ({ textFile }: BodyTextProps): ReactElement => {
                     return (
                         <Heading
                             key={index}
+                            id={`article-section-${index}`}
                             type="h1"
                             text={paragraph.replace('# ', '')}
                         />
