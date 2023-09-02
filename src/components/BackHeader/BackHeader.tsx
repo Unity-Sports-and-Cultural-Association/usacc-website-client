@@ -1,11 +1,15 @@
 import React, { ReactElement } from 'react';
-import './BackHeader.scss';
 import { SlArrowLeft } from 'react-icons/sl';
+import { useNavigate } from 'react-router-dom';
+import './BackHeader.scss';
+
 function BackHeader(): ReactElement {
+    const navigate = useNavigate();
+
     return (
-        <div className='back-header-container'>
+        <div onClick={(): void => navigate(-1)} className='back-header-container'>
             <SlArrowLeft className='back-header-left-arrow-container'/>
-            <a href='./' className='back-header-back-text'>Back</a>
+            <div className='back-header-back-text'>Back</div>
         </div>
     );
 }

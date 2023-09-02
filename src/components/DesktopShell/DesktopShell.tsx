@@ -46,7 +46,11 @@ function DesktopShell({ title, children, isArticle }: DesktopShellProps): ReactE
                 </div>
                 }
                 <div className='article-right-buffer'>
-                    <ArticleNav items={[ 'Our Story','What Matters','Making a Change' ]} />
+                    <ArticleNav
+                        items={[ 'Our Story','What Matters','Making a Change' ]}
+                        relates={[ [ 'Volunteering', '/volunteering' ], [ 'Membership','/membership' ] ]}
+                        others={[ [ 'Menu','/menu' ],[ 'Booking','/booking' ] ]}
+                    />
                 </div>
             </div>
         </div>
