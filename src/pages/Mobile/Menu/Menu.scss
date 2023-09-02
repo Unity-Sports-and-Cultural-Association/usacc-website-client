@@ -1,0 +1,15 @@
+@use '../../../scss' as *;
+
+.accordion-width-center-container {
+    display: flex;
+    width: 100%;
+}
+
+.accordion-width-container {
+    max-width: 35rem;
+    width: 100%;
+}
+
+.menu-bottom-spacing-container {
+    height: $spacing-25rem;
+}
