@@ -3,6 +3,7 @@ import Email from '../../../components/Email/Email';
 import HomeBooking from '../../../components/HomeBooking/HomeBooking';
 import HomeHeader from '../../../components/HomeHeader/HomeHeader';
 import HomeLearnMore from '../../../components/HomeLearnMore/HomeLearnMore';
+import LocationWidget from '../../../components/LocationWidget';
 import './Home.scss';
 
 function Home(): ReactElement {
@@ -24,6 +25,7 @@ function Home(): ReactElement {
                 description="Unity is always open to spirited individuals who support the mission and vision of the organization. Even though we are a Caribbean club everyone is welcome."
                 button='./membership'
             />
+            <LocationWidget />
             <Email />
         </div>
     );
