@@ -1,0 +1,50 @@
+@use '../../scss' as *;
+
+.accordion-container {
+    padding-left: $spacing-075rem;
+    padding-right: $spacing-2rem;
+    .menu-line-container {opacity: .3;}
+    .accordion-title-container {
+        display: flex;
+        align-items: center;
+        font-size: $font-size-15;
+        font-weight: $weight-regular;
+        background-color: $color-white;
+        z-index: 3;
+        .accordion-menu-arrow-container {
+            font-size: $font-size-086;
+            padding-left: $spacing-075rem;
+        }
+    }
+    .accordion-menu-item-container.closed {
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height $transition-default ease-in-out, opacity $transition-default;
+    }
+    .accordion-menu-item-container {
+        max-height: 500px;
+        padding-top: $spacing-05rem;
+        font-size: $font-size-1;
+        font-weight: $weight-regular;
+        display: flex;
+        flex-direction: column;
+        transition: max-height $transition-slow ease-in-out, opacity $transition-default;
+        .accordion-menu-item-row-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: $spacing-025rem;
+            z-index: 1;
+            &:nth-child(even) {
+                background-color: $color-article-left-gutter;
+            }
+            .accordion-menu-item-price-container {
+                padding-left: $spacing-075rem;
+                font-weight: $weight-medium;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
