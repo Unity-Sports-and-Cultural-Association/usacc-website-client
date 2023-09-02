@@ -10,12 +10,10 @@ function NavBar(): ReactElement {
     const isMobile = useContext(IsMobileContext);
 
     return (
-
-        <Headroom>
+        <Headroom disableInlineStyles={isOpen}>
             {isMobile ? <MobileNav isOpen={isOpen} setOpen={setOpen}/>
                 : <DesktopNav isOpen={isOpen} setOpen={setOpen} />}
         </Headroom>
-
     );
 }
 

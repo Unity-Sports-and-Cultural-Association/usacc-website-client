@@ -15,6 +15,11 @@ body {
   min-width: 343px;
 }
 
+body.modal-open {
+  margin-right: 10px;
+}
+
+
 a {
   position: relative;
   text-decoration: none;

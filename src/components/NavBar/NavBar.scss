@@ -26,3 +26,28 @@
 .navbar-master-container.hide-nav {
     opacity: 0;
 }
+
+.headroom--unpinned {
+    position: fixed;
+    transform: translateY(0%);
+}
+
+.headroom {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  .headroom--unfixed {
+    position: relative;
+    transform: translateY(0);
+  }
+  .headroom--scrolled {
+    transition: transform 200ms ease-in-out;
+  }
+
+  .headroom--pinned {
+    position: fixed;
+    transform: translateY(0%);
+  }
+  
