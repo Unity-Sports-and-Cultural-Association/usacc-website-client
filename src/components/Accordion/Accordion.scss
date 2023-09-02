@@ -5,6 +5,8 @@
     padding-right: $spacing-2rem;
     .menu-line-container {opacity: .3;}
     .accordion-title-container {
+        cursor: pointer;
+        user-select: none;
         display: flex;
         align-items: center;
         font-size: $font-size-15;
@@ -39,8 +41,9 @@
             }
             .accordion-menu-item-price-container {
                 padding-left: $spacing-075rem;
-                font-weight: $weight-medium;
+                font-weight: $weight-thick;
                 white-space: nowrap;
+                color: $color-gray-text;
             }
         }
     }
