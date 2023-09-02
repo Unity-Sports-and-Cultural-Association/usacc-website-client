@@ -88,7 +88,11 @@
 
     .article-back {
         position: absolute;
-        left: $spacing-25rem;
-        top: $spacing-3rem;
+        left: $spacing-15rem;
+        top: $spacing-2rem;
     }
+}
+
+.article-nav-sticky {
+    transition: $transition-default;
 }

@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { ReactElement } from 'react';
 import { Parallax } from 'react-scroll-parallax';
+import ArticleNav from '../ArticleNav';
 import BackNav from '../BackNav/BackNav';
 import BodyText from '../BodyText';
 import './DesktopShell.scss';
@@ -44,7 +45,9 @@ function DesktopShell({ title, children, isArticle }: DesktopShellProps): ReactE
             		{children}
                 </div>
                 }
-                <div className='article-right-buffer'></div>
+                <div className='article-right-buffer'>
+                    <ArticleNav items={[ 'Our Story','What Matters','Making a Change' ]} />
+                </div>
             </div>
         </div>
     );

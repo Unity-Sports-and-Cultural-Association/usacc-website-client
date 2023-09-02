@@ -16,23 +16,25 @@ import './App.scss';
 function App(): ReactElement {
     const isMobile = useIsMobile();
     return (
-        <IsMobileContext.Provider value={isMobile}>
-            <ParallaxProvider>
-                <Router>
-                    <NavBar />
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/menu" element={<Menu />} />
-                        <Route path="/volunteering" element={<Volunteer />} />
-                        <Route path="/about" element={<AboutUsSwitch isMobile={isMobile} />} />
-                        <Route path="/membership" element={<Membership />} />
-                        <Route path="/booking" element={<Booking />} />
-                        <Route path="*" element={<Navigate to="/" />} />
-                    </Routes>
-                    <Footer />
-                </Router>
-            </ParallaxProvider>
-        </IsMobileContext.Provider>
+        <div className='app-container'>
+            <IsMobileContext.Provider value={isMobile}>
+                <ParallaxProvider>
+                    <Router>
+                        <NavBar />
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/menu" element={<Menu />} />
+                            <Route path="/volunteering" element={<Volunteer />} />
+                            <Route path="/about" element={<AboutUsSwitch isMobile={isMobile} />} />
+                            <Route path="/membership" element={<Membership />} />
+                            <Route path="/booking" element={<Booking />} />
+                            <Route path="*" element={<Navigate to="/" />} />
+                        </Routes>
+                        <Footer />
+                    </Router>
+                </ParallaxProvider>
+            </IsMobileContext.Provider>
+        </div>
     );
 }
 
