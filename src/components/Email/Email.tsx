@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { ReactElement, useRef, useState } from 'react';
 import './Email.scss';
 
@@ -29,10 +30,30 @@ function Email(): ReactElement {
         handleEmailVerification();
         handleNameVerification();
         if (handleEmailVerification() && handleNameVerification()) {
-            // console.log({
-            //     name: nameValue?.current?.value,
-            //     email: emailValue?.current?.value,
-            // });
+            const formData = {
+                name: nameValue?.current?.value,
+                email: emailValue?.current?.value,
+            };
+            console.log(formData);
+            fetch(
+                'https://script.google.com/macros/s/AKfycbxKkNBjhR4H_tDEy5vn2PbgFa0A0XADQDp41E9YCso9QH_yT3Z1RsjbhP0Nve_OY5lv1A/exec',
+                {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                }
+            )
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log(data.message);
+                    alert(data.message);
+                })
+                .catch((error) => {
+                    console.log(error);
+                    alert('Something went wrong');
+                });
         }
 
     };
