@@ -1,5 +1,4 @@
 import React, { ReactElement } from 'react';
-import BackHeader from '../../../components/BackHeader/BackHeader';
 import Email from '../../../components/Email/Email';
 import HomeBooking from '../../../components/HomeBooking/HomeBooking';
 import HomeHeader from '../../../components/HomeHeader/HomeHeader';
@@ -11,26 +10,23 @@ function Home(): ReactElement {
     return (
         <>
             <HomeHeader />
-            <BackHeader />
-            <div className='mobile-content-container'>
-                <HomeBooking />
-                <HomeLearnMore
-                    image={'./assets/volunteering.png'}
-                    title="Volunteering"
-                    topic="Community Events"
-                    description="Unity Sports and Cultural Club offers a range of events and activities that give back to the community. Including opportunities for community service."
-                    button='./volunteering'
-                />
-                <HomeLearnMore
-                    image={'./assets/membership.png'}
-                    title="Membership"
-                    topic="Making a Difference"
-                    description="Unity is always open to spirited individuals who support the mission and vision of the organization. Even though we are a Caribbean club everyone is welcome."
-                    button='./membership'
-                />
-                <LocationWidget />
-                <Email />
-            </div>
+            <HomeBooking />
+            <HomeLearnMore
+                image={'./assets/volunteering.png'}
+                title="Volunteering"
+                topic="Community Events"
+                description="Unity Sports and Cultural Club offers a range of events and activities that give back to the community. Including opportunities for community service."
+                button='./volunteering'
+            />
+            <HomeLearnMore
+                image={'./assets/membership.png'}
+                title="Membership"
+                topic="Making a Difference"
+                description="Unity is always open to spirited individuals who support the mission and vision of the organization. Even though we are a Caribbean club everyone is welcome."
+                button='./membership'
+            />
+            <LocationWidget />
+            <Email />
         </>
     );
 }
