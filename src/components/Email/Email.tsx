@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React, { ReactElement, useRef, useState } from 'react';
 import './Email.scss';
 
@@ -30,30 +29,23 @@ function Email(): ReactElement {
         handleEmailVerification();
         handleNameVerification();
         if (handleEmailVerification() && handleNameVerification()) {
-            const formData = {
-                name: nameValue?.current?.value,
-                email: emailValue?.current?.value,
-            };
-            console.log(formData);
-            fetch(
-                'http://anyorigin.com/go?url=https://script.google.com/macros/s/AKfycbxKkNBjhR4H_tDEy5vn2PbgFa0A0XADQDp41E9YCso9QH_yT3Z1RsjbhP0Nve_OY5lv1A/exec',
+            const name = nameValue?.current?.value;
+            const email = emailValue?.current?.value;
+
+            // console.log(name, email);
+            const myHeaders = new Headers();
+            myHeaders.append('Content-Type', 'application/json');
+
+            // console.log(process.env.REACT_APP_SHEETS_API_KEY);
+            fetch(`${process.env.REACT_APP_SHEETS_API_KEY}`,
                 {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify(formData)
+                    body: JSON.stringify([ [ name, email ] ])
                 }
-            )
-                .then((res) => res.json())
-                .then((data) => {
-                    console.log(data.message);
-                    alert(data.message);
-                })
-                .catch((error) => {
-                    console.log(error);
-                    alert('Something went wrong');
-                });
+            );
         }
 
     };

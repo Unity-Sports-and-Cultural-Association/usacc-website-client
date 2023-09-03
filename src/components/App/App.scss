@@ -34,7 +34,11 @@ a {
 }
 
 .mobile-content-container {
-
+  display: flex;
+  flex-direction: column;
+  padding-left: 3%;
+  max-width: 600px;
+  position: relative;
 }
 
 .red-button {
