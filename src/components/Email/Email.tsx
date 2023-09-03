@@ -36,7 +36,7 @@ function Email(): ReactElement {
             };
             console.log(formData);
             fetch(
-                'https://script.google.com/macros/s/AKfycbxKkNBjhR4H_tDEy5vn2PbgFa0A0XADQDp41E9YCso9QH_yT3Z1RsjbhP0Nve_OY5lv1A/exec',
+                'http://anyorigin.com/go?url=https://script.google.com/macros/s/AKfycbxKkNBjhR4H_tDEy5vn2PbgFa0A0XADQDp41E9YCso9QH_yT3Z1RsjbhP0Nve_OY5lv1A/exec',
                 {
                     method: 'POST',
                     headers: {
