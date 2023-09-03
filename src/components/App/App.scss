@@ -33,6 +33,35 @@ a {
   color: red;
 }
 
-.test-height {
-  min-height: 120vh;
+.mobile-content-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 3%;
+  max-width: 600px;
+  position: relative;
+}
+
+.red-button {
+  transition: $transition-fast;
+}
+
+.red-button:hover {
+  background-color: $color-link-hover !important;
+  box-shadow: $card-shadow;
+}
+
+.red-button:active {
+  box-shadow: $card-shadow inset;
+}
+.arrow-n-text {
+  span {
+    transition: $transition-fast ease-out;
+  }
+
+  &:hover {
+    span {
+      margin-right: $spacing-05rem;
+      margin-left: $spacing-05rem;
+    }
+  }
 }

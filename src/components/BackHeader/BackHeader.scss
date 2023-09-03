@@ -9,6 +9,7 @@
     align-items: center;
     user-select: none;
     cursor: pointer;
+    margin-bottom: $spacing-1rem;
     .back-header-left-arrow-container {
         font-size: $font-size-05;
         margin-top: 2px;
@@ -20,6 +21,6 @@
         padding-bottom: 0;
         color: $color-blue;
         font-weight: $weight-medium;
-        font-size: $font-size-1;
+        font-size: $font-size-12;
     }
 }

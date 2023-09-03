@@ -5,8 +5,7 @@
     align-items: center;
     justify-content: center;
     color: $color-blue;
-    font-size: $font-size-1;
-    gap: $spacing-05rem;
+    gap: $spacing-025rem;
     
     .back-nav-link {
         font-weight: $weight-regular;
@@ -15,5 +14,9 @@
         cursor: pointer;
         user-select: none;
 
+    }
+
+    svg {
+        font-size: $font-size-05;
     }
 }
