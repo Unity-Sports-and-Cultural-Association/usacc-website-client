@@ -5,6 +5,7 @@
     padding-right: $spacing-2rem;
     .menu-line-container {opacity: .3;}
     .accordion-title-container {
+        padding-top: $spacing-05rem;
         cursor: pointer;
         user-select: none;
         display: flex;

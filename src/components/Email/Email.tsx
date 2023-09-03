@@ -80,7 +80,7 @@ function Email(): ReactElement {
                     ref={emailValue as React.RefObject<HTMLInputElement>}
                 />
                 <div className={hasEmailError ? 'email-error-container' : 'email-error-hide-container'} >The email field is required</div>
-                <div className='email-submit-button-container' onClick={handleVerifications}>Submit</div>
+                <div className='email-submit-button-container red-button' onClick={handleVerifications}>Submit</div>
             </div>
         </div>
     );

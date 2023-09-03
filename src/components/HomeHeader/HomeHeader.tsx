@@ -21,7 +21,7 @@ function HomeHeader(): ReactElement {
                 <div>
                     <div className='home-header-menu-title-text-container'>Night Life</div>
                     <div className='home-header-menu-time-container'>Fri-Sat: 10pm-2am</div>
-                    <a href='./menu' className='home-header-menu-container'>menu<SlArrowRight className='home-header-menu-right-arrow-container'/></a>
+                    <a href='./menu' className='home-header-menu-container arrow-n-text'><span>menu</span><SlArrowRight className='home-header-menu-right-arrow-container'/></a>
                 </div>
             </div>
         </div>
