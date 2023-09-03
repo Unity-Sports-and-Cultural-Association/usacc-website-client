@@ -1,36 +1,61 @@
+/* eslint-disable no-console */
 import React, { ReactElement, useRef, useState } from 'react';
 import './Email.scss';
 
 
 function Email(): ReactElement {
     const emailTest = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
-    const value = useRef<HTMLInputElement | HTMLTextAreaElement>(null);
+    const emailValue = useRef<HTMLInputElement | HTMLTextAreaElement>(null);
     const nameValue = useRef<HTMLInputElement | HTMLTextAreaElement>(null);
-    const [ emailError, setEmailError ] = useState(false);
-    const [ firstLastName, setFirstLastName ] = useState(false);
+    const [ hasEmailError, setHasEmailError ] = useState(false);
+    const [ hasNameError, setHasNameError ] = useState(false);
 
-    const handleNameVerification = (): void => {
-        if (nameValue.current?.value != '') {
-            setFirstLastName(false);
-        } else {
-            setFirstLastName(true);
-        }
+    const handleNameVerification = (): boolean => {
+        const isValid = nameValue.current?.value != '';
+        setHasNameError(!isValid);
+        return (isValid);
     };
 
-    const handleEmailVerification = (): void => {
-        if (value.current?.value == null) {
-            setEmailError(true);
+    const handleEmailVerification = (): boolean => {
+        if (emailValue.current?.value == null) {
+            setHasEmailError(true);
+            return false;
         }
-        if ((emailTest.test(value.current?.value ? value.current?.value : 'examplegmail.com'))) {
-            setEmailError(false);
-        } else {
-            setEmailError(true);
-        }
+        const isValid = emailTest.test(emailValue.current?.value ? emailValue.current?.value : 'examplegmail.com');
+        setHasEmailError(!isValid);
+        return (isValid);
     };
 
     const handleVerifications = (): void => {
         handleEmailVerification();
         handleNameVerification();
+        if (handleEmailVerification() && handleNameVerification()) {
+            const formData = {
+                name: nameValue?.current?.value,
+                email: emailValue?.current?.value,
+            };
+            console.log(formData);
+            fetch(
+                'https://script.google.com/macros/s/AKfycbxKkNBjhR4H_tDEy5vn2PbgFa0A0XADQDp41E9YCso9QH_yT3Z1RsjbhP0Nve_OY5lv1A/exec',
+                {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                }
+            )
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log(data.message);
+                    alert(data.message);
+                })
+                .catch((error) => {
+                    console.log(error);
+                    alert('Something went wrong');
+                });
+        }
+
     };
 
     return (
@@ -45,14 +70,24 @@ function Email(): ReactElement {
                     <div className='email-label-text-container'>Name</div>
                     <div className='email-red-star-container'>*</div>
                 </div>
-                <input className={firstLastName ? 'email-input-error-container' : 'email-input-container'} type='text' placeholder='First Last' ref={nameValue as React.RefObject<HTMLInputElement>}/>
-                <div className={firstLastName ? 'email-error-container' : 'email-error-hide-container'} >The name field is required</div>
+                <input
+                    className={hasNameError ? 'email-input-error-container' : 'email-input-container'}
+                    type='text'
+                    placeholder='First Last'
+                    ref={nameValue as React.RefObject<HTMLInputElement>}
+                />
+                <div className={hasNameError ? 'email-error-container' : 'email-error-hide-container'} >The name field is required</div>
                 <div className='email-label-container'>
                     <div className='email-label-text-container'>Email</div>
                     <div className='email-red-star-container'>*</div>
                 </div>
-                <input className={emailError ? 'email-input-error-container' : 'email-input-container'} type='text' placeholder='Example@gmail.com' ref={value as React.RefObject<HTMLInputElement>}/>
-                <div className={emailError ? 'email-error-container' : 'email-error-hide-container'} >The email field is required</div>
+                <input
+                    className={hasEmailError ? 'email-input-error-container' : 'email-input-container'}
+                    type='text'
+                    placeholder='Example@gmail.com'
+                    ref={emailValue as React.RefObject<HTMLInputElement>}
+                />
+                <div className={hasEmailError ? 'email-error-container' : 'email-error-hide-container'} >The email field is required</div>
                 <div className='email-submit-button-container' onClick={handleVerifications}>Submit</div>
             </div>
         </div>

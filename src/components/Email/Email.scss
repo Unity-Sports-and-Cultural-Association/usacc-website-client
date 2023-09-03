@@ -83,6 +83,9 @@
             font-size: $font-size-15;
             font-weight: $weight-thin;
             margin-top: $spacing-15rem;
+            cursor: pointer;
+            user-select: none;
+
         }
     }
 }
