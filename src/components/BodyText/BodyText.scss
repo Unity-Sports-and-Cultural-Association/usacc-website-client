@@ -1,7 +1,9 @@
 @use '../../scss' as *;
 
 .article-container {
-    .heading-text-h1 {
-        margin-bottom: $font-size-1;
+
+    p {
+        font-size: $font-size-12;
+        font-weight: $weight-medium;
     }
 }

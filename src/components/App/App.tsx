@@ -7,7 +7,7 @@ import Booking from '../../pages/Mobile/Booking/Booking';
 import Home from '../../pages/Mobile/Home/Home';
 import Membership from '../../pages/Mobile/Membership/Membership';
 import Menu from '../../pages/Mobile/Menu/Menu';
-import Volunteer from '../../pages/Mobile/Volunteer/Volunteer';
+import VolunteeringSwitch from '../../pages/VolunteeringSwitch';
 import IsMobileContext from '../../utils/isMobileContext';
 import useIsMobile from '../../utils/useIsMobile';
 import Footer from '../Footer';
@@ -38,8 +38,8 @@ function App(): ReactElement {
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/menu" element={<Menu />} />
-                        <Route path="/volunteering" element={<Volunteer />} />
-                        <Route path="/about" element={<AboutUsSwitch isMobile={isMobile} />} />
+                        <Route path="/volunteering" element={<VolunteeringSwitch />} />
+                        <Route path="/about" element={<AboutUsSwitch />} />
                         <Route path="/membership" element={<Membership />} />
                         <Route path="/booking" element={<Booking />} />
                         <Route path="*" element={<Navigate to="/" />} />

@@ -4,6 +4,8 @@
     display: flex;
     flex-direction: column;
 
+
+
     .footer-navs-container {
         display: flex;
         justify-content: center;
@@ -11,6 +13,9 @@
         width: 100%;
         
         background-color: $color-primary-dark;
+        @media (min-width: 768px) {
+            box-shadow: $shadow-top;
+        }
     }
 
     .footer-navs {

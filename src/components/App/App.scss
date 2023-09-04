@@ -47,11 +47,11 @@ a {
 
 .red-button:hover {
   background-color: $color-link-hover !important;
-  box-shadow: $card-shadow;
+  box-shadow: $shadow-card;
 }
 
 .red-button:active {
-  box-shadow: $card-shadow inset;
+  box-shadow: $shadow-card inset;
 }
 .arrow-n-text {
   span {

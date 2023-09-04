@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { ReactElement } from 'react';
 import { Parallax } from 'react-scroll-parallax';
-import ArticleNav from '../ArticleNav';
 import BackNav from '../BackNav/BackNav';
 import BodyText from '../BodyText';
 import './DesktopShell.scss';
@@ -13,6 +12,7 @@ type DesktopShellProps = {
     header: string;
     blurb: string;
     textFile: string;
+    articleNav: ReactElement;
 }
 
 function DesktopShell({
@@ -21,7 +21,8 @@ function DesktopShell({
     isArticle,
     header,
     blurb,
-    textFile
+    textFile,
+    articleNav
 }: DesktopShellProps): ReactElement {
 
     return (
@@ -56,11 +57,7 @@ function DesktopShell({
                 </div>
                 }
                 <div className='article-right-buffer'>
-                    <ArticleNav
-                        items={[ 'Our Story','What Matters','Making a Change' ]}
-                        relates={[ [ 'Volunteering', '/volunteering' ], [ 'Membership','/membership' ] ]}
-                        others={[ [ 'Menu','/menu' ],[ 'Booking','/booking' ] ]}
-                    />
+                    {articleNav}
                 </div>
             </div>
         </div>
