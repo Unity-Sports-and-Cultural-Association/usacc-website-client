@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect } from 'react';
+import React, { ReactElement } from 'react';
 import BackHeader from '../../../components/BackHeader/BackHeader';
 import BookingContact from '../../../components/BookingContact/BookingContact';
 import Carousel from '../../../components/Carousel/Carousel';
@@ -7,9 +7,6 @@ import Header from '../../../components/Header';
 import './Booking.scss';
 
 function Booking(): ReactElement {
-    useEffect(() => {
-        document.title = 'Unity Sports: Booking';
-    }, []);
     const gallary = [
         [ './assets/photo1.jpg' ],
         [ './assets/photo2.jpg' ],

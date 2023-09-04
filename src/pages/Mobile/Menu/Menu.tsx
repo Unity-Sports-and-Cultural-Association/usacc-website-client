@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect } from 'react';
+import React, { ReactElement } from 'react';
 import Accordion from '../../../components/Accordion/Accordion';
 import BackHeader from '../../../components/BackHeader/BackHeader';
 import DescriptionBody from '../../../components/DescriptionBody/DescriptionBody';
@@ -6,9 +6,6 @@ import Header from '../../../components/Header';
 import './Menu.scss';
 
 function Menu(): ReactElement {
-    useEffect(() => {
-        document.title = 'Unity Sports: Menu';
-    }, []);
     const seafood = [
         [ 'Seafood (Fish & Shrimp w/ Fries)', '$25' ],
         [ 'Shrimp & Fries', '$16' ],

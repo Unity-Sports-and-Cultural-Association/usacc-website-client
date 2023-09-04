@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect } from 'react';
+import React, { ReactElement } from 'react';
 import Email from '../../../components/Email/Email';
 import HomeBooking from '../../../components/HomeBooking/HomeBooking';
 import HomeHeader from '../../../components/HomeHeader/HomeHeader';
@@ -7,9 +7,6 @@ import LocationWidget from '../../../components/LocationWidget';
 import './Home.scss';
 
 function Home(): ReactElement {
-    useEffect(() => {
-        document.title = 'Unity Sports: Home';
-    }, []);
     return (
         <>
             <HomeHeader />

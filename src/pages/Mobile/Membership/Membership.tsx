@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect } from 'react';
+import React, { ReactElement } from 'react';
 import { SlFolder } from 'react-icons/sl';
 import BackHeader from '../../../components/BackHeader/BackHeader';
 import DescriptionBody from '../../../components/DescriptionBody/DescriptionBody';
@@ -6,9 +6,6 @@ import Header from '../../../components/Header/Header';
 import './Membership.scss';
 
 function Membership(): ReactElement {
-    useEffect(() => {
-        document.title = 'Unity Sports: Membership';
-    }, []);
 
     return (
         <>
