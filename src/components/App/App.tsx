@@ -30,6 +30,10 @@ function App(): ReactElement {
         window.scrollTo(0, 0);
     }, [ pathname ]);
 
+    useEffect(() => {
+        document.title = 'Unity Sports' + `${pathname == '/' ? '' : ': '}` + `${pathname.replace('/', '').charAt(0).toUpperCase() + pathname.replace('/', '').slice(1)}`;
+    }, [ pathname ]);
+
     return (
         <div className='app-container'>
             <IsMobileContext.Provider value={isMobile}>

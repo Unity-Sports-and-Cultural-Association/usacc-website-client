@@ -14,7 +14,6 @@ function Booking(): ReactElement {
         [ './assets/photo4.jpg' ],
     ];
 
-
     return (
         <>
             <Header
@@ -23,27 +22,29 @@ function Booking(): ReactElement {
                 description='Unity provides services for booking If you are looking for a space to host your next event or authentic Caribbean catering.'
             />
             <BackHeader />
-            <DescriptionBody
-                title='Booking a Hall'
-                description={<div>Unity offers two halls, options for catering and bartenders may be available upon request.</div>}
-            />
-            <Carousel
-                image={gallary}
-                title='Ballroom'
-                capacity='Capacity: 500 people'
-                description='Provides a stage, open wide area, and a bar area as a possible option. This space is great for large events that intend to have djs and an area for dancing. A great option for hosting weddings and funeral ceremonies.'
-            />
-            <Carousel
-                image={gallary}
-                title='Long Hall'
-                capacity='Capacity: 200 people'
-                description='This space is perfect for birthday parties and smaller gatherings'
-            />
-            <BookingContact
-                title='Over the Phone'
-                description={'Over the phone allows you to check live available spots from our ledger. After the request a representitive will reach out to you on a later date.'}
-                phoneNumber='(617) 436-9550'
-            />
+            <div className='mobile-content-container'>
+                <DescriptionBody
+                    title='Booking a Hall'
+                    description={<div>Unity offers two halls, options for catering and bartenders may be available upon request.</div>}
+                />
+                <Carousel
+                    image={gallary}
+                    title='Ballroom'
+                    capacity='Capacity: 500 people'
+                    description='Provides a stage, open wide area, and a bar area as a possible option. This space is great for large events that intend to have djs and an area for dancing. A great option for hosting weddings and funeral ceremonies.'
+                />
+                <Carousel
+                    image={gallary}
+                    title='Long Hall'
+                    capacity='Capacity: 200 people'
+                    description='This space is perfect for birthday parties and smaller gatherings'
+                />
+                <BookingContact
+                    title='Over the Phone'
+                    description={'Over the phone allows you to check live available spots from our ledger. After the request a representitive will reach out to you on a later date.'}
+                    phoneNumber='(617) 436-9550'
+                />
+            </div>
         </>
     );
 }

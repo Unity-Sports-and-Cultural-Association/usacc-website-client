@@ -7,9 +7,7 @@
     padding-left: $spacing-15rem;
     padding-top: $spacing-1rem;
     padding-bottom: $spacing-2rem;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(24, 0, 0, 0.451389) 77.43%, #340000 100%),
-linear-gradient(0deg, #570B0B, #570B0B);
-
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(24, 0, 0, 0.451389) 77.43%, #340000 100%), linear-gradient(0deg, #570B0B, #570B0B);
     .header-title-container {
         color: $color-white;
         font-size: $font-size-25;
