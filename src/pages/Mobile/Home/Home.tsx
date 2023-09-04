@@ -1,5 +1,4 @@
 import React, { ReactElement } from 'react';
-import BackHeader from '../../../components/BackHeader/BackHeader';
 import Email from '../../../components/Email/Email';
 import HomeBooking from '../../../components/HomeBooking/HomeBooking';
 import HomeHeader from '../../../components/HomeHeader/HomeHeader';

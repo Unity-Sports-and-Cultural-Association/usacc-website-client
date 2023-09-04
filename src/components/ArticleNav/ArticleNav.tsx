@@ -23,7 +23,7 @@ function ArticleNav({ items, relates, others }: ArticleNavProps): ReactElement {
                                 <div key={index} className="article-nav-item">
                                     <Scroll
                                         activeClass="active"
-                                        to={`article-section-${index}`}
+                                        to={`article-section-${index + 1}`}
                                         spy={true}
                                         smooth={true}
                                         duration={250}

@@ -8,7 +8,6 @@
         position: relative;
         width: 100%;
         background-color: $color-primary;
-
         display: flex;
     }
 
@@ -33,7 +32,7 @@
     }
 
     .right-container {
-        flex: 4;
+        flex: 5;
         background-color: $color-article-header-background;
         display: flex;
         flex-direction: column;
@@ -55,24 +54,29 @@
 
 
     .desktop-article-body-container {
-        height: 90vh;
+        height: 100%;
         width: 100%;
         display: flex;
-
     }
 
     .article-left-buffer {
         background-color: $color-article-left-gutter;
         flex: 1;
-        max-width: 7rem;
+        max-width: clamp(3rem, 5vw, 7rem);
     }
 
     .article-content-body {
         position: relative;
-        flex: 5;
+        flex: 6;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: $spacing-12rem;
 
         display: flex;
         justify-content: center;
+        
+        padding-bottom: $spacing-5rem;
     }
 
     .article-content {
