@@ -8,7 +8,7 @@ type BodyTextProps = {
 
 const BodyText = ({ textFile }: BodyTextProps): ReactElement => {
     const [ text, setText ] = useState<string[]>([]);
-
+    let counter = 0;
 
     useEffect(() => {
         fetch(textFile)
@@ -25,17 +25,29 @@ const BodyText = ({ textFile }: BodyTextProps): ReactElement => {
                     return (
                         <Heading
                             key={index}
-                            id={`article-section-${index}`}
                             type="h1"
                             text={paragraph.replace('# ', '')}
                         />
                     );
                 } else if (paragraph.startsWith('## ')) {
+                    counter++;
                     return (
                         <Heading
                             key={index}
+                            id={`article-section-${counter}`}
                             type="h2"
                             text={paragraph.replace('## ', '')}
+                            className={index === 1 ? 'begin' : ''}
+                        />
+                    );
+                } else if (paragraph.startsWith('### ')) {
+                    counter++;
+                    return (
+                        <Heading
+                            key={index}
+                            id={`article-section-${counter}`}
+                            type="ghost"
+                            text={paragraph.replace('### ', '')}
                         />
                     );
                 } else {

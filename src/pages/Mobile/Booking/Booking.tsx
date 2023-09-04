@@ -16,7 +16,7 @@ function Booking(): ReactElement {
 
 
     return (
-        <div className='test-height'>
+        <>
             <Header
                 title={<div>Renting a<br />Service</div>}
                 topic='Booking Halls, Bartenders, & Catering'
@@ -44,8 +44,7 @@ function Booking(): ReactElement {
                 description={'Over the phone allows you to check live available spots from our ledger. After the request a representitive will reach out to you on a later date.'}
                 phoneNumber='(617) 436-9550'
             />
-
-        </div>
+        </>
     );
 }
 

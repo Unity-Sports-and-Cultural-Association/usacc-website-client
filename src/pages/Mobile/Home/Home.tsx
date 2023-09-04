@@ -8,7 +8,7 @@ import './Home.scss';
 
 function Home(): ReactElement {
     return (
-        <div className='test-height'>
+        <>
             <HomeHeader />
             <HomeBooking />
             <HomeLearnMore
@@ -27,7 +27,7 @@ function Home(): ReactElement {
             />
             <LocationWidget />
             <Email />
-        </div>
+        </>
     );
 }
 

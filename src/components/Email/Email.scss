@@ -6,7 +6,7 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px -2px 4px 0px #00000045;
+    box-shadow: $shadow-top;
     .email-container {
         display: flex;
         flex-direction: column;
@@ -83,6 +83,8 @@
             font-size: $font-size-15;
             font-weight: $weight-thin;
             margin-top: $spacing-15rem;
+            cursor: pointer;
+            user-select: none;
         }
     }
 }

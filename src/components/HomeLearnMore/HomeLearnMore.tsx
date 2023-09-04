@@ -11,7 +11,7 @@ function HomeLearnMore({ image, title, topic, description, button }: HomeLearnMo
                     <div className='home-learn-more-title-container'>{title}</div>
                     <div className='home-learn-more-topic-container'>{topic}</div>
                     <div className='home-learn-more-description-container'>{description}</div>
-                    <a href={button} className='home-learn-more-buttom-container'>Learn More<SlArrowRight className='home-learn-more-right-arrow-container' /></a>
+                    <a href={button} className='home-learn-more-buttom-container arrow-n-text'><span>Learn More</span><SlArrowRight className='home-learn-more-right-arrow-container' /></a>
                 </div>
             </div>
         </div>

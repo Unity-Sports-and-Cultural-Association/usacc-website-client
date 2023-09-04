@@ -1,10 +1,13 @@
 @use '../../scss' as *;
 
 .article-nav-container {
+    background-color: $color-article-right-gutter;
+    border-radius: 5px;
     margin-top: $spacing-3rem;
     margin-left: $spacing-2rem;
     display: flex;
     flex-direction: column;
+    max-width: 13rem;
     .article-timeline {
         width: 3px;
         background-color: $color-gray;
@@ -37,7 +40,7 @@
     }
 
     .article-nav-item {
-        padding-bottom: $spacing-05rem;
+        padding-bottom: $spacing-1rem;
     }
 
     .article-nav-divider {
