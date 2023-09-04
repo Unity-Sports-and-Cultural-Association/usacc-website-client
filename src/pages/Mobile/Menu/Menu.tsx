@@ -49,12 +49,9 @@ function Menu(): ReactElement {
                 <DescriptionBody
                     title='Food Menu'
                     description={
-                        <div>
-                            Selection & Pricing may vary in house.
-                        </div>
+                        <div>Unity offers a diverse and delicious take-out menu that features authentic Caribbean cuisine. The options include fresh and flavorful seafood, classic chicken dishes, and a variety of sides to complement the meal. There are also regularly in-house specials like aloo pie, souce, and Pholourie.</div>
                     }
                 />
-                {/* <div>Unity offers a diverse and delicious take-out menu that features authentic Caribbean cuisine. The options include fresh and flavorful seafood, classic chicken dishes, and a variety of sides to complement the meal. There are also regularly in-house specials like aloo pie, souce, and Pholourie</div> */}
                 <DescriptionBody
                     title=''
                     description={
@@ -80,6 +77,7 @@ function Menu(): ReactElement {
                         </div>
                     }
                 />
+                <div className='food-menu-description-subtext-container'>* Selection & Pricing may vary in house</div>
                 <DescriptionBody
                     title=''
                     description={
