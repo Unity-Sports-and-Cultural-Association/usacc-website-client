@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useEffect } from 'react';
 import Accordion from '../../../components/Accordion/Accordion';
 import BackHeader from '../../../components/BackHeader/BackHeader';
 import DescriptionBody from '../../../components/DescriptionBody/DescriptionBody';
@@ -6,6 +6,9 @@ import Header from '../../../components/Header';
 import './Menu.scss';
 
 function Menu(): ReactElement {
+    useEffect(() => {
+        document.title = 'Unity Sports: Menu';
+    }, []);
     const seafood = [
         [ 'Seafood (Fish & Shrimp w/ Fries)', '$25' ],
         [ 'Shrimp & Fries', '$16' ],
@@ -50,9 +53,11 @@ function Menu(): ReactElement {
                     title='Food Menu'
                     description={
                         <div>
-                        Unity offers a diverse and delicious take-out menu that features authentic Caribbean cuisine. The options include fresh and flavorful seafood, classic chicken dishes, and a variety of sides to complement the meal. There are also regularly in-house specials like aloo pie, souce, and Pholourie
-                        </div>}
+                            Selection & Pricing may vary in house.
+                        </div>
+                    }
                 />
+                {/* <div>Unity offers a diverse and delicious take-out menu that features authentic Caribbean cuisine. The options include fresh and flavorful seafood, classic chicken dishes, and a variety of sides to complement the meal. There are also regularly in-house specials like aloo pie, souce, and Pholourie</div> */}
                 <DescriptionBody
                     title=''
                     description={

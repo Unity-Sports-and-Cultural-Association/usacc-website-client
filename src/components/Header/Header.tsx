@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import './Header.scss';
+
 type HeaderProps = {title: ReactElement | string, topic: string, description: string};
 function Header({ title, topic, description }: HeaderProps): ReactElement {
     return (
