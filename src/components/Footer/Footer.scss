@@ -13,9 +13,8 @@
         width: 100%;
         
         background-color: $color-primary-dark;
-        @media (min-width: 768px) {
-            box-shadow: $shadow-top;
-        }
+        
+        box-shadow: $shadow-top;
     }
 
     .footer-navs {

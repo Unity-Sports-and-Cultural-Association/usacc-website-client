@@ -4,9 +4,12 @@ type HeaderProps = {title: ReactElement | string, topic: string, description: st
 function Header({ title, topic, description }: HeaderProps): ReactElement {
     return (
         <div className='header-container'>
-            <div className='header-title-container'>{title}</div>
-            <div className='header-topic-container'>{topic}</div>
-            <div className='header-description-container'>{description}</div>
+            <div className='header-text-container'>
+                <div className='header-title-container'>{title}</div>
+                <div className='header-topic-container'>{topic}</div>
+                <div className='header-description-container'>{description}</div>
+            </div>
+            <div className='header-cover'/>
         </div>
     );
 }

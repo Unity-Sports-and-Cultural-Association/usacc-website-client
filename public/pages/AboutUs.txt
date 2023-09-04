@@ -1,18 +1,15 @@
-# Unity Sports: Our History
-//## Where we begin
-//Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. 
+# Unity Sports
+//## Our Mission
+// Unity Sports and Cultural Association is a non-profit organization
+ that has been serving the New England community since 1971. The club was
+  founded by a group of Caribbean immigrants who wanted to share their culture,
+   sports, and social justice values with others. They also wanted to create a space
+    where they could connect with their roots, preserve their identity, and foster a sense of belonging in their new home.
 
-Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin 
-laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo.
-Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, 
+//Today, the club has grown to become one of the most active and inclusive Caribbean-American clubs in the region, hosting various events and activities throughout the year. The club’s mission is to promote unity, diversity, and social justice in New England through sports and cultural events that celebrate the rich heritage and traditions of the Caribbean.
 
-//## Jomba Juice
-//vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. 
+//The club offers a range of sports programs for its members and guests, such as cricket, soccer, basketball, volleyball, tennis, and more. The club also organizes cultural events that showcase the vibrant and colorful aspects of Caribbean culture, such as music, dance, art, food, and more. Some of our signature events include the Caribbean-American Cultural Expo, the Senior Citizens Thanksgiving Luncheon, the Unity Day Parade, and the Unity Awards Gala.
 
-Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna. 
-Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. 
-Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl. Suspendisse mauris. 
+//The club also supports various causes and charities that benefit the local and global community. The club has donated to relief efforts for natural disasters in the Caribbean, sponsored scholarships for students of Caribbean descent, partnered with local organizations to provide health and wellness services, and advocated for social justice issues that affect the Caribbean-American community.
 
-//Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna. 
-Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. 
-Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl. Suspendisse mauris. 
+//The club welcomes members and guests of all backgrounds and interests to join its vibrant and diverse community and enjoy its facilities and amenities. The club has a spacious clubhouse that features a banquet hall, a bar, a lounge, a library, a game room, and a gym. The club also has a large outdoor field that can accommodate various sports activities.

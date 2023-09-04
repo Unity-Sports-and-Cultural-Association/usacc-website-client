@@ -10,7 +10,7 @@ function NavBar(): ReactElement {
     const isMobile = useContext(IsMobileContext);
 
     return (
-        <Headroom disableInlineStyles={isOpen}>
+        <Headroom disableInlineStyles={isOpen} style={{ zIndex: 9990 }}>
             {isMobile ? <MobileNav isOpen={isOpen} setOpen={setOpen}/>
                 : <DesktopNav isOpen={isOpen} setOpen={setOpen} />}
         </Headroom>

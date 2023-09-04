@@ -5,6 +5,7 @@ import Carousel from '../../../components/Carousel/Carousel';
 import DescriptionBody from '../../../components/DescriptionBody/DescriptionBody';
 import Header from '../../../components/Header';
 import './Booking.scss';
+import MobileContent from '../../../components/MobileContent/MobileContent';
 
 function Booking(): ReactElement {
     const gallary = [
@@ -16,7 +17,7 @@ function Booking(): ReactElement {
 
 
     return (
-        <>
+        <MobileContent>
             <Header
                 title={<div>Renting a<br />Service</div>}
                 topic='Booking Halls, Bartenders, & Catering'
@@ -44,7 +45,7 @@ function Booking(): ReactElement {
                 description={'Over the phone allows you to check live available spots from our ledger. After the request a representitive will reach out to you on a later date.'}
                 phoneNumber='(617) 436-9550'
             />
-        </>
+        </MobileContent>
     );
 }
 

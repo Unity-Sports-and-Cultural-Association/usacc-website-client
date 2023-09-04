@@ -1,15 +1,22 @@
 @use '../../scss' as *;
 
+.home-widget-booking-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    background-color: $color-white;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    
+    margin-bottom: $spacing-3rem;
+}
 .home-booking-container {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 600px;
     padding-left: $spacing-15rem;
     padding-top: $spacing-1rem;
     padding-bottom: $spacing-2rem;
-    background-color: $color-white;
-    box-shadow: 0px 4px 4px 0px #00000040;
-    margin-bottom: $spacing-2rem;
     .home-booking-title-container {
         color: $color-primary;
         font-size: $font-size-25;

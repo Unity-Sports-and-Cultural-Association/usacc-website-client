@@ -11,12 +11,12 @@ function AboutUs(): ReactElement {
             textFile='/pages/AboutUs.txt'
             articleNav={
                 <ArticleNav
-                    items={[ 'Our Story','What Matters','Making a Change' ]}
+                    items={[ 'Our Mission' ]}
                     relates={[ [ 'Volunteering', '/volunteering' ], [ 'Membership','/membership' ] ]}
                     others={[ [ 'Menu','/menu' ],[ 'Booking','/booking' ] ]}
                 />
             }
-        ></DesktopShell>
+        />
     );
 }
 
