@@ -4,6 +4,7 @@ import BackHeader from '../../../components/BackHeader/BackHeader';
 import DescriptionBody from '../../../components/DescriptionBody/DescriptionBody';
 import Header from '../../../components/Header';
 import './Menu.scss';
+import MobileContent from '../../../components/MobileContent/MobileContent';
 
 function Menu(): ReactElement {
     const seafood = [
@@ -45,7 +46,7 @@ function Menu(): ReactElement {
                 description='Unity Sports & Cultural association has night life clubbing Friday and Saturday nights. Unity is known for it’s safe and relaxed clubbing expierence, offering affordable drinking and eating options.'
             />
             <BackHeader />
-            <div className='mobile-content-container'>
+            <MobileContent>
                 <DescriptionBody
                     title='Food Menu'
                     description={
@@ -100,7 +101,7 @@ function Menu(): ReactElement {
                         </div>}
                 />
                 <div className='menu-bottom-spacing-container'/>
-            </div>
+            </MobileContent>
         </>
     );
 }

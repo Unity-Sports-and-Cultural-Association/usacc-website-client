@@ -51,6 +51,7 @@
   }
 
   .headroom--pinned {
+    z-index: 9990;
     position: fixed;
     transform: translateY(0%);
   }

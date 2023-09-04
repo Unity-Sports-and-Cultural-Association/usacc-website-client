@@ -1,13 +1,32 @@
 @use '../../scss' as *;
 
 .header-container {
+    position: relative;
+    overflow-x: visible;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 100%;
     padding-left: $spacing-15rem;
     padding-top: $spacing-1rem;
     padding-bottom: $spacing-2rem;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(24, 0, 0, 0.451389) 77.43%, #340000 100%), linear-gradient(0deg, #570B0B, #570B0B);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(24, 0, 0, 0.451389) 77.43%, #340000 100%),
+linear-gradient(0deg, #570B0B, #570B0B);
+
+    .header-cover {
+        width: 99999rem;
+        margin-left: -9999rem;
+        height: 100%;
+        z-index: 1;
+        margin-top: $spacing-1rem;
+        left: 0;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(24, 0, 0, 0.451389) 77.43%, #340000 100%), linear-gradient(0deg, #570B0B, #570B0B);
+        position: absolute;
+    }
+
+    .header-text-container {
+        z-index: 2;
+    }
     .header-title-container {
         color: $color-white;
         font-size: $font-size-25;
