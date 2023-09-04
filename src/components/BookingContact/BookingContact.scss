@@ -1,0 +1,52 @@
+@use '../../scss' as *;
+
+.booking-contact-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: $spacing-15rem;
+    margin-right: $spacing-15rem;
+    padding-bottom: $spacing-4rem;
+    background-color: $color-white;
+    .booking-contact-title-container {
+        color: $color-primary;
+        font-size: $font-size-25;
+        font-family: $title-font;
+        font-weight: $weight-medium;
+    }
+    .booking-contact-body-container {
+        margin-left: $spacing-05rem;
+        margin-right: $spacing-05rem;
+        padding-top: $spacing-05rem;
+        .booking-contact-body-text {
+            color: $color-default-text;
+            font-size: $font-size-1;
+            font-family: $default-font;
+            font-weight: $weight-regular;
+            word-wrap: break-word;
+            padding-right: $spacing-3rem;
+        }
+    }
+    .booking-contact-phone-number-container {
+        display: flex;
+        align-items: center;
+        padding-top: $spacing-05rem;
+        .booking-contact-phone-icon {
+            color: $color-primary;
+            padding-right: $spacing-05rem;
+            font-weight: $weight-medium;
+        }
+        .booking-contact-phone-number {
+            color: $color-primary;
+            text-decoration: underline;
+            padding-right: $spacing-05rem;
+            font-weight: $weight-medium;
+        }
+        .booking-contact-sub-text {
+            color: $color-gray;
+            font-size: $font-size-086;
+            font-weight: $weight-medium;
+        }
+    }
+    
+}
