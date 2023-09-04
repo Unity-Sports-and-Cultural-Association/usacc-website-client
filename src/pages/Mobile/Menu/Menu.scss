@@ -15,3 +15,10 @@
 .menu-bottom-spacing-container {
     height: $spacing-25rem;
 }
+
+.food-menu-description-subtext-container {
+    padding-left: $spacing-2rem + $spacing-025rem;
+    color: $color-gray;
+    font-size: $font-size-086;
+    font-weight: $weight-regular;
+}

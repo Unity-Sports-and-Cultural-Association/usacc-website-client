@@ -15,7 +15,6 @@ function Booking(): ReactElement {
         [ './assets/photo4.jpg' ],
     ];
 
-
     return (
         <MobileContent>
             <Header

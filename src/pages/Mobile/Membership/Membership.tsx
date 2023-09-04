@@ -6,6 +6,7 @@ import Header from '../../../components/Header/Header';
 import './Membership.scss';
 
 function Membership(): ReactElement {
+
     return (
         <>
             <Header
