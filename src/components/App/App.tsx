@@ -4,9 +4,9 @@ import { useLocation } from 'react-router-dom';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import AboutUsSwitch from '../../pages/AboutUsSwitch';
 import MembershipSwitch from '../../pages/Desktop/Membership';
+import MenuSwitch from '../../pages/MenuSwitch';
 import Booking from '../../pages/Mobile/Booking/Booking';
 import Home from '../../pages/Mobile/Home/Home';
-import Menu from '../../pages/Mobile/Menu/Menu';
 import VolunteeringSwitch from '../../pages/VolunteeringSwitch';
 import IsMobileContext from '../../utils/isMobileContext';
 import useIsMobile from '../../utils/useIsMobile';
@@ -41,7 +41,7 @@ function App(): ReactElement {
                     <NavBar />
                     <Routes>
                         <Route path="/" element={<Home />} />
-                        <Route path="/menu" element={<Menu />} />
+                        <Route path="/menu" element={<MenuSwitch />} />
                         <Route path="/volunteering" element={<VolunteeringSwitch />} />
                         <Route path="/about" element={<AboutUsSwitch />} />
                         <Route path="/membership" element={<MembershipSwitch />} />

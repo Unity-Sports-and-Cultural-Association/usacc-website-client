@@ -6,16 +6,18 @@ type HeadingProps = {
     text: string;
     id: string;
     className: string;
+    styles: React.CSSProperties | undefined;
 }
 
-function Heading({ type, text, id, className }: HeadingProps): ReactElement {
+function Heading({ type, text, id, className, styles }: HeadingProps): ReactElement {
 
     return (
-        <div id={id} className={`heading-text-${type} ${className}`}>{text}</div>
+        <div style={ styles} id={id} className={`heading-text-${type} ${className}`}>{text}</div>
     );
 }
 
 Heading.defaultProps = {
+    styles: undefined,
     id: '',
     className: ''
 };
