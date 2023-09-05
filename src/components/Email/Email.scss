@@ -59,7 +59,9 @@
             font-size: $font-size-086;
         }
         .email-input-container {
+            font-size: $font-size-1;
             padding: $spacing-05rem;
+            height: $spacing-15rem;
             border-width: 2px;
             border-radius: $spacing-025rem;
             border-color: $color-gray;

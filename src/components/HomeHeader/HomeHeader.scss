@@ -41,8 +41,6 @@
         font-size: $font-size-12;
     }
     .home-header-contact-text-container {
-        color: $color-gray;
-        text-decoration: underline;
         padding-left: $spacing-05rem;
         font-size: $font-size-086;
     }
@@ -73,7 +71,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: $spacing-025rem;
+        padding: $spacing-05rem;
         margin-right: $spacing-12rem;
         border-radius: $spacing-025rem;
         border-style: solid;
