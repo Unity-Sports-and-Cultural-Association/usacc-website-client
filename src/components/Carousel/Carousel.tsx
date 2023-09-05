@@ -3,12 +3,14 @@ import { SlArrowLeft, SlArrowRight } from 'react-icons/sl';
 import './Carousel.scss';
 
 type CarouselProps = {
+    carouselRef: React.MutableRefObject<HTMLDivElement | null>;
+    onImageClick: React.Dispatch<React.SetStateAction<boolean>>;
     image: object[];
     title: string;
     capacity: string;
     description: string;
 }
-function Carousel({ image, title, capacity, description }: CarouselProps): ReactElement {
+function Carousel({ carouselRef, onImageClick, image, title, capacity, description }: CarouselProps): ReactElement {
     const [ currentIndex, setCurrentIndex ] = useState<number>(0);
     const itemsRef = useRef<Map<number, HTMLImageElement> | null>(null);
 
@@ -36,15 +38,29 @@ function Carousel({ image, title, capacity, description }: CarouselProps): React
         scrollToId(index);
     };
 
+    // function scrollToId(itemId: number): void {
+    //     const map = getMap();
+    //     if (map) {
+    //         const node = map.get(itemId);
+    //         node?.scrollIntoView({
+    //             behavior: 'smooth',
+    //             block: 'nearest',
+    //             inline: 'center'
+    //         });
+    //     }
+    // }
+
     function scrollToId(itemId: number): void {
         const map = getMap();
         if (map) {
             const node = map.get(itemId);
-            node?.scrollIntoView({
-                behavior: 'smooth',
-                block: 'nearest',
-                inline: 'center'
-            });
+            if (node && node.parentNode) {
+                const parent = node.parentNode as Element;
+                parent.scrollTo({
+                    left: node.offsetLeft,
+                    behavior: 'smooth'
+                });
+            }
         }
     }
 
@@ -75,12 +91,19 @@ function Carousel({ image, title, capacity, description }: CarouselProps): React
                     }
                 </div>
                 <div className='carousel-gallery-control-container'>
-                    <div className='carousel-gallery-button-container'>
+                    <div className='carousel-gallery-button-container'
+                        onMouseDown={(): void => {
+                            onImageClick(true);
+                        }}
+                        onMouseUp={(): void => {
+                            onImageClick(false);
+                        }}
+                    >
                         <div className='carousel-gallery-left-button-container' onClick={handlePrevButton}>
                             <SlArrowLeft className='carousel-gallery-left-button'/>
                             <div className='carousel-gallery-left-button-cover'/>
                         </div>
-                        <div className='carousel-gallery-right-button-container' onClick={handleNextButton}>
+                        <div className='carousel-gallery-right-button-container' onClick={handleNextButton} ref={carouselRef}>
                             <SlArrowRight className='carousel-gallery-right-button'/>
                             <div className='carousel-gallery-right-button-cover'/>
                         </div>
