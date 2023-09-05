@@ -54,8 +54,8 @@ function DesktopShell({
                             <BackNav/>
                         </div>
                         <BodyText textFile={textFile} />
-                    </div>
             		{children}
+                    </div>
                 </div>
                 }
                 <div className='article-right-buffer'>
