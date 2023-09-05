@@ -50,9 +50,13 @@ const BodyText = ({ textFile }: BodyTextProps): ReactElement => {
                             text={paragraph.replace('### ', '')}
                         />
                     );
+                } else if (paragraph.startsWith('--- ')) {
+                    return (
+                        <div key={index} className='section-separator' />
+                    );
                 } else {
                     return (
-                        <p key={index}>{paragraph}</p>
+                        <p key={index} dangerouslySetInnerHTML={{ __html: paragraph }} />
                     );
                 }
             })}

@@ -81,6 +81,7 @@
 
     .article-content {
         width: 68%;
+        position: relative;
         font-weight: $weight-regular;
         margin-top: $spacing-4rem;
     }
@@ -90,10 +91,11 @@
         flex: 2;
     }
 
-    .article-back {
-        position: absolute;
-        left: $spacing-15rem;
-        top: $spacing-2rem;
+    .back-nav-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: $spacing-1rem;
     }
 }
 

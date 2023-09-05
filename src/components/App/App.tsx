@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { useLocation } from 'react-router-dom';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import AboutUsSwitch from '../../pages/AboutUsSwitch';
+import MembershipSwitch from '../../pages/Desktop/Membership';
 import Booking from '../../pages/Mobile/Booking/Booking';
 import Home from '../../pages/Mobile/Home/Home';
-import Membership from '../../pages/Mobile/Membership/Membership';
 import Menu from '../../pages/Mobile/Menu/Menu';
 import VolunteeringSwitch from '../../pages/VolunteeringSwitch';
 import IsMobileContext from '../../utils/isMobileContext';
@@ -44,7 +44,7 @@ function App(): ReactElement {
                         <Route path="/menu" element={<Menu />} />
                         <Route path="/volunteering" element={<VolunteeringSwitch />} />
                         <Route path="/about" element={<AboutUsSwitch />} />
-                        <Route path="/membership" element={<Membership />} />
+                        <Route path="/membership" element={<MembershipSwitch />} />
                         <Route path="/booking" element={<Booking />} />
                         <Route path="*" element={<Navigate to="/" />} />
                     </Routes>
