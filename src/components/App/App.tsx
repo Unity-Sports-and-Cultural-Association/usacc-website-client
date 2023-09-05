@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { useLocation } from 'react-router-dom';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import AboutUsSwitch from '../../pages/AboutUsSwitch';
-import MembershipSwitch from '../../pages/Desktop/Membership';
+import MembershipSwitch from '../../pages/MembershipSwitch';
 import MenuSwitch from '../../pages/MenuSwitch';
 import Booking from '../../pages/Mobile/Booking/Booking';
 import Home from '../../pages/Mobile/Home/Home';
