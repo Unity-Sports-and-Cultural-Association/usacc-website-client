@@ -5,11 +5,11 @@ import Desktop from './Desktop/Membership';
 import Mobile from './Mobile/Membership/Membership';
 
 
-function VolunteeringSwitch(): ReactElement {
+function MembershipSwitch(): ReactElement {
     const isMobile = useContext(IsMobileContext);
     return (
         <ViewPortSwitch Desktop={<Desktop />} Mobile={<Mobile />} isMobile={isMobile} />
     );
 }
 
-export default VolunteeringSwitch;
+export default MembershipSwitch;
