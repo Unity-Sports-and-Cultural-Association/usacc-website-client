@@ -1,11 +1,12 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useRef, useEffect, useState } from 'react';
+import ReactTestUtils from 'react-dom/test-utils';
 import BackHeader from '../../../components/BackHeader/BackHeader';
 import BookingContact from '../../../components/BookingContact/BookingContact';
 import Carousel from '../../../components/Carousel/Carousel';
 import DescriptionBody from '../../../components/DescriptionBody/DescriptionBody';
 import Header from '../../../components/Header';
-import './Booking.scss';
 import MobileContent from '../../../components/MobileContent/MobileContent';
+import './Booking.scss';
 
 function Booking(): ReactElement {
     const gallary = [
@@ -14,6 +15,31 @@ function Booking(): ReactElement {
         [ './assets/photo3.jpg' ],
         [ './assets/photo4.jpg' ],
     ];
+
+    const carouselRef = useRef<HTMLDivElement | null>(null);
+    const carouselRef2 = useRef<HTMLDivElement | null>(null);
+    const [ userInteracted, setUserInteracted ] = useState(false);
+    const [ userInteracted2, setUserInteracted2 ] = useState(false);
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            if (carouselRef.current && !userInteracted) {
+                ReactTestUtils.Simulate.click(carouselRef.current);
+            }
+        }, 5000);
+
+        return () => clearInterval(intervalId);
+    }, [ userInteracted ]);
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            if (carouselRef2.current && !userInteracted2) {
+                ReactTestUtils.Simulate.click(carouselRef2.current);
+            }
+        }, 5000);
+
+        return () => clearInterval(intervalId);
+    }, [ userInteracted2 ]);
 
     return (
         <MobileContent>
@@ -28,12 +54,16 @@ function Booking(): ReactElement {
                 description={<div>Unity offers two halls, options for catering and bartenders may be available upon request.</div>}
             />
             <Carousel
+                carouselRef={carouselRef}
+                onImageClick={setUserInteracted}
                 image={gallary}
                 title='Ballroom'
                 capacity='Capacity: 500 people'
                 description='Provides a stage, open wide area, and a bar area as a possible option. This space is great for large events that intend to have djs and an area for dancing. A great option for hosting weddings and funeral ceremonies.'
             />
             <Carousel
+                carouselRef={carouselRef2}
+                onImageClick={setUserInteracted2}
                 image={gallary}
                 title='Long Hall'
                 capacity='Capacity: 200 people'
