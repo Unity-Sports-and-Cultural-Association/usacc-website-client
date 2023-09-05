@@ -4,11 +4,12 @@ import BackHeader from '../../../components/BackHeader/BackHeader';
 import DescriptionBody from '../../../components/DescriptionBody/DescriptionBody';
 import Header from '../../../components/Header/Header';
 import './Membership.scss';
+import MobileContent from '../../../components/MobileContent/MobileContent';
 
 function Membership(): ReactElement {
 
     return (
-        <>
+        <MobileContent>
             <Header
                 title={<div>Community<br />Member</div>}
                 topic='Join our mission'
@@ -59,7 +60,7 @@ function Membership(): ReactElement {
                     <div className='membership-pdf-text-container'>Unity Sports Constitution & Bylaws PDF</div>
                 </div>
             </div>
-        </>
+        </MobileContent>
     );
 }
 

@@ -49,8 +49,10 @@ function DesktopShell({
                 <div className="article-left-buffer" />
                 { isArticle &&
                 <div className='article-content-body'>
-                    <BackNav className='article-back'/>
                     <div className='article-content' >
+                        <div className='back-nav-container'>
+                            <BackNav/>
+                        </div>
                         <BodyText textFile={textFile} />
                     </div>
             		{children}
