@@ -10,7 +10,7 @@
         user-select: none;
         display: flex;
         align-items: center;
-        font-size: $font-size-15;
+        font-size: $font-size-2;
         font-weight: $weight-regular;
         background-color: $color-white;
         .accordion-menu-arrow-container {
@@ -27,7 +27,7 @@
     .accordion-menu-item-container {
         max-height: 500px;
         padding-top: $spacing-05rem;
-        font-size: $font-size-1;
+        font-size: $font-size-15;
         font-weight: $weight-regular;
         display: flex;
         flex-direction: column;
@@ -44,7 +44,6 @@
                 padding-left: $spacing-075rem;
                 font-weight: $weight-thick;
                 white-space: nowrap;
-                color: $color-gray-text;
             }
         }
     }
