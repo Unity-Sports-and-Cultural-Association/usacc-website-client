@@ -4,7 +4,7 @@ import DesktopShell from '../../components/DesktopShell/DesktopShell';
 import Heading from '../../components/Heading/Heading';
 import MenuDisplay from '../../components/Menu/MenuDisplay';
 
-function AboutUs(): ReactElement {
+function Menu(): ReactElement {
     return (
         <DesktopShell
             title='Menu'
@@ -60,4 +60,4 @@ function AboutUs(): ReactElement {
     );
 }
 
-export default AboutUs;
+export default Menu;

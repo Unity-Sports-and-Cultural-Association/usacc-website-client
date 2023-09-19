@@ -1,0 +1,18 @@
+.facebook-widget * {
+    /* This will affect the scrollbar in the whole page */
+    /* You can replace body with a class or id to affect only that element */
+    body::-webkit-scrollbar {
+        width: 0px; /* width of the entire scrollbar */
+    }
+
+    body::-webkit-scrollbar-track {
+        background: transparent; /* color of the tracking area */
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background-color: rgba(0,0,0,0); /* color of the scroll thumb */
+        border-radius: 20px; /* roundness of the scroll thumb */
+        border: transparent; /* creates padding around scroll thumb */
+    }
+
+}

@@ -1,5 +1,4 @@
 @use '../../scss' as *;
-
 .home-learn-more-main-container {
     display: flex;
     width: 100%;
@@ -49,7 +48,6 @@
                 align-items: center;
                 margin-right: $spacing-15rem;
                 padding: $spacing-075rem;
-                border-radius: 6px;
                 color: $color-white;
                 font-size: $font-size-15;
                 font-weight: $weight-thin;
