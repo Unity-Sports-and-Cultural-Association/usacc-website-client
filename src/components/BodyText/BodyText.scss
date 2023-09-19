@@ -1,7 +1,9 @@
 @use '../../scss' as *;
 
 .article-container {
-
+    .heading-text-h1 {
+        white-space: nowrap;
+    }
     p {
         font-size: $font-size-12;
         font-weight: $weight-medium;
@@ -21,9 +23,11 @@
         padding-right: $spacing-2rem;
         .heading-text-h1 {
             font-size: $font-size-25;
+            white-space: normal;
         }
         p{
             font-size: 1;
         }
+        padding-bottom: 4rem;
     }
 }
