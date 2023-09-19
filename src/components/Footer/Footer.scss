@@ -143,6 +143,11 @@
             gap: $spacing-1rem;
         }
     }
+    @media (min-width: 768px) {
+        .footer-email-link, .footer-location-link, .footer-contact-link {
+            text-decoration: none;
+        }
+    }
 
 }
 

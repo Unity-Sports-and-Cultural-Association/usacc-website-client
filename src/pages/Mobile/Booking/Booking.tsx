@@ -48,10 +48,10 @@ function Booking(): ReactElement {
                 topic='Booking Halls, Bartenders, & Catering'
                 description='Unity provides services for booking If you are looking for a space to host your next event or authentic Caribbean catering.'
             />
-            <BackHeader />
+            <BackHeader/>
             <DescriptionBody
                 title='Booking a Hall'
-                description={<div>Unity offers two halls, options for catering and bartenders may be available upon request.</div>}
+                description={<div>We offer our Venues for a vareity of events at an affordable price here in the Boston area.  These halls are good for birthday parties, funerals, weddings, and a place for you to host your classes. We have two spacious halls that can accommodate up to 200 people each, equipped with tables, chairs, projectors, sound systems, and catering services. You can also request bartenders to serve drinks at your event.</div>}
             />
             <Carousel
                 carouselRef={carouselRef}
@@ -59,7 +59,7 @@ function Booking(): ReactElement {
                 image={gallary}
                 title='Ballroom'
                 capacity='Capacity: 500 people'
-                description='Provides a stage, open wide area, and a bar area as a possible option. This space is great for large events that intend to have djs and an area for dancing. A great option for hosting weddings and funeral ceremonies.'
+                description='Our main ballroom is a versatile and elegant space that can host any kind of event you have in mind. Whether you are planning a birthday party, a funeral, a wedding, or a class, our ballroom can accommodate up to 300 people comfortably. Our ballroom features a stage, an open wide area, and a bar area as a possible option. You can also add a DJ and an area for dancing if you want to create a lively atmosphere.'
             />
             <Carousel
                 carouselRef={carouselRef2}
@@ -67,10 +67,10 @@ function Booking(): ReactElement {
                 image={gallary}
                 title='Long Hall'
                 capacity='Capacity: 200 people'
-                description='This space is perfect for birthday parties and smaller gatherings'
+                description='Our long hall is a cozy and charming space that can host smaller events with up to 200 people. Our long hall features a stage and an open wide area. You can also add a DJ and an area for dancing if you want to create a lively atmosphere. Our long hall is perfect for birthday parties, smaller gatherings, or any other occasion that requires a warm and friendly setting. Our long hall is designed to make your guests feel comfortable and welcome.'
             />
             <BookingContact
-                title='Over the Phone'
+                title='Get Your Quote'
                 description={'Over the phone allows you to check live available spots from our ledger. After the request a representitive will reach out to you on a later date.'}
                 phoneNumber='(617) 436-9550'
             />
