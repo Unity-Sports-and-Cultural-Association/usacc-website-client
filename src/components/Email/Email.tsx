@@ -51,38 +51,41 @@ function Email(): ReactElement {
     };
 
     return (
-        <div className='email-main-container'>
-            <div className='email-container'>
-                <div className='email-title-container'>E-Mailing List</div>
-                <div className='email-subtext-container'>
-                    <div className='email-red-star-container'>*</div>
-                    <div className='email-warning-text-container'>means the field is required</div>
+        <form name="contact" method="POST" data-netlify="true" onSubmit={handleVerifications}>
+            <input type="hidden" name="email-contacts" value="contact" />
+            <div className='email-main-container'>
+                <div className='email-container'>
+                    <div className='email-title-container'>E-Mailing List</div>
+                    <div className='email-subtext-container'>
+                        <div className='email-red-star-container'>*</div>
+                        <div className='email-warning-text-container'>means the field is required</div>
+                    </div>
+                    <div className='email-label-container'>
+                        <div className='email-label-text-container'>Name</div>
+                        <div className='email-red-star-container'>*</div>
+                    </div>
+                    <input
+                        className={hasNameError ? 'email-input-error-container' : 'email-input-container'}
+                        type='text'
+                        placeholder='First Last'
+                        ref={nameValue as React.RefObject<HTMLInputElement>}
+                    />
+                    <div className={hasNameError ? 'email-error-container' : 'email-error-hide-container'} >The name field is required</div>
+                    <div className='email-label-container'>
+                        <div className='email-label-text-container'>Email</div>
+                        <div className='email-red-star-container'>*</div>
+                    </div>
+                    <input
+                        className={hasEmailError ? 'email-input-error-container' : 'email-input-container'}
+                        type='text'
+                        placeholder='Example@gmail.com'
+                        ref={emailValue as React.RefObject<HTMLInputElement>}
+                    />
+                    <div className={hasEmailError ? 'email-error-container' : 'email-error-hide-container'} >The email field is required</div>
+                    <button className='email-submit-button-container red-button' type="submit" onClick={handleVerifications}>Submit</button>
                 </div>
-                <div className='email-label-container'>
-                    <div className='email-label-text-container'>Name</div>
-                    <div className='email-red-star-container'>*</div>
-                </div>
-                <input
-                    className={hasNameError ? 'email-input-error-container' : 'email-input-container'}
-                    type='text'
-                    placeholder='First Last'
-                    ref={nameValue as React.RefObject<HTMLInputElement>}
-                />
-                <div className={hasNameError ? 'email-error-container' : 'email-error-hide-container'} >The name field is required</div>
-                <div className='email-label-container'>
-                    <div className='email-label-text-container'>Email</div>
-                    <div className='email-red-star-container'>*</div>
-                </div>
-                <input
-                    className={hasEmailError ? 'email-input-error-container' : 'email-input-container'}
-                    type='text'
-                    placeholder='Example@gmail.com'
-                    ref={emailValue as React.RefObject<HTMLInputElement>}
-                />
-                <div className={hasEmailError ? 'email-error-container' : 'email-error-hide-container'} >The email field is required</div>
-                <div className='email-submit-button-container red-button' onClick={handleVerifications}>Submit</div>
             </div>
-        </div>
+        </form>
     );
 }
 
