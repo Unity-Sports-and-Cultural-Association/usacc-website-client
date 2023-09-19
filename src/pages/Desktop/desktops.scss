@@ -6,4 +6,28 @@
     .volunteer-pdf-container {
         margin-left: 0;
     }
+    .carousel-container {
+        width: 140%;
+    }
+
+    .mobile-content-container .mobile-content-body {
+
+        max-width: 100%;
+        margin-top: -2rem;
+        .description-body-title-container {
+            font-size: 4rem;
+            margin-left: -.5rem;
+        }
+        .description-body-container, .booking-contact-container {
+            width: 650px;
+        }
+    }
+    
+}
+.carousel-container {
+    margin-top: 1rem;
+}
+
+.carousel-title-container {
+    margin-top: 1rem;
 }
