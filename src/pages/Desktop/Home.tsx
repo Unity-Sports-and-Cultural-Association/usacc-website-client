@@ -1,12 +1,12 @@
 import React, { ReactElement } from 'react';
-import Email from '../../../components/Email/Email';
-import FacebookWidget from '../../../components/FacebookWidget/FacebookWidget';
-import HomeBooking from '../../../components/HomeBooking/HomeBooking';
-import HomeHeader from '../../../components/HomeHeader/HomeHeader';
-import HomeLearnMore from '../../../components/HomeLearnMore/HomeLearnMore';
-import LocationWidget from '../../../components/LocationWidget';
+import Email from '../../components/Email/Email';
+import FacebookWidget from '../../components/FacebookWidget/FacebookWidget';
+import HomeBooking from '../../components/HomeBooking/HomeBooking';
+import HomeHeader from '../../components/HomeHeader/HomeHeader';
+import HomeLearnMore from '../../components/HomeLearnMore/HomeLearnMore';
+import LocationWidget from '../../components/LocationWidget';
 import './Home.scss';
-import MobileContent from '../../../components/MobileContent/MobileContent';
+import MobileContent from '../../components/MobileContent/MobileContent';
 
 function Home(): ReactElement {
     return (
