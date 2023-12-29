@@ -1,58 +1,51 @@
-import React, { ReactElement, useRef, useState } from 'react';
+import React, { ReactElement, useState } from 'react';
 import './Email.scss';
 
-
 function Email(): ReactElement {
-    const emailTest = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
-    const emailValue = useRef<HTMLInputElement | HTMLTextAreaElement>(null);
-    const nameValue = useRef<HTMLInputElement | HTMLTextAreaElement>(null);
+    const [ email, setEmail ] = useState('');
+    const [ name, setName ] = useState('');
     const [ hasEmailError, setHasEmailError ] = useState(false);
     const [ hasNameError, setHasNameError ] = useState(false);
 
+    const emailTest = new RegExp(/(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/);
+
     const handleNameVerification = (): boolean => {
-        const isValid = nameValue.current?.value != '';
+        const isValid = name !== '';
         setHasNameError(!isValid);
-        return (isValid);
+        return isValid;
     };
 
     const handleEmailVerification = (): boolean => {
-        if (emailValue.current?.value == null) {
-            setHasEmailError(true);
-            return false;
-        }
-        const isValid = emailTest.test(emailValue.current?.value ? emailValue.current?.value : 'examplegmail.com');
+        const isValid = emailTest.test(email);
         setHasEmailError(!isValid);
-        return (isValid);
+        return isValid;
     };
 
-    const handleVerifications = (): void => {
-        handleEmailVerification();
-        handleNameVerification();
-        if (handleEmailVerification() && handleNameVerification()) {
-            const name = nameValue?.current?.value;
-            const email = emailValue?.current?.value;
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
+        event.preventDefault();
+        const isEmailValid = handleEmailVerification();
+        const isNameValid = handleNameVerification();
 
-            // console.log(name, email);
-            const myHeaders = new Headers();
-            myHeaders.append('Content-Type', 'application/json');
+        if (isEmailValid && isNameValid) {
+            const formData = {
+                'form-name': 'contact',
+                name,
+                email,
+            };
 
-            // console.log(process.env.REACT_APP_SHEETS_API_KEY);
-            fetch(`${process.env.REACT_APP_SHEETS_API_KEY}`,
-                {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify([ [ name, email ] ])
-                }
-            );
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData).toString(),
+            })
+                .then(() => window.alert('Form successfully submitted'))
+                .catch((error) => window.alert(`Error:, ${error}`));
         }
-
     };
 
     return (
-        <form name="contact" method="POST" data-netlify="true" onSubmit={handleVerifications}>
-            <input type="hidden" name="email-contacts" value="contact" />
+        <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+            <input type="hidden" name="form-name" value="contact" />
             <div className='email-main-container'>
                 <div className='email-container'>
                     <div className='email-title-container'>E-Mailing List</div>
@@ -68,9 +61,10 @@ function Email(): ReactElement {
                         className={hasNameError ? 'email-input-error-container' : 'email-input-container'}
                         type='text'
                         placeholder='First Last'
-                        ref={nameValue as React.RefObject<HTMLInputElement>}
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                     />
-                    <div className={hasNameError ? 'email-error-container' : 'email-error-hide-container'} >The name field is required</div>
+                    {hasNameError && <div className='email-error-container'>The name field is required</div>}
                     <div className='email-label-container'>
                         <div className='email-label-text-container'>Email</div>
                         <div className='email-red-star-container'>*</div>
@@ -78,11 +72,12 @@ function Email(): ReactElement {
                     <input
                         className={hasEmailError ? 'email-input-error-container' : 'email-input-container'}
                         type='text'
-                        placeholder='Example@gmail.com'
-                        ref={emailValue as React.RefObject<HTMLInputElement>}
+                        placeholder='example@gmail.com'
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                     />
-                    <div className={hasEmailError ? 'email-error-container' : 'email-error-hide-container'} >The email field is required</div>
-                    <button className='email-submit-button-container red-button' type="submit" onClick={handleVerifications}>Submit</button>
+                    {hasEmailError && <div className='email-error-container'>The email field is required</div>}
+                    <button className='email-submit-button-container red-button' type="submit">Submit</button>
                 </div>
             </div>
         </form>
