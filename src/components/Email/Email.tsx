@@ -2,9 +2,11 @@ import React, { ReactElement, useRef, useState } from 'react';
 import './Email.scss';
 
 function Email(): ReactElement {
+
     const emailRef = useRef<HTMLInputElement>(null);
     const firstNameRef = useRef<HTMLInputElement>(null);
     const lastNameRef = useRef<HTMLInputElement>(null);
+
     const [ hasEmailError, setHasEmailError ] = useState(false);
     const [ hasFirstNameError, setHasFirstNameError ] = useState(false);
     const [ hasLastNameError, setHasLastNameError ] = useState(false);
@@ -34,6 +36,7 @@ function Email(): ReactElement {
 
 
     return (
+
         <form name="contact" method="post" data-netlify="true" onSubmit={handleSubmit}>
             <input type="hidden" name="form-name" value="contact" />
             <div className='email-main-container'>
@@ -84,7 +87,6 @@ function Email(): ReactElement {
                         ref={emailRef}
                     />
                     {hasEmailError && <div className='email-error-container'>The email field is required.</div>}
-
                     <button className='email-submit-button-container red-button' type="submit">Submit</button>
                 </div>
             </div>
