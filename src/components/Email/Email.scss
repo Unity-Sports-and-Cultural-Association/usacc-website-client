@@ -29,7 +29,6 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            padding-bottom: $spacing-1rem;
             .email-warning-text-container {
                 padding-left: $spacing-025rem;
                 color: $color-subtext-color;
@@ -43,6 +42,7 @@
             align-items: center;
             padding-bottom: $spacing-025rem;
             .email-label-text-container {
+                margin-top: $spacing-1rem;
                 padding-right: $spacing-025rem;
                 font-size: $font-size-12;
                 font-weight: $weight-regular;

@@ -40,19 +40,34 @@ function Email(): ReactElement {
         event.preventDefault();
 
         if (handleVerifications()) {
-            setIsSubmitted(true); // Disable the button after form is submitted
+            setIsSubmitted(true);
             setButtonText('Submitted');
-            setEmail('');
-            setFirstName('');
-            setLastName('');
-            // Netlify should handle the form submission here
+
+            // Assert the event.target as an HTMLFormElement
+            const form = event.target as HTMLFormElement;
+            const data = new FormData(form);
+            data.append('form-name', 'contact');
+
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                body: new URLSearchParams(data as any).toString(),
+            })
+                .then(() => {
+                    setEmail('');
+                    setFirstName('');
+                    setLastName('');
+                // Handle the success state here, such as showing a success message
+                });
         }
     };
 
 
+
     return (
 
-        <form name="contact" method="post" data-netlify="true" onSubmit={handleSubmit}>
+        <form name="contact" method="post" onSubmit={handleSubmit}>
             <input type="hidden" name="form-name" value="contact" />
             <div className='email-main-container'>
                 <div className='email-container'>
@@ -66,7 +81,6 @@ function Email(): ReactElement {
                         <div className='email-red-star-container'>*</div>
                     </div>
                     <input
-                        required
                         className={hasFirstNameError ? 'email-input-error-container' : 'email-input-container'}
                         type='text'
                         placeholder='First Name'
@@ -81,7 +95,6 @@ function Email(): ReactElement {
                         <div className='email-red-star-container'>*</div>
                     </div>
                     <input
-                        required
                         className={hasLastNameError ? 'email-input-error-container' : 'email-input-container'}
                         type='text'
                         placeholder='Last Name'
@@ -96,7 +109,6 @@ function Email(): ReactElement {
                         <div className='email-red-star-container'>*</div>
                     </div>
                     <input
-                        required
                         className={hasEmailError ? 'email-input-error-container' : 'email-input-container'}
                         type='email'
                         placeholder='example@gmail.com'
