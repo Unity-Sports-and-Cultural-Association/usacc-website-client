@@ -1,22 +1,33 @@
-import React, { ReactElement, useRef, useState } from 'react';
+import React, { ReactElement, useState } from 'react';
 import './Email.scss';
 
 function Email(): ReactElement {
 
-    const emailRef = useRef<HTMLInputElement>(null);
-    const firstNameRef = useRef<HTMLInputElement>(null);
-    const lastNameRef = useRef<HTMLInputElement>(null);
-
+    const [ email, setEmail ] = useState('');
+    const [ firstName, setFirstName ] = useState('');
+    const [ lastName, setLastName ] = useState('');
     const [ hasEmailError, setHasEmailError ] = useState(false);
     const [ hasFirstNameError, setHasFirstNameError ] = useState(false);
     const [ hasLastNameError, setHasLastNameError ] = useState(false);
+    const [ buttonText, setButtonText ] = useState('Submit');
+    const [ isSubmitted, setIsSubmitted ] = useState(false);
+
 
     const emailTest = new RegExp(/(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/);
 
-    const handleVerifications = (): boolean | null => {
-        const isFirstNameValid = firstNameRef.current && firstNameRef.current.value !== '';
-        const isLastNameValid = lastNameRef.current && lastNameRef.current.value !== '';
-        const isEmailValid = emailRef.current && emailTest.test(emailRef.current.value);
+    const handleInputChange = (setter: React.Dispatch<React.SetStateAction<string>>) =>
+        (event: React.ChangeEvent<HTMLInputElement>) => {
+            setter(event.target.value);
+            if (buttonText !== 'Submit') {
+                setIsSubmitted(false); // Enable the button again when the user starts typing
+                setButtonText('Submit');
+            }
+        };
+
+    const handleVerifications = (): boolean => {
+        const isFirstNameValid = firstName !== '';
+        const isLastNameValid = lastName !== '';
+        const isEmailValid = emailTest.test(email);
 
         setHasFirstNameError(!isFirstNameValid);
         setHasLastNameError(!isLastNameValid);
@@ -29,8 +40,12 @@ function Email(): ReactElement {
         event.preventDefault();
 
         if (handleVerifications()) {
-            // Since Netlify is handling the form submission, you don't need to do anything else here.
-            // The form will be submitted naturally after this function completes.
+            setIsSubmitted(true); // Disable the button after form is submitted
+            setButtonText('Submitted');
+            setEmail('');
+            setFirstName('');
+            setLastName('');
+            // Netlify should handle the form submission here
         }
     };
 
@@ -55,8 +70,9 @@ function Email(): ReactElement {
                         className={hasFirstNameError ? 'email-input-error-container' : 'email-input-container'}
                         type='text'
                         placeholder='First Name'
-                        ref={firstNameRef}
                         name='first'
+                        value={firstName}
+                        onChange={handleInputChange(setFirstName)}
                     />
                     {hasFirstNameError && <div className='email-error-container'>The first name field is required.</div>}
 
@@ -69,7 +85,8 @@ function Email(): ReactElement {
                         className={hasLastNameError ? 'email-input-error-container' : 'email-input-container'}
                         type='text'
                         placeholder='Last Name'
-                        ref={lastNameRef}
+                        value={lastName}
+                        onChange={handleInputChange(setLastName)}
                         name='last'
                     />
                     {hasLastNameError && <div className='email-error-container'>The last name field is required.</div>}
@@ -84,10 +101,15 @@ function Email(): ReactElement {
                         type='email'
                         placeholder='example@gmail.com'
                         name='email'
-                        ref={emailRef}
+                        value={email}
+                        onChange={handleInputChange(setEmail)}
                     />
                     {hasEmailError && <div className='email-error-container'>The email field is required.</div>}
-                    <button className='email-submit-button-container red-button' type="submit">Submit</button>
+                    <button
+                        className={`email-submit-button-container red-button ${isSubmitted ? 'disabled' : ''}`}
+                        type="submit"
+                        disabled={isSubmitted}
+                    >{buttonText}</button>
                 </div>
             </div>
         </form>
