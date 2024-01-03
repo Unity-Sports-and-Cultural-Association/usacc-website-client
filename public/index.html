@@ -27,6 +27,49 @@
     <title>React App</title>
   </head>
   <body>
+
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <div >
+          <div >
+              <div >E-Mailing List</div>
+              <div >
+                  <div >*</div>
+                  <div >means the field is required</div>
+              </div>
+              <div >
+                  <div >First Name</div>
+                  <div >*</div>
+              </div>
+              <input
+                  type='text'
+                  name='first'
+              />
+
+              <div >
+                  <div >Last Name</div>
+                  <div >*</div>
+              </div>
+              <input
+                  type='text'
+                  name='last'
+              />
+
+              <div >
+                  <div >Email</div>
+                  <div>*</div>
+              </div>
+              <input
+                  type='email'
+                  name='email'
+              />
+             
+
+              <button type="submit">Submit</button>
+          </div>
+      </div>
+  </form>
+
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
