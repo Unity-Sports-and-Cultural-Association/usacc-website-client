@@ -79,7 +79,7 @@ function Booking(): ReactElement {
             />
             <BookingContact
                 title='Get Your Quote'
-                description={'Over the phone allows you to check live available spots from our ledger. After the request a representitive will reach out to you on a later date.'}
+                description={'Check live available spots from our ledger over the phone or through email. After the request a representative will reach out to you on a later date.'}
                 phoneNumber='(617) 436-9550'
             />
         </MobileContent>

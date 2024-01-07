@@ -11,11 +11,13 @@ function HomeHeader(): ReactElement {
                     <div className='home-header-contact-container'>
                         <div className='home-header-contact-list-container'>
                             <SlLocationPin className='home-header-contact-pin-container'/>
-                            <div className='home-header-contact-text-container'>10 Dunbar Ave,<br/> Dorchester Center,<br/> MA 02124</div>
+                            <div className='home-header-contact-text-container'>
+                                <a href="https://www.google.com/maps/place/10+Dunbar+Ave,+Dorchester+Center,+Ma+02124" target="_blank" rel="noreferrer">
+                                10 Dunbar Ave,<br/> Dorchester Center,<br/> MA 02124</a></div>
                         </div>
                         <div className='home-header-contact-list-container'>
                             <SlPhone className='home-header-contact-icon-container'/>
-                            <div className='home-header-contact-text-container'>&#40;617&#41; 436-9550</div>
+                            <div className='home-header-contact-text-container'><a href="tel:6174369550">&#40;617&#41; 436-9550</a></div>
                         </div>
                     </div>
                     <hr className='home-header-line-container'/>

@@ -34,9 +34,11 @@ function Footer(): ReactElement {
                                 <SlLocationPin />
                             </div>
                             <div className='footer-location-link'>
+                                <a href="https://www.google.com/maps/place/10+Dunbar+Ave,+Dorchester+Center,+Ma+02124" target="_blank" rel="noreferrer">
                                 10 Dunbar Ave,
                                 Dorchester<br/> Center,
                                 Ma 02124
+                                </a>
                             </div>
                         </div>
                         <div className='footer-bottom-right-links'>
@@ -45,7 +47,7 @@ function Footer(): ReactElement {
                                     <SlPhone />
                                 </div>
                                 <div className='footer-contact-link'>
-                            (617) 436-9550
+                                    <a href="tel:6174369550">(617) 436-9550</a>
                                 </div>
                             </div>
                             <div className='footer-email-container'>
@@ -53,7 +55,7 @@ function Footer(): ReactElement {
                                     <SlEnvolope />
                                 </div>
                                 <div className='footer-email-link'>
-								SomeLongEmailNameExample@gmail.com
+                                    <a href="mailto:SomeLongEmailNameExample@gmail.com">SomeLongEmailNameExample@gmail.com</a>
                                 </div>
                             </div>
 

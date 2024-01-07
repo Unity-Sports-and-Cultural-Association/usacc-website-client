@@ -32,6 +32,7 @@
     }
 
     .right-container {
+        z-index: 4;
         flex: 5;
         background-color: $color-article-header-background;
         display: flex;

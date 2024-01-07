@@ -60,12 +60,13 @@
         flex-direction: column;
         gap: $spacing-05rem;
         font-size: $font-size-086;
-        & a {
-            color: $color-gray;
-        }
+        
         @media (min-width: 768px) {
             font-size: $font-size-1;
         }
+    }
+    a {
+        color: $color-gray;
     }
 
     .footer-top-nav {
@@ -122,12 +123,19 @@
         }
     }
 
+    
     .footer-location-link, .footer-contact-link {
+        @media (min-width: 768px) {
+            font-size: $font-size-075;
+        }
         font-size: $font-size-05;
         text-decoration: underline;
     }
 
     .footer-email-link {
+        @media (min-width: 768px) {
+            font-size: $font-size-075;
+        }
         font-size: $font-size-05;
         text-decoration: underline;
     }

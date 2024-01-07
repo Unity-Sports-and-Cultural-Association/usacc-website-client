@@ -45,9 +45,11 @@ function MobileNav({ isOpen, setOpen }: MobileNavProps): ReactElement {
                                 <SlLocationPin />
                             </div>
                             <div className='side-contact-link'>
+                                <a href="https://www.google.com/maps/place/10+Dunbar+Ave,+Dorchester+Center,+Ma+02124" target="_blank" rel="noreferrer">
                                 10 Dunbar Ave,<br/>
                                 Dorchester Center,<br/>
                                 Ma 02124
+                                </a>
                             </div>
                         </div>
                         <div className='side-contact'>
@@ -55,12 +57,12 @@ function MobileNav({ isOpen, setOpen }: MobileNavProps): ReactElement {
                                 <SlPhone />
                             </div>
                             <div className='side-contact-link'>
-                            (617) 436-9550
+                                <a href="tel:6174369550">(617) 436-9550</a>
                             </div>
                         </div>
                         <div className='side-footer'>
                             <div className='side-email'>
-                            someLongEmailName@gmail.com
+                                <a href="mailto:SomeLongEmailNameExample@gmail.com">SomeLongEmailNameExample@gmail.com</a>
                             </div>
                             <div className='side-footer-text'>
                             Unity Sports and Cultural Association is a 501(c)4 organization in Boston

@@ -1,3 +1,4 @@
+@use '../../scss' as *;
 .facebook-widget * {
     /* This will affect the scrollbar in the whole page */
     /* You can replace body with a class or id to affect only that element */
@@ -17,4 +18,6 @@
     @media (max-width: 767px) {
         
     }
+    box-shadow: $shadow-card;
+    border: 1px solid $color-gray;
 }

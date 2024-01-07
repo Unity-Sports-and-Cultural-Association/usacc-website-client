@@ -37,12 +37,15 @@
             font-weight: $weight-medium;
         }
         .booking-contact-phone-number {
-            color: $color-primary;
-            text-decoration: underline;
-            padding-right: $spacing-05rem;
-            font-weight: $weight-medium;
+            a {
+                color: $color-primary;
+                text-decoration: underline;
+                padding-right: $spacing-05rem;
+                font-weight: $weight-medium;
+            }
         }
         .booking-contact-sub-text {
+            
             color: $color-gray;
             font-size: $font-size-086;
             font-weight: $weight-medium;

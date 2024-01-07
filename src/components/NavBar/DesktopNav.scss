@@ -27,14 +27,15 @@
         margin-right: $spacing-3rem;
         padding-bottom: $spacing-05rem;
 
-        & a {
-            color: $color-black;
-            transition: $transition-fast;
-            &:hover {
-                color: $color-gray;
-            }
-        }
         
+        
+    }
+    a {
+        color: $color-white;
+        transition: $transition-fast;
+        &:hover {
+            color: $color-gray;
+        }
     }
 
     
@@ -80,5 +81,11 @@
         top: 0;
     }
     
+    .side-email {
+        a {
+            
+            font-size: $font-size-075;
+        }
+    }
 
 
