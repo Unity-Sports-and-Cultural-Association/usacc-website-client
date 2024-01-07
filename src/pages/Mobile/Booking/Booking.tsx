@@ -16,6 +16,14 @@ function Booking(): ReactElement {
         [ './assets/photo4.jpg' ],
     ];
 
+    const longHall = [
+        [ './assets/longhall/long_hall5.jpg' ],
+        [ './assets/longhall/long_hall3.jpg' ],
+        [ './assets/longhall/long_hall4.jpg' ],
+        [ './assets/longhall/long_hall1.jpg' ],
+        [ './assets/longhall/long_hall2.jpg' ],
+    ];
+
     const carouselRef = useRef<HTMLDivElement | null>(null);
     const carouselRef2 = useRef<HTMLDivElement | null>(null);
     const [ userInteracted, setUserInteracted ] = useState(false);
@@ -64,7 +72,7 @@ function Booking(): ReactElement {
             <Carousel
                 carouselRef={carouselRef2}
                 onImageClick={setUserInteracted2}
-                image={gallary}
+                image={longHall}
                 title='Long Hall'
                 capacity='Capacity: 200 people'
                 description='Our long hall is a cozy and charming space that can host smaller events with up to 200 people. Our long hall features a stage and an open wide area. You can also add a DJ and an area for dancing if you want to create a lively atmosphere. Our long hall is perfect for birthday parties, smaller gatherings, or any other occasion that requires a warm and friendly setting. Our long hall is designed to make your guests feel comfortable and welcome.'

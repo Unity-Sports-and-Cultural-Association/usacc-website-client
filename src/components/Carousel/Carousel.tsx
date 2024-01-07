@@ -73,54 +73,60 @@ function Carousel({ carouselRef, onImageClick, image, title, capacity, descripti
     }
 
     return (
+
         <div className='carousel-container'>
-            <div className='carousel-gallery-container'>
-                <div className='carousel-frame-container'>
-                    {
-                        image.map((key: object, index: number) => <img key={index} src={`${key}`} alt='err' className='carousel-image'
-                            ref={
-                                (imgObject): void => {
-                                    const map = getMap();
-                                    //if the imgObject is not empty then execute
-                                    if (imgObject) {
-                                        map?.set(index, imgObject);
+            <div className='carousel-crop'>
+                <div className='carousel-gallery-container'>
+                    <div className='carousel-frame-container'>
+                        {
+                            image.map((key: object, index: number) => <img key={index} src={`${key}`} alt='err' className='carousel-image'
+                                ref={
+                                    (imgObject): void => {
+                                        const map = getMap();
+                                        //if the imgObject is not empty then execute
+                                        if (imgObject) {
+                                            map?.set(index, imgObject);
+                                        }
                                     }
                                 }
-                            }
-                        />)
-                    }
-                </div>
-                <div className='carousel-gallery-control-container'>
-                    <div className='carousel-gallery-button-container'
-                        onMouseDown={(): void => {
-                            onImageClick(true);
-                        }}
-                        onMouseUp={(): void => {
-                            onImageClick(false);
-                        }}
-                    >
-                        <div className='carousel-gallery-left-button-container' onClick={handlePrevButton}>
-                            <SlArrowLeft className='carousel-gallery-left-button'/>
-                            <div className='carousel-gallery-left-button-cover'/>
-                        </div>
-                        <div className='carousel-gallery-right-button-container' onClick={handleNextButton} ref={carouselRef}>
-                            <SlArrowRight className='carousel-gallery-right-button'/>
-                            <div className='carousel-gallery-right-button-cover'/>
-                        </div>
-                    </div>
-                    <div className='carousel-dot-container'>
-                        {
-                            [ ...Array(image.length).keys() ].map((key) => (
-                                <div key={key} className={key == currentIndex ? 'carousel-current-dot' : 'carousel-dot'} onClick={(): void => dotClickTo(key)}/>
-                            ))
+                            />)
                         }
+                    </div>
+                    <div className='carousel-gallery-control-container'>
+                        <div className='carousel-gallery-button-container'
+                            onMouseDown={(): void => {
+                                onImageClick(true);
+                            }}
+                            onMouseUp={(): void => {
+                                onImageClick(false);
+                            }}
+                        >
+                            <div className='carousel-gallery-left-button-container' onClick={handlePrevButton}>
+                                <SlArrowLeft className='carousel-gallery-left-button'/>
+                                <div className='carousel-gallery-left-button-cover'/>
+                            </div>
+                            <div className='carousel-gallery-right-button-container' onClick={handleNextButton} ref={carouselRef}>
+                                <SlArrowRight className='carousel-gallery-right-button'/>
+                                <div className='carousel-gallery-right-button-cover'/>
+                            </div>
+                        </div>
+                        <div className='carousel-dot-container'>
+                            {
+                                [ ...Array(image.length).keys() ].map((key) => (
+                                    <div key={key} className={key == currentIndex ? 'carousel-current-dot' : 'carousel-dot'} onClick={(): void => dotClickTo(key)}/>
+                                ))
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
-            <div className='carousel-title-container'>{title}</div>
-            <div className='carousel-capacity-container'>{capacity}</div>
-            <div className='carousel-description-container'>{description}</div>
+            <div className='carousel-info-container'>
+                <div className='carousel-title-container'>{title}</div>
+                <div className='carousel-capacity-container'>{capacity}</div>
+                <div className='carousel-description-container'>{description}</div>
+            </div>
         </div>
+
     );
 }
 

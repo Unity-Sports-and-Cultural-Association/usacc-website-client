@@ -63,8 +63,6 @@ function Email(): ReactElement {
         }
     };
 
-
-
     return (
 
         <form name="contact" method="post" onSubmit={handleSubmit}>
