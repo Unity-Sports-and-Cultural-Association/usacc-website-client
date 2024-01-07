@@ -32,6 +32,12 @@
         justify-content: space-evenly;
         flex-direction: row;
         padding-right: $spacing-3rem;
+        & a {
+            color: white;
+            &:hover {
+                color: $color-gray;
+            }
+        }
     }
     .home-header-contact-container {
         display: flex;

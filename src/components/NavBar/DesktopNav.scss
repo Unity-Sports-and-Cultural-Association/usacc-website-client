@@ -16,18 +16,27 @@
         z-index: 9998;
     }
 
+
     .desktop-nav-links.desktop {
         display: flex;
         justify-content: center;
         align-items: top;
 
+        color: $color-black;
         font-size: $font-size-15;
         font-weight: $weight-regular;
         gap: $spacing-1rem;
         margin-right: $spacing-3rem;
         padding-bottom: $spacing-05rem;
 
-        
+        a {
+            color: $color-black;
+            transition: $transition-fast;
+            &:hover {
+                color: $color-gray;
+            }
+        }
+
         
     }
     a {
@@ -38,11 +47,16 @@
         }
     }
 
+
+
+
     
     .right-menu-container {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        
     }
 
     .nav-button.desktop {

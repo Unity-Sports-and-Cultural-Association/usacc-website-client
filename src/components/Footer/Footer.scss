@@ -53,6 +53,9 @@
     .footer-nav-links-container {
         display: flex;
         gap: $spacing-3rem;
+        a:hover {
+            color: rgb(255, 255, 255);
+        }
     }
 
     .footer-nav-links {
@@ -106,6 +109,9 @@
             gap: $spacing-4rem;
             padding-top: $spacing-12rem;
             padding-bottom: $spacing-05rem;
+        }
+        a:hover{
+            color: gray;
         }
     }
 
