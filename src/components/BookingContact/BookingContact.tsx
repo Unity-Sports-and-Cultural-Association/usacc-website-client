@@ -13,7 +13,7 @@ function BookingContact({ title, description, phoneNumber }: BookingContactProps
                 </div>
                 <div className='booking-contact-phone-number-container'>
                     <SlPhone className='booking-contact-phone-icon'/>
-                    <div className='booking-contact-phone-number'>{phoneNumber}</div>
+                    <div className='booking-contact-phone-number'><a href="tel:6174369550">{phoneNumber}</a></div>
                     <div className='booking-contact-sub-text'>- wait times may vary</div>
                 </div>
             </div>
