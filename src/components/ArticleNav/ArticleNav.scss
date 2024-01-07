@@ -41,6 +41,9 @@
 
     .article-nav-item {
         padding-bottom: $spacing-1rem;
+        a:hover {
+            color: rgb(68, 68, 68);
+        }
     }
 
     .article-nav-divider {
@@ -64,6 +67,9 @@
             & a{
                 cursor: pointer;
                 color: $color-gray-text;
+                &:hover {
+                    color: rgb(80, 80, 80)
+                }
             }
         }
     }

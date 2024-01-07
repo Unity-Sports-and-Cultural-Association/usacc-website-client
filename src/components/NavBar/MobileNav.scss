@@ -48,6 +48,9 @@
 
         & a {
             color: $color-white;
+            &:hover {
+                color: $color-gray;
+            }
         }
         font-size: $font-size-15;
     }
@@ -90,6 +93,13 @@
         display: flex;
         flex-direction: column;
         gap: $spacing-1rem;
+        & a {
+            color: white;
+            
+            &:hover {
+                color: $color-gray;
+            }
+        }
     }
 
     .side-footer {
