@@ -1,6 +1,24 @@
 @use '../../scss' as *;
 
+.carousel-crop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    @media (max-width: 768px) {
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 0;
+    }
+    background-color: black;
+    padding-left: $spacing-4rem;
+    padding-right: $spacing-4rem;
+    border-radius: 3px;
+    margin-bottom: $spacing-1rem;
+}
 .carousel-container {
+    max-width: 873px;
     display: flex;
     flex-direction: column;
     padding-left: $spacing-15rem;
@@ -180,6 +198,7 @@
         color: $color-subtext-color;
         font-size: $font-size-1;
         font-weight: $weight-regular;
+        margin-bottom: $spacing-05rem;
     }
     .carousel-description-container {
         padding-top: $spacing-05rem;
@@ -188,6 +207,19 @@
         font-family: $default-font;
         font-weight: $weight-regular;
         word-wrap: break-word;
-        padding-bottom: $spacing-4rem;
+        padding-bottom: $spacing-2rem;
+       
     }
+    .carousel-info-container {
+        box-shadow: $shadow-card;
+        margin-bottom: $spacing-4rem;
+        padding: $spacing-1rem;
+        border-radius: 3px;
+        
+        @media (max-width: 768px) {
+            border-radius: 0 0 3px 3px;
+        }
+    }
+    
 }
+

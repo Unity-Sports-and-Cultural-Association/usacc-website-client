@@ -15,6 +15,13 @@ function Booking(): ReactElement {
         [ './assets/photo3.jpg' ],
         [ './assets/photo4.jpg' ],
     ];
+    const longHall = [
+        [ './assets/longhall/long_hall5.jpg' ],
+        [ './assets/longhall/long_hall3.jpg' ],
+        [ './assets/longhall/long_hall4.jpg' ],
+        [ './assets/longhall/long_hall1.jpg' ],
+        [ './assets/longhall/long_hall2.jpg' ],
+    ];
 
     const carouselRef = useRef<HTMLDivElement | null>(null);
     const carouselRef2 = useRef<HTMLDivElement | null>(null);
@@ -59,7 +66,7 @@ function Booking(): ReactElement {
                 <MobileContent>
                     <DescriptionBody
                         title='Booking a Hall'
-                        description={<div>We offer our Venues for a vareity of events at an affordable price here in the Boston area.  These halls are good for birthday parties, funerals, weddings, and a place for you to host your classes. We have two spacious halls that can accommodate up to 200 people each, equipped with tables, chairs, projectors, sound systems, and catering services. You can also request bartenders to serve drinks at your event.</div>}
+                        description={<div>We offer our Venues for a variety of events at an affordable price in the Boston area. These halls are good for birthday parties, funerals, weddings, and a place for you to host your classes. We provide two spacious halls, Bartenders are available for events upon request, chairs and tables are included, with speakers available for rent.</div>}
                     />
                     <Carousel
                         carouselRef={carouselRef}
@@ -72,10 +79,10 @@ function Booking(): ReactElement {
                     <Carousel
                         carouselRef={carouselRef2}
                         onImageClick={setUserInteracted2}
-                        image={gallary}
+                        image={longHall}
                         title='Long Hall'
                         capacity='Capacity: 200 people'
-                        description='Our long hall is a cozy and charming space that can host smaller events with up to 200 people. Our long hall features a stage and an open wide area. You can also add a DJ and an area for dancing if you want to create a lively atmosphere. Our long hall is perfect for birthday parties, smaller gatherings, or any other occasion that requires a warm and friendly setting. Our long hall is designed to make your guests feel comfortable and welcome.'
+                        description='The perfect space to host smaller events, bring your own speakers or rent  You can also add a DJ and an area for dancing if you want to create a lively atmosphere. Our long hall is perfect for birthday parties, smaller gatherings, or any other occasion that requires a warm and friendly setting. Our long hall is designed to make your guests feel comfortable and welcome.'
                     />
                     <BookingContact
                         title='Get Your Quote'
