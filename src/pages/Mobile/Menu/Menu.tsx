@@ -36,6 +36,7 @@ function Menu(): ReactElement {
                             Unity cares about its customers and strives to provide the best take-out experience possible. The commitment to quality ingredients and expert preparation ensures that every dish is a culinary delight. Come to Unity and discover the many delicious options on the menu!
                     </div>}
             />
+            <img src={'./assets/bar.jpg'} className="unity-photo" alt="barimage" />
             <DescriptionBody
                 title='Bar Menu'
                 description={
@@ -43,6 +44,9 @@ function Menu(): ReactElement {
                         At our bar, we always strive to provide the best drinking experience for our customers. We keep our drinks in rotation to offer you the best price and selection. Whether you prefer beer, wine, cocktails, or shots, you will find something to suit your taste and mood. Our drinks range from $6 to $12, and we also have an option to purchase bottles ranging from $150 to $200.
                     </div>}
             />
+
+
+
             <DescriptionBody
                 title=''
                 description={

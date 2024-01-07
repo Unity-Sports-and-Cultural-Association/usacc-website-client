@@ -52,6 +52,7 @@ function Menu(): ReactElement {
                 <p>
                     At our bar, we always strive to provide the best drinking experience for our customers. We keep our drinks in rotation to offer you the best price and selection. Whether you prefer beer, wine, cocktails, or shots, you will find something to suit your taste and mood. Our drinks range from $6 to $12, and we also have an option to purchase bottles ranging from $150 to $200.
                 </p>
+                <img src={'./assets/bar.jpg'} className="unity-photo" alt="barimage" />
                 <p>
                     We care about our customers and want to create a welcoming environment that is different from other clubbing environments in the Boston area. Our commitment to quality service and a friendly atmosphere ensures that every visit is a memorable one. Come to our bar and discover the many delicious options on our menu!
                 </p>
