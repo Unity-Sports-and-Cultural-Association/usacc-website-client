@@ -30,6 +30,7 @@ function MobileNav({ isOpen, setOpen }: MobileNavProps): ReactElement {
                 <div className='links-side-menu'>
                     <div className='side-nav-links'>
                         <Link className="no-underline" to="/menu" onClick={closeMenu}>Menu</Link>
+                        <Link className="no-underline" to="/events" onClick={closeMenu}>Events</Link>
                         <Link className="no-underline" to="/booking" onClick={closeMenu}>Booking</Link>
                         <Link className="no-underline" to="/volunteering" onClick={closeMenu}>Volunteering</Link>
                         <Link className="no-underline" to="/membership" onClick={closeMenu}>Membership</Link>

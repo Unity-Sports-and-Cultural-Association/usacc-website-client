@@ -25,6 +25,7 @@ function DesktopNav({ isOpen, setOpen }: DesktopNavProps): ReactElement {
                         <Link to="/volunteering">Volunteering</Link>
                         <Link to="/booking">Booking</Link>
                         <Link to="/menu">Menu</Link>
+                        <Link to="/events">Events</Link>
                     </div>
                     <div className={isOpen ? 'nav-button desktop active' : 'nav-button desktop'}>
                         <Hamburger toggled={isOpen} toggle={setOpen} />
