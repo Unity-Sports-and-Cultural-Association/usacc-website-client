@@ -1,37 +1,105 @@
 @use '../../scss' as *;
 
 .home-header-guide {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(24, 0, 0, 0.451389) 77.43%, #340000 100%), linear-gradient(0deg, #570B0B, #570B0B);
+    background: linear-gradient(180deg, #2F1010 0%, #31020E 100%);
     width: 100%;
-    justify-content: center;
     display: flex;
+    justify-content: space-between;
+}
+
+.home-header-parallax-container {
+    position: absolute;
+    opacity: .1;
+    width: 100%;
+    margin-top: -$spacing-6rem;
+    z-index: .5;
+}
+
+.home-header-parallax-title {
+    color: $color-white;
+    font-size: $font-size-5+$font-size-5+$font-size-5+$font-size-5+$font-size-5+$font-size-3;
+    font-family: $title-font;
+    font-weight: $weight-medium;
+    z-index: .5;
+}
+
+.home-renting-container {
+    max-width: 25rem;
+    background: linear-gradient(180deg, rgba(33, 29, 29, 0.35) 0%, rgba(0, 0, 0, 0.35) 100%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+
+    padding: 3rem;
+    padding-left: 5rem;
+    padding-bottom: 5rem;
+    .home-renting-title {
+        color: $color-white;
+        font-size: $font-size-25;
+        font-family: $title-font;
+        font-weight: $weight-medium;
+        padding-right: $spacing-2rem;
+    }
+    .home-renting-subtitle {
+        color: $color-subtext-color;
+        font-size: $font-size-1;
+        font-weight: $weight-regular;
+    }
+    .home-renting-desc {
+        padding-top: $spacing-075rem;
+        color: $color-white;
+        font-size: $font-size-1;
+        font-family: $default-font;
+        font-weight: $weight-medium;
+        word-wrap: break-word;
+        padding-right: $spacing-4rem + $spacing-15rem;
+    }
+    .home-renting-button {
+        background-color: transparent!important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: $spacing-3rem;
+        padding: $spacing-075rem;
+        border-radius: 6px;
+        color: $color-white;
+        font-size: $font-size-15;
+        font-weight: $weight-thin;
+        margin-top: $spacing-15rem;
+        border: solid 1px $color-white;
+    }
 }
 .home-header-container {
     display: flex;
     flex-direction: column;
     width: 600px;
-    padding-left: $spacing-15rem;
-    padding-top: $spacing-1rem;
-    padding-bottom: $spacing-2rem;
+    padding-left: $spacing-5rem;
+    justify-content: center;
     color: $color-white;
+    padding-top: $spacing-4rem;
+    padding-bottom: $spacing-4rem;
+
+    z-index: 2;
+
     .home-header-title-container {
+        max-width: 30rem;
         font-family: $title-font;
         font-weight: $weight-medium;
-        font-size: $font-size-25;
+        font-size: $font-size-3;
     }
     .home-header-description-container {
+        max-width: 23.5rem;
         padding-top: $spacing-1rem;
         font-weight: $weight-regular;
         padding-right: $spacing-4rem;
         padding-bottom: $spacing-15rem;
+        padding-left: $spacing-075rem;
     }
     .home-header-bottom-container {
         display: flex;
-        justify-content: space-evenly;
         flex-direction: row;
-        padding-right: $spacing-3rem;
+        max-width: 30rem;
     }
     .home-header-contact-container {
         display: flex;
@@ -43,6 +111,9 @@
         font-size: $font-size-12;
     }
     .home-header-contact-text-container {
+        max-width: 14.25rem;
+        color: $color-gray;
+        text-decoration: underline;
         padding-left: $spacing-05rem;
         font-size: $font-size-086;
     }
@@ -56,24 +127,22 @@
         padding-top: $spacing-025rem;
     }
     .home-header-line-container {
-        margin-left: $spacing-2rem;
-        margin-right: $spacing-2rem;
+        margin-left: $spacing-05rem;
+        margin-right: $spacing-1rem;
     }
 
     .home-header-menu-title-text-container {
         font-weight: $weight-medium;
     }
-
     .home-header-menu-time-container {
         padding-top: $spacing-025rem;
         padding-bottom: $spacing-1rem;
     }
-
     .home-header-menu-container {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: $spacing-05rem;
+        padding: $spacing-025rem;
         margin-right: $spacing-12rem;
         border-radius: $spacing-025rem;
         border-style: solid;

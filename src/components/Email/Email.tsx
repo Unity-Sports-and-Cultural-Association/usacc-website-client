@@ -57,17 +57,27 @@ function Email(): ReactElement {
                 <div className='email-container'>
                     <div className='email-title-container'>E-Mailing List</div>
                     <div className='email-subtext-container'>
-                        <div className='email-red-star-container'>*</div>
-                        <div className='email-warning-text-container'>means the field is required</div>
+                        <div className='email-warning-text-container'>Get Notified</div>
                     </div>
-                    <div className='email-label-container'>
-                        <div className='email-label-text-container'>Name</div>
+                    <div className='email-desc'>Come engage with the local community. Join the emailing list to be notified about upcoming events, sport outings, and volunteering opportunities. </div>
+                    <div className='email-name-label-container'>
+                        <div className='email-label-text-container'>First Name</div>
                         <div className='email-red-star-container'>*</div>
                     </div>
                     <input
                         className={hasNameError ? 'email-input-error-container' : 'email-input-container'}
                         type='text'
-                        placeholder='First Last'
+                        placeholder=''
+                        ref={nameValue as React.RefObject<HTMLInputElement>}
+                    />
+                    <div className='email-name-label-container'>
+                        <div className='email-label-text-container'>Last Name</div>
+                        <div className='email-red-star-container'>*</div>
+                    </div>
+                    <input
+                        className={hasNameError ? 'email-input-error-container' : 'email-input-container'}
+                        type='text'
+                        placeholder=''
                         ref={nameValue as React.RefObject<HTMLInputElement>}
                     />
                     <div className={hasNameError ? 'email-error-container' : 'email-error-hide-container'} >The name field is required</div>
@@ -78,7 +88,7 @@ function Email(): ReactElement {
                     <input
                         className={hasEmailError ? 'email-input-error-container' : 'email-input-container'}
                         type='text'
-                        placeholder='Example@gmail.com'
+                        placeholder=''
                         ref={emailValue as React.RefObject<HTMLInputElement>}
                     />
                     <div className={hasEmailError ? 'email-error-container' : 'email-error-hide-container'} >The email field is required</div>
