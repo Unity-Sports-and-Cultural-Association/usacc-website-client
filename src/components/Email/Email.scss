@@ -6,7 +6,7 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    box-shadow: $shadow-top;
+    // box-shadow: $shadow-top;
     .email-container {
         display: flex;
         flex-direction: column;
@@ -36,8 +36,29 @@
                 font-weight: $weight-regular;
             }
         }
+        .email-desc {
+            padding-left: $spacing-025rem;
+            max-width: 20rem;
+            color: $color-black;
+            font-size: $font-size-1;
+            font-weight: $weight-regular;
+        }
+        .email-name-label-container {
+            display: flex;
+            padding-left: $spacing-025rem;
+            margin-top: $spacing-075rem;
+            flex-direction: row;
+            align-items: center;
+            padding-bottom: $spacing-025rem;
+            .email-label-text-container {
+                padding-right: $spacing-025rem;
+                font-size: $font-size-12;
+                font-weight: $weight-regular;
+            }
+        }
         .email-label-container {
             display: flex;
+            padding-left: $spacing-025rem;
             flex-direction: row;
             align-items: center;
             padding-bottom: $spacing-025rem;
@@ -85,7 +106,7 @@
             color: $color-white;
             font-size: $font-size-15;
             font-weight: $weight-thin;
-            margin-top: $spacing-15rem;
+            margin-top: $spacing-025rem;
             cursor: pointer;
             user-select: none;
         }
