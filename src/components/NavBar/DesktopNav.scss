@@ -36,8 +36,19 @@
                 color: $color-gray;
             }
         }
+
         
     }
+    a {
+        color: $color-white;
+        transition: $transition-fast;
+        &:hover {
+            color: $color-gray;
+        }
+    }
+
+
+
 
 
 
