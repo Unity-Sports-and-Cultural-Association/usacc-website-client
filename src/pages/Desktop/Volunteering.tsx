@@ -22,7 +22,7 @@ function Volunteering(): ReactElement {
             <div className='article-extra-content'>
                 <div className='volunteer-pdf-container'>
                     <SlEnvolope className='volunteer-pdf-icon-container'/>
-                    <div className='volunteer-pdf-text-container'>someLongEmailName@gmail.com</div>
+                    <div className='volunteer-pdf-text-container'><a href="mailto:SomeLongEmailNameExample@gmail.com">SomeLongEmailNameExample@gmail.com</a></div>
                 </div>
             </div>
 

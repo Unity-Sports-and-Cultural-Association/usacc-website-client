@@ -1,3 +1,4 @@
+
 .article-extra-content {
     display: flex;
     justify-content: flex-start;
@@ -30,4 +31,10 @@
 
 .carousel-title-container {
     margin-top: 1rem;
+}
+
+.volunteer-pdf-text-container {
+    & a {
+        color: #570B0B;
+    }
 }

@@ -1,6 +1,7 @@
 @use '../../scss' as *;
 
 .carousel-crop {
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,11 +19,17 @@
     margin-bottom: $spacing-1rem;
 }
 .carousel-container {
+    margin-bottom: 4rem;
+    border: 1px rgb(215, 215, 215) solid;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding-top: 2rem;
+
     max-width: 873px;
     display: flex;
     flex-direction: column;
-    padding-left: $spacing-15rem;
-    padding-right: $spacing-15rem;
+    padding-left: $spacing-3rem;
+    padding-right: $spacing-3rem;
     .carousel-gallery-container {
         user-select: none;
         position: relative;
@@ -212,7 +219,9 @@
     }
     .carousel-info-container {
         box-shadow: $shadow-card;
-        margin-bottom: $spacing-4rem;
+        background-color: white;
+        margin-bottom: 2rem;
+
         padding: $spacing-1rem;
         border-radius: 3px;
         

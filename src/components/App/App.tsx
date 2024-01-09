@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import AboutUsSwitch from '../../pages/AboutUsSwitch';
 import BookingSwitch from '../../pages/BookingSwitch';
+import EventsSwitch from '../../pages/EventsSwitch';
 import MembershipSwitch from '../../pages/MembershipSwitch';
 import MenuSwitch from '../../pages/MenuSwitch';
 import Home from '../../pages/Mobile/Home/Home';
@@ -46,6 +47,7 @@ function App(): ReactElement {
                         <Route path="/about" element={<AboutUsSwitch />} />
                         <Route path="/membership" element={<MembershipSwitch />} />
                         <Route path="/booking" element={<BookingSwitch />} />
+                        <Route path="/events" element={<EventsSwitch />} />
                         <Route path="*" element={<Navigate to="/" />} />
                     </Routes>
                     <Footer />

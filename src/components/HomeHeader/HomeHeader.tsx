@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import './HomeHeader.scss';
 import { SlArrowRight, SlLocationPin, SlPhone } from 'react-icons/sl';
+import { Link } from 'react-router-dom';
 function HomeHeader(): ReactElement {
     return (
         <div className='home-header-guide'>
@@ -24,7 +25,7 @@ function HomeHeader(): ReactElement {
                     <div>
                         <div className='home-header-menu-title-text-container'>Night Life</div>
                         <div className='home-header-menu-time-container'>Fri-Sat: 10pm-2am</div>
-                        <a href='./menu' className='home-header-menu-container arrow-n-text'><span>menu</span><SlArrowRight className='home-header-menu-right-arrow-container'/></a>
+                        <Link to="/menu" className='home-header-menu-container arrow-n-text'><span>menu</span><SlArrowRight className='home-header-menu-right-arrow-container'/></Link>
                     </div>
                 </div>
             </div>
