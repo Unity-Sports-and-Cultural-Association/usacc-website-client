@@ -76,10 +76,6 @@ function Email(): ReactElement {
                         <div className='email-warning-text-container'>Get Notified</div>
                     </div>
                     <div className='email-desc'>Come engage with the local community. Join the emailing list to be notified about upcoming events, sport outings, and volunteering opportunities. </div>
-                    <div className='email-name-label-container'>
-                        <div className='email-label-text-container'>First Name</div>
-                        <div className='email-red-star-container'>*</div>
-                    </div>
                     <div className='email-label-container'>
                         <div className='email-label-text-container'>First Name</div>
                         <div className='email-red-star-container'>*</div>

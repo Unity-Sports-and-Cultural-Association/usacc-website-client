@@ -12,7 +12,7 @@ function HomeEvents(): ReactElement {
                     <div className='home-events-title'>Unity Events</div>
                     <div className='home-events-subtitle'>Come Together</div>
                     <div className='home-events-desc'>Our club hosts a variety kinds of events, from arts and crafts to DJs on stage. Unity provides an open space where there’s always something for everyone here at Unity. </div>
-                    <a href='fill this out' className='home-events-button'>Learn more<SlArrowRight className='home-events-button-arrow-container'/></a>
+                    <a href='/events' className='home-events-button'>Learn more<SlArrowRight className='home-events-button-arrow-container'/></a>
                 </div>
             </div>
             <div className='home-events-right-container'>

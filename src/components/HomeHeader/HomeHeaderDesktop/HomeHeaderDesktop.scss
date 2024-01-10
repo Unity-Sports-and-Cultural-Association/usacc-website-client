@@ -1,6 +1,6 @@
-@use '../../scss' as *;
+@use '../../../scss/' as *;
 
-.home-header-guide {
+.home-header-desktop-guide {
     background: linear-gradient(180deg, #2F1010 0%, #31020E 100%);
     width: 100%;
     display: flex;
@@ -23,7 +23,7 @@
     z-index: .5;
 }
 
-.home-renting-container {
+.home-renting-desktop-container {
     max-width: 25rem;
     background: linear-gradient(180deg, rgba(33, 29, 29, 0.35) 0%, rgba(0, 0, 0, 0.35) 100%);
     z-index: 2;
@@ -70,7 +70,7 @@
         border: solid 1px $color-white;
     }
 }
-.home-header-container {
+.home-header-desktop-container {
     display: flex;
     flex-direction: column;
     width: 600px;
