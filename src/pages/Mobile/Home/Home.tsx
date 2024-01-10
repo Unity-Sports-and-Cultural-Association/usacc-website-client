@@ -6,8 +6,6 @@ import HomeLearnMore from '../../../components/HomeLearnMore/HomeLearnMore';
 import LocationWidget from '../../../components/LocationWidget';
 import './Home.scss';
 import MobileContent from '../../../components/MobileContent';
-// import Membership from '../Membership/Membership';
-// import MobileContent from '../../../components/MobileContent/MobileContent';
 
 function Home(): ReactElement {
     return (

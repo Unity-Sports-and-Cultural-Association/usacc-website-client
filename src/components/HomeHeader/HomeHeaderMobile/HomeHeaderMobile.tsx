@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 import './HomeHeaderMobile.scss';
 import { SlArrowRight, SlLocationPin, SlPhone } from 'react-icons/sl';
 import { Link } from 'react-router-dom';
-import { Parallax } from 'react-scroll-parallax';
+
 function HomeHeaderMobile(): ReactElement {
     return (
         <div className='home-header-guide'>
@@ -30,17 +30,6 @@ function HomeHeaderMobile(): ReactElement {
                     </div>
                 </div>
             </div>
-            <div className='home-renting-container'>
-                <div className='home-renting-title'>Renting a Service</div>
-                <div className='home-renting-subtitle'>Booking Halls, Bartenders, & Catering</div>
-                <div className='home-renting-desc'>Unity provides services for booking If you are looking for a space to host your next event or authentic Caribbean catering.</div>
-                <a href='./Booking' className='home-renting-button'>Request a Quote</a>
-            </div>
-            <Parallax speed={-30} className='home-header-parallax-container'>
-                <div className='home-header-parallax-title'>
-                    Unity
-                </div>
-            </Parallax>
         </div>
     );
 }
