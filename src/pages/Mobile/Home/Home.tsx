@@ -1,12 +1,13 @@
 import React, { ReactElement } from 'react';
-import Email from '../../../components/Email/Email';
 import FacebookWidget from '../../../components/FacebookWidget/FacebookWidget';
 import HomeBooking from '../../../components/HomeBooking/HomeBooking';
 import HomeHeaderMobile from '../../../components/HomeHeader/HomeHeaderMobile';
 import HomeLearnMore from '../../../components/HomeLearnMore/HomeLearnMore';
 import LocationWidget from '../../../components/LocationWidget';
 import './Home.scss';
-import MobileContent from '../../../components/MobileContent/MobileContent';
+import MobileContent from '../../../components/MobileContent';
+// import Membership from '../Membership/Membership';
+// import MobileContent from '../../../components/MobileContent/MobileContent';
 
 function Home(): ReactElement {
     return (
@@ -40,7 +41,6 @@ function Home(): ReactElement {
                 </MobileContent>
             </div>
             <LocationWidget />
-            <Email />
         </>
     );
 }

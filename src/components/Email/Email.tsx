@@ -73,9 +73,9 @@ function Email(): ReactElement {
                 <div className='email-container'>
                     <div className='email-title-container'>E-Mailing List</div>
                     <div className='email-subtext-container'>
-                        <div className='email-warning-text-container'>Get Notified</div>
+                        <div className='email-red-star-container'>*</div>
+                        <div className='email-warning-text-container'>means the field is required</div>
                     </div>
-                    <div className='email-desc'>Come engage with the local community. Join the emailing list to be notified about upcoming events, sport outings, and volunteering opportunities. </div>
                     <div className='email-label-container'>
                         <div className='email-label-text-container'>First Name</div>
                         <div className='email-red-star-container'>*</div>
