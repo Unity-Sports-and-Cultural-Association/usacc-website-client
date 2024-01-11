@@ -19,7 +19,7 @@ function Footer(): ReactElement {
                             <div className='footer-nav-links'>
                                 <Link to="/menu">menu</Link>
                                 <Link to="/booking">renting</Link>
-                                <Link to="/">wiki</Link>
+                                <Link to="/events">events</Link>
                             </div>
                         </div>
                         <div className='footer-app-logo'>
@@ -29,16 +29,27 @@ function Footer(): ReactElement {
                         </div>
                     </div>
                     <div className='footer-bottom-nav'>
-                        <div className='footer-location-container'>
-                            <div className='footer-location-logo'>
-                                <SlLocationPin />
-                            </div>
-                            <div className='footer-location-link'>
-                                <a href="https://www.google.com/maps/place/10+Dunbar+Ave,+Dorchester+Center,+Ma+02124" target="_blank" rel="noreferrer">
+                        <div className='left-footer-container'>
+                            <div className='footer-location-container'>
+                                <div className='footer-location-logo'>
+                                    <SlLocationPin />
+                                </div>
+                                <div className='footer-location-link'>
+                                    <a href="https://www.google.com/maps/place/10+Dunbar+Ave,+Dorchester+Center,+Ma+02124" target="_blank" rel="noreferrer">
                                 10 Dunbar Ave,
                                 Dorchester<br/> Center,
                                 Ma 02124
-                                </a>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div className='footer-email-container'>
+                                <div className='footer-email-icon'>
+                                    <SlEnvolope />
+                                </div>
+                                <div className='footer-email-link'>
+                                    <a href="mailto:unitypublicrelationscommittee@gmail.com">UnityPublicRelationsCommittee@gmail.com</a>
+                                </div>
                             </div>
                         </div>
                         <div className='footer-bottom-right-links'>
@@ -48,14 +59,6 @@ function Footer(): ReactElement {
                                 </div>
                                 <div className='footer-contact-link'>
                                     <a href="tel:6174369550">(617) 436-9550</a>
-                                </div>
-                            </div>
-                            <div className='footer-email-container'>
-                                <div className='footer-email-icon'>
-                                    <SlEnvolope />
-                                </div>
-                                <div className='footer-email-link'>
-                                    <a href="mailto:SomeLongEmailNameExample@gmail.com">SomeLongEmailNameExample@gmail.com</a>
                                 </div>
                             </div>
 

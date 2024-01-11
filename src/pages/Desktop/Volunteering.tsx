@@ -14,15 +14,15 @@ function Volunteering(): ReactElement {
             articleNav={
                 <ArticleNav
                     items={[ 'Senior Citizens Thanksgiving','Caribbean-American & Cultural Expo','Contact' ]}
-                    relates={[ [ 'About us', '/about' ], [ 'Membership','/membership' ] ]}
-                    others={[ [ 'Menu','/menu' ],[ 'Booking','/booking' ] ]}
+                    relates={[ [ 'About us', '/about' ], [ 'Events','/events' ] ]}
+                    others={[ [ 'Menu','/menu' ],[ 'Booking','/booking' ], [ 'Membership','/membership' ] ]}
                 />
             }
         >
             <div className='article-extra-content'>
                 <div className='volunteer-pdf-container'>
                     <SlEnvolope className='volunteer-pdf-icon-container'/>
-                    <div className='volunteer-pdf-text-container'><a href="mailto:SomeLongEmailNameExample@gmail.com">SomeLongEmailNameExample@gmail.com</a></div>
+                    <div className='volunteer-pdf-text-container'><a href="mailto:unitypublicrelationscommittee@gmail.com">UnityPublicRelationsCommittee@gmail.com</a></div>
                 </div>
             </div>
 

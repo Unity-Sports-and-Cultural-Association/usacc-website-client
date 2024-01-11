@@ -13,7 +13,7 @@ function AboutUs(): ReactElement {
                 <ArticleNav
                     items={[ 'Our Mission' ]}
                     relates={[ [ 'Volunteering', '/volunteering' ], [ 'Membership','/membership' ] ]}
-                    others={[ [ 'Menu','/menu' ],[ 'Booking','/booking' ] ]}
+                    others={[ [ 'Menu','/menu' ],[ 'Booking','/booking' ], [ 'Events','/events' ] ]}
                 />
             }
         />

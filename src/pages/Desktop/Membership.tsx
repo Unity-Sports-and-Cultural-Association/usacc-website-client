@@ -15,14 +15,14 @@ function MembershipSwitch(): ReactElement {
                 <ArticleNav
                     items={[ 'Membership','Benefits','Application' ]}
                     relates={[ [ 'Volunteering','/volunteering' ], [ 'About us', '/about' ] ]}
-                    others={[ [ 'Booking','/booking' ], [ 'Menu','/menu' ] ]}
+                    others={[ [ 'Booking','/booking' ], [ 'Menu','/menu' ], [ 'Events','/events' ] ]}
                 />
             }
         >
             <div className='article-extra-content'>
                 <div className='volunteer-pdf-container'>
                     <SlEnvolope className='volunteer-pdf-icon-container'/>
-                    <div className='volunteer-pdf-text-container'>someLongEmailName@gmail.com</div>
+                    <div className='volunteer-pdf-text-container'>UnityPublicRelationsCommittee@gmail.com</div>
                 </div>
             </div>
 

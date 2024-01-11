@@ -73,7 +73,7 @@ function DesktopNav({ isOpen, setOpen }: DesktopNavProps): ReactElement {
                         </div>
                         <div className='side-footer'>
                             <div className='side-email'>
-                                <a href="mailto:SomeLongEmailNameExample@gmail.com">SomeLongEmailNameExample@gmail.com</a>
+                                <a href="mailto:unitypublicrelationscommittee@gmail.com">UnityPublicRelationsCommittee@gmail.com</a>
                             </div>
                             <div className='side-footer-text'>
                             Unity Sports and Cultural Association is a 501(c)4 organization in Boston

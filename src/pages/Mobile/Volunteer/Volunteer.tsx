@@ -19,7 +19,7 @@ function Volunteer(): ReactElement {
                 <BodyText textFile={'/pages/Volunteering.txt'} />
                 <div className='volunteer-pdf-container'>
                     <SlEnvolope className='volunteer-pdf-icon-container'/>
-                    <div className='volunteer-pdf-text-container'>someLongEmailName@gmail.com</div>
+                    <div className='volunteer-pdf-text-container'>UnityPublicRelationsCommittee@gmail.com</div>
                 </div>
             </div>
         </>

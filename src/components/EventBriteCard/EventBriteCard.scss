@@ -5,7 +5,10 @@
         margin-left: 0;
         margin-right: 0;
     }
-    
+    background-image: url(../../../public/assets/events_pic.png);
+    background-size: cover; // This will make the image cover the entire container
+    background-position: center; // This centers the background image
+    background-repeat: no-repeat; 
     margin-top: 1rem;
     margin-bottom: 2rem;
     display: flex;
@@ -15,17 +18,17 @@
     gap: 1rem;
     box-shadow: $shadow-card;
     border-radius: 25px;
-    padding: 4.5rem 2rem 3.5rem 2rem;
+    padding: 6rem 2rem 5.5rem 2rem;
     .event-brite-title {
         font-weight: bold;
         font-size: $font-size-3;
-        color: #231040;
+        color: #ffffff;
     }
     .event-brite-button {
         cursor: pointer;
-        background-color: #2848c8;
+        background-color: #e33636;
         &:hover {
-            background-color: #291da8;
+            background-color: #c82838;
         }
         color: white;
         font-weight: $weight-medium;
@@ -45,19 +48,22 @@
     }
     .event-brite-contact {
         cursor: pointer;
-        color: #3659e3;
+        color: #ffffff;
         padding: .75rem 2.5rem .75rem 2.5rem;
         border-radius: 4px;
         transition: background-color 250ms;
         &:hover {
-            background-color: rgb(232, 232, 232);
+            background-color: rgba(145, 145, 145, 0.53);
+            
         }
     }
     .event-brite-caption {
         margin-top: 1rem;
         user-select: none;
+        color: rgb(186, 186, 186);
     }
     .bold {
+        color: white;
         text-decoration: underline;
         font-weight: $weight-thick;
     }
