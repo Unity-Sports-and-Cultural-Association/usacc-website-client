@@ -14,7 +14,7 @@ function VolunteeringDesktop(): ReactElement {
                         <a href='/volunteering' id='volunteering-button'>Learn More</a>
                     </div>
                 </div>
-                <img src='/assets/volunteer-upscale.png' alt='' className='volunteering-img'/>
+                <img src='/assets/volunteer-upscale.png' alt='volunteering-event' className='volunteering-img'/>
             </div>
         </div>
     );
