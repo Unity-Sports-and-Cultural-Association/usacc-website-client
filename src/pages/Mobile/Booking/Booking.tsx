@@ -24,14 +24,6 @@ function Booking(): ReactElement {
         [ './assets/longhall/long_hall2.jpg' ],
     ];
 
-    const longHall = [
-        [ './assets/longhall/long_hall5.jpg' ],
-        [ './assets/longhall/long_hall3.jpg' ],
-        [ './assets/longhall/long_hall4.jpg' ],
-        [ './assets/longhall/long_hall1.jpg' ],
-        [ './assets/longhall/long_hall2.jpg' ],
-    ];
-
     const carouselRef = useRef<HTMLDivElement | null>(null);
     const carouselRef2 = useRef<HTMLDivElement | null>(null);
     const [ userInteracted, setUserInteracted ] = useState(false);

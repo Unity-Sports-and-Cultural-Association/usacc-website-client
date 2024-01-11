@@ -41,8 +41,12 @@
 
     .article-nav-item {
         padding-bottom: $spacing-1rem;
+        a {
+            font-weight: 400;
+            color: rgb(145, 145, 145);
+        }
         a:hover {
-            color: rgb(68, 68, 68);
+            color: rgb(70, 70, 70);
         }
     }
 
