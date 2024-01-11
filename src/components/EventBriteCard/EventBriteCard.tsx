@@ -4,6 +4,7 @@ import './EventBriteCard.scss';
 function EventBriteCard(): ReactElement {
     return (
         <div className='event-brite-card-container'>
+
             <div className='event-brite-title'>
                 Unity +
             </div>

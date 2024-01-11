@@ -9,11 +9,11 @@ import './desktops.scss';
 import MobileContent from '../../components/MobileContent';
 
 function Booking(): ReactElement {
-    const gallary = [
-        [ './assets/photo1.jpg' ],
-        [ './assets/photo2.jpg' ],
-        [ './assets/photo3.jpg' ],
-        [ './assets/photo4.jpg' ],
+    const bigHall = [
+        [ './assets/bighall/big_hall2.png' ],
+        [ './assets/bighall/big_hall1.png' ],
+        [ './assets/bighall/big_hall3.png' ],
+        [ './assets/bighall/big_hall4.png' ],
     ];
     const longHall = [
         [ './assets/longhall/long_hall5.jpg' ],
@@ -57,8 +57,8 @@ function Booking(): ReactElement {
             articleNav={
                 <ArticleNav
                     items={[ 'Venues' ]}
-                    relates={[ [ 'Volunteering','/volunteering' ], [ 'About us', '/about' ] ]}
-                    others={[ [ 'Membership','/membership' ], [ 'Menu','/menu' ] ]}
+                    relates={[ [ 'Events','/events' ], [ 'About us', '/about' ] ]}
+                    others={[ [ 'Membership','/membership' ], [ 'Menu','/menu' ], [ 'Volunteering','/volunteering' ] ]}
                 />
             }
         >
@@ -71,7 +71,7 @@ function Booking(): ReactElement {
                     <Carousel
                         carouselRef={carouselRef}
                         onImageClick={setUserInteracted}
-                        image={gallary}
+                        image={bigHall}
                         title='Ballroom'
                         capacity='Capacity: 500 people'
                         description='Our main ballroom is a versatile and elegant space that can host any kind of event you have in mind. Whether you are planning a birthday party, a funeral, a wedding, or a class, our ballroom can accommodate up to 300 people comfortably. Our ballroom features a stage, an open wide area, and a bar area as a possible option. You can also add a DJ and an area for dancing if you want to create a lively atmosphere.'
@@ -86,8 +86,9 @@ function Booking(): ReactElement {
                     />
                     <BookingContact
                         title='Get Your Quote'
-                        description={'Over the phone allows you to check live available spots from our ledger. After the request a representitive will reach out to you on a later date.'}
+                        description={'Over the phone allows you to check live available spots from our ledger. After the request a representative will reach out to you on a later date.'}
                         phoneNumber='(617) 436-9550'
+                        email='UnityRentalCommittee@gmail.com'
                     />
                 </MobileContent>
             </div>

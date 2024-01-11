@@ -14,8 +14,8 @@ function Menu(): ReactElement {
             articleNav={
                 <ArticleNav
                     items={[ 'Food Menu', 'Bar Menu' ]}
-                    relates={[ [ 'Booking', '/booking' ], [ 'Volunteering','/volunteering' ] ]}
-                    others={[ [ 'Membership','/membership' ],[ 'About us','/about' ] ]}
+                    relates={[ [ 'Events','/events' ] ]}
+                    others={[ [ 'Membership','/membership' ],[ 'About us','/about' ], [ 'Volunteering','/volunteering' ], [ 'Booking', '/booking' ] ]}
                 />
             }
         >

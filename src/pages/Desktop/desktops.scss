@@ -38,3 +38,22 @@
         color: #570B0B;
     }
 }
+
+@media (min-width: 768px) {
+.booking-contact-container {
+    margin-left: 0;
+}
+
+.booking-contact-container .booking-contact-body-container {
+    margin-left: 0;
+}
+
+.booking-contact-body-text {
+    font-weight: 400 !important;
+    line-height: 1.6em; 
+}
+
+.heading-text-h2 {
+    margin-bottom: 0 ;
+}
+}
