@@ -1,17 +1,16 @@
 import React, { ReactElement } from 'react';
-import Email from '../../../components/Email/Email';
 import FacebookWidget from '../../../components/FacebookWidget/FacebookWidget';
 import HomeBooking from '../../../components/HomeBooking/HomeBooking';
-import HomeHeader from '../../../components/HomeHeader/HomeHeader';
+import HomeHeaderMobile from '../../../components/HomeHeader/HomeHeaderMobile';
 import HomeLearnMore from '../../../components/HomeLearnMore/HomeLearnMore';
 import LocationWidget from '../../../components/LocationWidget';
 import './Home.scss';
-import MobileContent from '../../../components/MobileContent/MobileContent';
+import MobileContent from '../../../components/MobileContent';
 
 function Home(): ReactElement {
     return (
         <>
-            <HomeHeader />
+            <HomeHeaderMobile />
             <HomeBooking />
             <div className='home-content-container'>
                 <MobileContent>
@@ -40,7 +39,6 @@ function Home(): ReactElement {
                 </MobileContent>
             </div>
             <LocationWidget />
-            <Email />
         </>
     );
 }
