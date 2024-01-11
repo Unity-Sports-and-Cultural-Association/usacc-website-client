@@ -19,7 +19,7 @@ function Footer(): ReactElement {
                             <div className='footer-nav-links'>
                                 <Link to="/menu">menu</Link>
                                 <Link to="/booking">renting</Link>
-                                <Link to="/">wiki</Link>
+                                <Link to="/events">events</Link>
                             </div>
                         </div>
                         <div className='footer-app-logo'>
