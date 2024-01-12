@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 function Footer(): ReactElement {
     return (
         <div className='app-footer-container'>
+            <div id='footer-boundary' className='footer-boundary-container' />
             <div className='footer-navs-container' >
                 <div className='footer-navs'>
                     <div className='footer-top-nav'>

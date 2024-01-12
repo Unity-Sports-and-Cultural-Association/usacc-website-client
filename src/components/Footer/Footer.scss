@@ -4,7 +4,13 @@
     display: flex;
     flex-direction: column;
 
-
+    .footer-boundary-container {
+        margin-top: -6rem;
+        position: absolute;
+        width: 100%;
+        height: 3rem;
+        background-color: transparent !important;
+    }
 
     .footer-navs-container {
         display: flex;
@@ -15,6 +21,7 @@
         background-color: $color-primary-dark;
         
         box-shadow: $shadow-top;
+        z-index: 99;
     }
 
     .left-footer-container {

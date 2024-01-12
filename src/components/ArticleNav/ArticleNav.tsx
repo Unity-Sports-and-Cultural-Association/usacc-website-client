@@ -12,7 +12,7 @@ type ArticleNavProps = {
 
 function ArticleNav({ items, relates, others }: ArticleNavProps): ReactElement {
     return (
-        <Sticky top={50}>
+        <Sticky top={50} bottomBoundary={'#footer-boundary'}>
             <div className="article-nav-container">
                 <div className='article-top-nav'>
                     <div className='article-nav-title'>In This Page</div>
