@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react';
+import Email from '../../../components/Email';
 import FacebookWidget from '../../../components/FacebookWidget/FacebookWidget';
 import HomeBooking from '../../../components/HomeBooking/HomeBooking';
 import HomeHeaderMobile from '../../../components/HomeHeader/HomeHeaderMobile';
@@ -22,7 +23,7 @@ function Home(): ReactElement {
                         button='./volunteering'
                     />
                     <HomeLearnMore
-                        image={'./assets/events.png'}
+                        image={'./assets/event_mobile.png'}
                         title="Events"
                         topic="Come Together"
                         description="Our club hosts a variety kinds of events, from arts and crafts to DJs on stage. Unity provides an open space where there’s always something for everyone here at Unity."
@@ -36,9 +37,11 @@ function Home(): ReactElement {
                         button='./membership'
                     />
                     <FacebookWidget />
+
                 </MobileContent>
             </div>
             <LocationWidget />
+            <Email/>
         </>
     );
 }
