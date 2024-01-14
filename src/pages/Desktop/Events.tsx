@@ -11,7 +11,7 @@ function Events(): ReactElement {
         <DesktopShell
             title='Events'
             header='Enjoy The Night'
-            blurb='Unity promotes coming together, offering a night life experience and activities for adults and children scattered throughout the calendar. Make sure to sign up with our email to get notified.'
+            blurb='Unity promotes coming together, offering a night life experience and activities for adults and children scattered throughout the calendar year. Make sure to sign up with our email to get notified about upcoming events.'
             textFile='/pages/Events.txt'
             articleNav={
                 <ArticleNav
@@ -43,7 +43,7 @@ function Events(): ReactElement {
                     text={'Events'}
                 />
                 <p style={{ marginBottom: '2rem' }}>
-                At unity, Friday and Saturday nights get live: Soca, Calypso, Hip-hop, Reggae, Compás, Zouk, and more vibrate the dance floor. We bring the Caribbean islands to the Boston spanning artists from Trinidad & Tobago, Jamaica, to Barbados. Unitys club scene is an authenic Caribbean experince where there is lots of open space for people to socialize and dance to music we are accustomed to in our home islands.
+                At Unity, Friday and Saturday nights get live: Soca, Calypso, Hip-hop, Reggae, Compás, Zouk, and more vibrate the dance floor. We bring the Caribbean islands to the Boston spanning artists from Trinidad & Tobago, Jamaica, Barbados, to the Virgin Islands. Unity&rsquo;s club scene boasts an authentic Caribbean experience for socializing and meeting new people. Come and dance to the rhythm of the island vibes.
 
                 </p>
                 <Heading
@@ -52,14 +52,17 @@ function Events(): ReactElement {
                     text={'Rum Punch & Music'}
                 />
                 <p>
-                RumPunch and Music is a monthly concert series where import some of our favorite island artist. The rum punch represents the Caribbean as a popular drink most of the islands share it represents unity so no matter if you&rsquo;re trini Haitian Jamaica  you can come feel at home.
+                Rum Punch and Music is a monthly concert series bringing in the hottest artists from the Caribbean. Rum Punch represents the Caribbean flavour that the islands share, representing unity no matter the origin or heritage—home is here.
                 </p>
                 <Heading
                     id={'article-section-3'}
                     type="ghost"
                     text={''}
                 />
-                <BookingContact title={'Contact US'} description={'Host your own events and classes at Unity. Email or call us to arrange scheduling details. Well support and promote classes to our members. Despite Unity established Caribbean Origins, all are welcome.'} phoneNumber={'(617) 436-9550'} email={'UnityPublicRelationsCommittee@gmail.com'}/>
+                <BookingContact title={'Contact US'}
+                    description={'Host your own events and classes at Unity. Email or call us to arrange scheduling details. Unity will promote classes to its mailing list and members across social media platforms. Despite our Caribbean origins, all people are welcomed'}
+                    phoneNumber={'(617) 436-9550'}
+                    email={'UnityPublicRelationsCommittee@gmail.com'}/>
             </div>
         </DesktopShell>
     );

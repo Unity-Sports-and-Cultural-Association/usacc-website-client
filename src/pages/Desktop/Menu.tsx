@@ -8,8 +8,8 @@ function Menu(): ReactElement {
     return (
         <DesktopShell
             title='Menu'
-            header='Caribbean-American non-profit'
-            blurb='Unity Sports and Cultural Association is a vibrant and diverse community that celebrates and supports Caribbean culture, sports, and social justice in New England.'
+            header='Friday & Saturday Night Menu'
+            blurb='Unity is known for its safe and relaxed clubbing experience, offering affordable drinking and authentic Caribbean food in the Boston area.'
             textFile='/pages/Menu.txt'
             articleNav={
                 <ArticleNav
@@ -30,15 +30,13 @@ function Menu(): ReactElement {
                     text={''}
                 />
                 <p style={{ marginBottom: '2rem' }}>
-                Unity offers a diverse and delicious take-out menu that features authentic Caribbean cuisine. The options include fresh and flavorful seafood, classic chicken dishes, and a variety of sides to complement the meal. There are also regularly in-house specials like aloo pie, souce, and Pholourie.
+                Unity brings fresh and flavorful Caribbean dishes, seafood and classic chicken dishes with our own special sauces. Round year, our specials range from Aloo Pie, Souse, Pholourie, Corn Soup, and more.
                 </p>
                 <MenuDisplay />
                 <p>
                     <div className='food-menu-description-subtext-container'>* Selection & Pricing may vary in house</div>
                 </p>
-                <p>
-                    Unity cares about its customers and strives to provide the best take-out experience possible. The commitment to quality ingredients and expert preparation ensures that every dish is a culinary delight. Come to Unity and discover the many delicious options on the menu!
-                </p>
+
                 <Heading
                     styles={{ marginTop: '3rem' }}
                     type="h1"
@@ -50,7 +48,7 @@ function Menu(): ReactElement {
                     text={''}
                 />
                 <p>
-                    At our bar, we always strive to provide the best drinking experience for our customers. We keep our drinks in rotation to offer you the best price and selection. Whether you prefer beer, wine, cocktails, or shots, you will find something to suit your taste and mood. Our drinks range from $6 to $12, and we also have an option to purchase bottles ranging from $150 to $200.
+                At our bar, we provide a professional drinking experience for our customers. We keep our drinks in rotation to offer you the best price and selection. Whether you prefer beer, wine, cocktails, or shots, you will find something to suit your taste and mood. Our drinks range from $6 to $12, with faithful pours with options to purchase bottles.
                 </p>
                 <img src={'./assets/bar.jpg'} className="unity-photo" alt="barimage" />
                 <p>

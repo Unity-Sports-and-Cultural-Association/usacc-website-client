@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
-import { SlFolder } from 'react-icons/sl';
 import BackHeader from '../../../components/BackHeader/BackHeader';
 import BodyText from '../../../components/BodyText';
+import BookingContact from '../../../components/BookingContact';
 import Header from '../../../components/Header/Header';
 import './Membership.scss';
 import MobileContent from '../../../components/MobileContent/MobileContent';
@@ -19,8 +19,12 @@ function Membership(): ReactElement {
             <div className='mobile-content-container'>
                 <BodyText textFile={'/pages/Membership.txt'} />
                 <div className='membership-pdf-container'>
-                    <SlFolder className='membership-pdf-icon-container'/>
-                    <div className='membership-pdf-text-container'>Unity Sports Constitution & Bylaws PDF</div>
+                    <BookingContact
+                        title={'Contact Us'}
+                        description={''}
+                        phoneNumber={'(617) 436-9550'}
+                        email={'UnityPublicRelationsCommittee@gmail.com'}
+                    />
                 </div>
             </div>
         </MobileContent>
