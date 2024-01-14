@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
-import { SlEnvolope } from 'react-icons/sl';
 import ArticleNav from '../../components/ArticleNav/ArticleNav';
+import BookingContact from '../../components/BookingContact';
 import DesktopShell from '../../components/DesktopShell/DesktopShell';
 import './desktops.scss';
 
@@ -21,8 +21,12 @@ function MembershipSwitch(): ReactElement {
         >
             <div className='article-extra-content'>
                 <div className='volunteer-pdf-container'>
-                    <SlEnvolope className='volunteer-pdf-icon-container'/>
-                    <div className='volunteer-pdf-text-container'>UnityPublicRelationsCommittee@gmail.com</div>
+                    <BookingContact
+                        title={'Contact Us'}
+                        description={''}
+                        phoneNumber={'(617) 436-9550'}
+                        email={'UnityPublicRelationsCommittee@gmail.com'}
+                    />
                 </div>
             </div>
 
